@@ -1,0 +1,14 @@
+{
+    "ExtensionDescription": {
+        "description": "extension description",
+        "message": "http://www.gzool.com"
+    },
+    "ExtensionName": {
+        "description": "extension name",
+        "message": "jizhureader"
+    },
+    "BrowserActionTitle": {
+        "description": "extension name",
+        "message": "jizhureader"
+    }
+}

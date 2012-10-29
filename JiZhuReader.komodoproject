@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="4ea0e5e5-467d-47c9-bc7d-bfb07d044b48" kpf_version="5" name="JiZhuReader.komodoproject">
+<preference-set idref="4ea0e5e5-467d-47c9-bc7d-bfb07d044b48">
+  <boolean id="dedentOnColon">0</boolean>
+  <string id="editAutoIndentStyle">smart</string>
+  <boolean id="editBackspaceDedents">1</boolean>
+  <boolean id="editElectricBrace">1</boolean>
+  <boolean id="indentStringsAfterParens">0</boolean>
+  <long id="indentWidth">4</long>
+  <boolean id="showIndentationGuides">1</boolean>
+  <long id="tabWidth">8</long>
+  <boolean id="useSmartTabs">1</boolean>
+  <boolean id="useTabs">0</boolean>
+</preference-set>
+</project>
