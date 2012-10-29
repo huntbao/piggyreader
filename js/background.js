@@ -15,6 +15,9 @@
                     case 'articlefrompage':
                         self.articlefrompageHandler(port);
                         break;
+                    case 'appendcontent':
+                        self.appendcontentHandler(port);
+                        break;
                     default: 
 			break;
                 }
@@ -24,6 +27,12 @@
             var self = this;
             port.onMessage.addListener(function(data){
                 chrome.tabs.sendRequest(port.sender.tab.id, {name: 'sendarticletoreader', data: data});
+            });
+        },
+        appendcontentHandler: function(port){
+            var self = this;
+            port.onMessage.addListener(function(data){
+                chrome.tabs.sendRequest(port.sender.tab.id, {name: 'superaddtoreader', data: data});
             });
         },
         browserAction: function(){
