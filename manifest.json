@@ -19,6 +19,10 @@
         {
             "js": [ "js/sites/douban.com.js" ],
             "matches": [ "http://movie.douban.com/review/*", "http://book.douban.com/review/*", "http://music.douban.com/review/*" ]
+        },
+        {
+            "js": [ "js/sites/tianya.cn.js" ],
+            "matches": [ "http://www.tianya.cn/*" ]
         }
     ],
     "default_locale": "zh_CN",

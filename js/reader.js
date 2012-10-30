@@ -38,6 +38,8 @@
             var self = this;
             if(data.content !== ''){
                 $('#article').html(data.content);
+            }
+            if(data.title !== ''){
                 $('#title').html(data.title);
             }
         },
