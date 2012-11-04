@@ -1,5 +1,4 @@
-﻿/*@huntbao
-All right reserved*/
+﻿/*@huntbao*/
 ::-webkit-scrollbar{
     width:8px;
     height:8px;
@@ -13,51 +12,62 @@ All right reserved*/
 ::-webkit-scrollbar-track-piece {
     background-color: #eee;
 }
-
+::selection {
+    background-color:#06c;
+    color:#fff !important;
+}
 body{
     padding: 0;
     margin: 0;
-    background: #fff;
     width: 100%;
     height: 100%;
-    position: absolute;
-    font: 16px/1.5 Georgia, Arial, "\5b8b\4f53", sans-serif;
+    font: 16px/1.5 Helvetica, Arial, "\5b8b\4f53", sans-serif;
     color: #333;
+    background: url(images/itembg.png);
+    margin-bottom: 20px;
 }
-.title{
+.prettyprint{
+    background-color: #efefef;
+    padding: 0 4px !important;
+}
+.jz-title{
     font-size: 24px;
     font-weight: bold;
     margin: 12px 0 20px 0;
     text-align: center;
 }
-.header{
+.jz-header{
     background: url(images/header.png) repeat-x;
     height: 38px;
 }
-.content-wrap{
-    width: 680px;
-    margin: 0 auto;
+.jz-contentwrap{
+    width: 700px;
+    margin: 12px auto 0;
+    box-shadow: 0px 0px 6px;
+    padding: 12px;
+    border-radius: 3px;
+    background-color: #fff;
 }
-.article{
-    padding-bottom: 100px;
+.jz-article{
+    padding-bottom: 30px;
     word-wrap: break-word;
-    word-break:break-all;
+    word-break: break-all;
 }
-.article img{
+.jz-article img{
     max-width: 100%;
 }
-.article a:visited, .article a:link{
+.jz-article a:visited, .jz-article a:link{
     color: #06c;
 }
-.article a:hover{
+.jz-article a:hover{
     color: #ff7300;
 }
-.superaddcontent{
+.jz-addcontent{
     margin-top: 20px;
     font-size: 14px;
 }
-.superaddcontent .stitle{
-    font-size: 11px;
+.jz-stitle{
+    font-size: 12px;
     font-family: tahoma;
     -webkit-text-size-adjust: none;
     padding: 2px 4px;
@@ -66,11 +76,22 @@ body{
     margin: 36px 0 12px;
     color: #999;
 }
-.superaddcontent .stitle a:link, .superaddcontent .stitle a:visited{
+.jz-stitle a:link, .jz-stitle a:visited{
     color: #999;
     text-decoration: none;
 }
-.superaddcontent .stitle a:hover{
+.jz-stitle a:hover{
     color: #ff7300;
     text-decoration: underline;
+}
+.jz-author .jz-stitle a:link, .jz-author .jz-stitle a:visited{
+    color: #f00;
+}
+.jz-author .jz-stitle a:after{
+    content: ' (\697C\4E3B)'
+}
+.jz-pagenum{
+    text-align: right;
+    border-top: 1px solid #666;
+    padding-top: 4px;
 }

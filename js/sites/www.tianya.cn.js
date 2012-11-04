@@ -43,18 +43,18 @@
                 //get firstAuthor
                 titltInfo = getTitleInfo(page.find('#firstAuthor'));
             }
-            htmlStr += '<div class="swrap';
+            htmlStr += '<div class="jz-swrap';
             if(titltInfo.isPostAuthor){
-                htmlStr += ' author">';
+                htmlStr += ' jz-author">';
             }else{
                 htmlStr += '">';
             }
-            htmlStr += '<p class="stitle">' + totalPosts + '#&nbsp;&nbsp;' + titltInfo.content + '</p>';
+            htmlStr += '<p class="jz-stitle">' + totalPosts + '#&nbsp;&nbsp;' + titltInfo.content + '</p>';
             //get content
             cloneEl = $(el).clone();
             cloneEl.find('a[href="http://m.tianya.cn/web/"]').remove();
             cloneEl.find('.post-jb, .fromwap').remove();
-            htmlStr += '<div class="scontent">' + cloneEl.html() + '</div></div>'
+            htmlStr += '<div class="jz-scontent">' + cloneEl.html() + '</div></div>'
         });
         var port = chrome.extension.connect({name : 'appendcontent'});
         port.postMessage({

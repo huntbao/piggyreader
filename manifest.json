@@ -8,8 +8,8 @@
     },
    "content_scripts": [
         {
-            "js": [ "js/lib/jquery-1.7.2.min.js", "js/lib/extract-content.js", "js/web.page.js" ],
-            "css": [ "css/web.page.css" ],
+            "js": [ "js/lib/jquery-1.7.2.min.js", "js/lib/extract-content.js", "js/all.pages.js" ],
+            "css": [ "css/all.pages.css" ],
             "matches": [ "http://*/*", "https://*/*" ]
         },
         {
@@ -21,8 +21,12 @@
             "matches": [ "http://movie.douban.com/review/*", "http://book.douban.com/review/*", "http://music.douban.com/review/*" ]
         },
         {
-            "js": [ "js/sites/tianya.cn.js" ],
-            "matches": [ "http://www.tianya.cn/*" ]
+            "js": [ "js/sites/www.tianya.cn.js" ],
+            "matches": [ "http://www.tianya.cn/publicforum/content/*" ]
+        },
+        {
+            "js": [ "js/sites/bbs.tianya.cn.js" ],
+            "matches": [ "http://bbs.tianya.cn/*" ]
         }
     ],
     "default_locale": "zh_CN",

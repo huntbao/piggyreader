@@ -10,5 +10,9 @@
     "BrowserActionTitle": {
         "description": "extension name",
         "message": "jizhureader"
+    },
+    "Pagination": {
+        "description": "pagination",
+        "message": "\u7B2C $1 \u9875"
     }
 }

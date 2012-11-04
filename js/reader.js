@@ -5,18 +5,21 @@
     window.jiZhuReader = {
         init: function(){
             var self = this;
+            self.currentPageNum = 1;
+            self.jzArticle = $('#jz-article');
+            self.jzTitle = $('#jz-title');
+            self.notifyParent();
+            self.getPageContent();
             self.initExtensionRequest();
-            self.notifyInitReader();
-            self.getContent();
         },
-        getContent: function(){
+        getPageContent: function(){
             var self = this;
             parent.postMessage({name: 'getpagecontent'}, '*');
-            $('#header').click(function(){
+            $('#jz-header').click(function(){
                 parent.postMessage({name: 'removeiframe'}, '*');
             });
         },
-        notifyInitReader: function(){
+        notifyParent: function(){
             parent.postMessage({name: 'afterinitreader'}, '*');
         },
         initExtensionRequest: function(){
@@ -37,17 +40,24 @@
         sendarticletoreaderHandler: function(data){
             var self = this;
             if(data.content !== ''){
-                $('#article').html(data.content);
+                var section = $('<section>', {class: 'jz-addcontent', html: data.content});
+                self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
+                prettyPrint();
             }
             if(data.title !== ''){
-                $('#title').html(data.title);
+                self.jzTitle.html(data.title);
             }
         },
         superaddtoreaderHandler: function(data){
             var self = this;
             if(data.content !== ''){
-                var section = $('<section>', {class: 'superaddcontent', html: data.content});
-                $('#article').append(section);
+                self.currentPageNum++;
+                var section = $('<section>', {class: 'jz-addcontent'}),
+                pageContent = $('<div>', {class: 'jz-pagecontent', html: data.content}),
+                pageNum = $('<h6>', {text: chrome.i18n.getMessage('Pagination', [self.currentPageNum]), class: 'jz-pagenum'});
+                section.append(pageNum).append(pageContent);
+                self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
+                prettyPrint(section[0]);
             }
         }
     }

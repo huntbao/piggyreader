@@ -48,7 +48,7 @@
             item.find('.content').remove();
             item.find('.align-right').remove();
             content = item.html();
-            htmlStr += '<p class="stitle">' + (startNum + idx + 1) + '#&nbsp;&nbsp;' + title + '</p>' + '<div class="scontent">' + content + '</div>';
+            htmlStr += '<p class="jz-stitle">' + (startNum + idx + 1) + '#&nbsp;&nbsp;' + title + '</p>' + '<div class="jz-scontent">' + content + '</div>';
         });
         var port = chrome.extension.connect({name : 'appendcontent'});
         port.postMessage({
