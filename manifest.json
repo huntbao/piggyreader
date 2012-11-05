@@ -22,7 +22,7 @@
         },
         {
             "js": [ "js/sites/www.tianya.cn.js" ],
-            "matches": [ "http://www.tianya.cn/publicforum/content/*" ]
+            "matches": [ "http://www.tianya.cn/publicforum/*" ]
         },
         {
             "js": [ "js/sites/bbs.tianya.cn.js" ],
