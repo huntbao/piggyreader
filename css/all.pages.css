@@ -1,5 +1,5 @@
-﻿/*@huntbao
-All right reserved*/
+﻿/*Piggy Reader
+author @huntbao*/
 #jizhureader-iframe{
     margin: 0;
     padding: 0;
@@ -7,6 +7,7 @@ All right reserved*/
     width: 100%;
     height: 100%;
     top: 0;
+    bottom: 0;
     left: -100%;
     z-index: 2147483647 !important;
 }
@@ -37,4 +38,4 @@ body.jizhureader-beforereader #jizhureader-iframe,
     display: block !important;
     overflow: auto !important;
     visibility: visible !important;
-} 
+}

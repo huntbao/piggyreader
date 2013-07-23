@@ -1,20 +1,21 @@
-﻿//@huntbao 
-//All right reserved
+﻿//Piggy Reader
+//author @huntbao
 (function($){
     'use strict';
-    jiZhuReader.__getPageContent = jiZhuReader.getPageContent;
     jiZhuReader.getPageContent = function(){
         //override
-        jiZhuReader.__getPageContent();
-        /*jiZhuReader.__removeIframe = jiZhuReader.removeIframe;
-        jiZhuReader.removeIframe = function(){
-            //override
-            jiZhuReader.__removeIframe();
-            clearTimeout(jiZhuReader.getSuperAddTimer);
-        }*/
+        var title = document.querySelector('*[property="v:summary"]'),
+        content = document.querySelector('*[property="v:description"]'),
+        viewer = document.querySelector('*[property="v:reviewer"]'),
+        port = chrome.extension.connect({name:'articlefrompage'});
+        port.postMessage({
+            content: content && content.innerHTML,
+            title: title && title.innerHTML || document.title,
+            subtitle: getSubtitle(viewer)
+        });
         var pageNav = $('#comments .paginator');
         if(pageNav.length === 0){
-            getCommentsByContainer($('#comments'), 0);
+            getCommentsByContainer(document.body, 0);
         }else{
             getComments(0);
         }
@@ -26,33 +27,35 @@
             var commentDiv = div.find('#comments');
             if(commentDiv.length === 1){
                 getCommentsByContainer(commentDiv, startNum);
-                console.log('get comments from ' + startNum);
                 var nextA = commentDiv.find('.paginator .next').find('a');
                 if(nextA.length === 1){
+                    var currentPage = parseInt(commentDiv.find('.paginator .on').text());
                     jiZhuReader.getSuperAddTimer = setTimeout(function(){
-                        getComments(parseInt(commentDiv.find('.paginator .thispage').text())* 100);
-                    }, 2000);
+                        getComments(currentPage* 100);
+                    }, currentPage * 2000);
                 }
             }
         });
     }
     function getCommentsByContainer(container, startNum){
         var commentItems = $('.comment-item', container),
-        item,
         title,
         content,
         htmlStr = '';
         commentItems.each(function(idx, el){
-            item = $(el).clone();
-            title = item.find('.pl').html();
-            item.find('.content').remove();
-            item.find('.align-right').remove();
-            content = item.html();
+            title = $(el).find('.author, .hd').html();
+            content = $(el).find('p').html();
             htmlStr += '<p class="jz-stitle">' + (startNum + idx + 1) + '#&nbsp;&nbsp;' + title + '</p>' + '<div class="jz-scontent">' + content + '</div>';
         });
         var port = chrome.extension.connect({name : 'appendcontent'});
         port.postMessage({
             content: htmlStr
         });
+    }
+    function getSubtitle(viewer){
+        viewer = $(viewer);
+        viewer.parent().addClass('author').removeAttr('onclick');
+        var viewDate = document.querySelector('span[property="v:dtreviewed"]');
+        return viewDate.outerHTML + viewer.parent()[0].outerHTML;
     }
 })(jQuery);

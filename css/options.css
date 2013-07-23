@@ -1,0 +1,88 @@
+﻿/*Piggy Reader
+author @huntbao*/
+*{
+    padding:0;
+    margin:0;
+}
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ccc;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #eee;
+}
+::selection {
+    background-color: #06c;
+    color: #fff !important;
+}
+body{
+    background-color: #fff;
+    color: #666;
+    font-size: 12px;
+    font-family: "\5FAE\8F6F\96C5\9ED1"/*yahei*/,sans-serif/*for mac*/;
+    overflow: hidden;
+}
+.not-selectable{
+    -webkit-user-select: none;
+    user-select: none;
+}
+.wrapper{
+    width: 672px;
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+.settings{
+    width: 652px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 28px auto;
+    padding: 10px;
+}
+.settings h2{
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+.content{
+    margin: 0 8px;
+}
+.content li{
+    overflow: hidden;
+    list-style: none;
+    margin: 8px 0 16px;
+}
+.content .tiptext{
+    margin-bottom: 8px;
+}
+.content .tiptext2{
+    margin-bottom: 8px;
+    color: #888;
+}
+.content label input{
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.content label span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.content .optionname{
+    float: left;
+    width: 160px;
+    margin-top: 2px;
+}
+.content .optionset{
+    float: left;
+    width: 470px;
+}
+.copyright{
+    text-align: center;
+}
+

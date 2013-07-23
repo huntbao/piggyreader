@@ -1,18 +1,58 @@
 {
     "ExtensionDescription": {
         "description": "extension description",
-        "message": "http://www.gzool.com"
+        "message": "饥猪阅读(Piggy Reader)，改进阅读体验！"
     },
     "ExtensionName": {
         "description": "extension name",
-        "message": "jizhureader"
+        "message": "饥猪阅读"
     },
     "BrowserActionTitle": {
         "description": "extension name",
-        "message": "jizhureader"
+        "message": "饥猪阅读"
     },
     "Pagination": {
         "description": "pagination",
-        "message": "\u7B2C $1 \u9875"
+        "message": "第 $1 页"
+    },
+    "JiZhuReaderOption": {
+        "description": "title",
+        "message": "饥猪阅读选项"
+    },
+    "Option": {
+        "description": "option",
+        "message": "选项"
+    },
+    "ReaderFontSize": {
+        "description": "reader fontsize",
+        "message": "阅读字体大小"
+    },
+    "Copyright": {
+        "description": "piggy reader",
+        "message": "©2013 - 饥猪阅读"
+    },
+    "Goback": {
+        "message": "返回(Esc)"
+    },
+    "Edit": {
+        "message": "编辑"
+    },
+    "Save": {
+        "message": "保存"
+    },
+    "Print": {
+        "message": "打印"
+    },
+    "Help": {
+        "message": "帮助"
+    },
+    "HelpModalTitle": {
+        "message": "饥猪阅读"
+    },
+    "HelpModalTip": {
+        "message": "欢迎使用饥猪阅读（Piggy Reader）！<br />在使用过程中遇到任何问题，请<a href=\"mailto:gzooler@gmail.com\" target=\"_blank\" class=\"jz-mailto-link\">联系我</a>，谢谢。"
+    },
+    "ClipFailedTip": {
+        "message": "<div class=\"jz-clipfailed-tip\">抱歉，没有找到有效的网页正文~~</div>"
     }
 }

@@ -1,0 +1,58 @@
+{
+    "ExtensionDescription": {
+        "description": "extension description",
+        "message": "Piggy Reader! Improve reading experience!"
+    },
+    "ExtensionName": {
+        "description": "extension name",
+        "message": "Piggy Reader"
+    },
+    "BrowserActionTitle": {
+        "description": "extension name",
+        "message": "Piggy Reader"
+    },
+    "Pagination": {
+        "description": "pagination",
+        "message": "Page $1"
+    },
+    "JiZhuReaderOption": {
+        "description": "title",
+        "message": "Piggy Reader Options"
+    },
+    "Option": {
+        "description": "option",
+        "message": "Options"
+    },
+    "ReaderFontSize": {
+        "description": "reader fontsize",
+        "message": "Font Size"
+    },
+    "Copyright": {
+        "description": "piggy reader",
+        "message": "©2013 - Piggy Reader"
+    },
+    "Goback": {
+        "message": "Back(Esc)"
+    },
+    "Edit": {
+        "message": "Edit"
+    },
+    "Save": {
+        "message": "Save"
+    },
+    "Print": {
+        "message": "Print"
+    },
+    "Help": {
+        "message": "Help"
+    },
+    "HelpModalTitle": {
+        "message": "Piggy Reader"
+    },
+    "HelpModalTip": {
+        "message": "Welcome to use Piggy Reader！<br />If you've encountered any problem, please <a href=\"mailto:gzooler@gmail.com\" target=\"_blank\" class=\"jz-mailto-link\">contact me</a>, thank you."
+    },
+    "ClipFailedTip": {
+        "message": "<div class=\"jz-clipfailed-tip\">Sorry, no content has been found~~</div>"
+    }
+}

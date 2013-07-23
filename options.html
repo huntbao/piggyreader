@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>{{JiZhuReaderOption}}</title>
+        <link rel="stylesheet" href="css/options.css" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="settings">
+                <h2 class="title" id="option">{{Option}}</h2>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <div class="optionname" id="readerfontsize">{{ReaderFontSize}}</div>
+                            <div class="optionset">
+                                <p class="tiptext"><label><input id="fontsize" type="range" name="fontsize" min="12" max="20" step="2" value="16" /><span></span></label></p>
+                                <div class="demonstrate" id="demonstratefontsize">{{DemonstrateFontSize}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright" id="copyright">{{Copyright}}</div>
+        </div>
+        <script src="js/lib/jquery-1.10.1.min.js"></script>
+        <script src="js/settings.js"></script>
+        <script src="js/options.js"></script>
+    </body>
+</html>

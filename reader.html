@@ -1,18 +1,25 @@
 ﻿<!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8"/>
-	<title>Ji Zhu Reader</title>
+        <title>JiZhu Reader</title>
         <link rel="stylesheet" href="css/prettify.css" />
         <link rel="stylesheet" href="css/reader.css" />
         <base target="_blank" />
     </head>
     <body>
-        <header class="jz-header" id="jz-header"></header>
-        <section class="jz-contentwrap">
+	<section class="jz-sider">
+	    <div class="jz-actionbtn jz-closebtn" id="jz-closebtn"></div>
+	    <div class="jz-actionbtn jz-editbtn" id="jz-editbtn"></div>
+	    <div class="jz-actionbtn jz-printbtn" id="jz-printbtn"></div>
+	    <div class="jz-actionbtn jz-helpbtn" id="jz-helpbtn"></div>
+	</section>
+        <section class="jz-contentwrap" id="jz-contentwrap">
             <div class="jz-title" id="jz-title"></div>
+            <div class="jz-subtitle" id="jz-subtitle"></div>
             <article class="jz-article" id="jz-article"></article>
         </section>
-	<script src="js/lib/jquery-1.7.2.min.js"></script>
+        <script src="js/lib/jquery-1.10.1.min.js"></script>
         <script src="js/lib/prettify.js"></script>
         <script src="js/reader.js"></script>
     </body>

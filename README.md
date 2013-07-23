@@ -1,4 +1,0 @@
-jizhureader
-===========
-
-Ji Zhu Reader

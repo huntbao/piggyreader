@@ -1,92 +1,57 @@
-﻿//@huntbao 
-//All right reserved
+﻿//Piggy Reader
+//author @huntbao
 (function($){
     'use strict';
-    var totalPosts = 0,
-    postAuthorName;
-    jiZhuReader.getPageContent = function(){
-        var port = chrome.extension.connect({name:'articlefrompage'});
-        port.postMessage({
-            content: '',
-            title: $('#hTitle').text().trim()
-        });
-        var pageDivTop = $('#pageDivTop');
-        if(pageDivTop.length  === 1){
-            var currentPageNum = pageDivTop.find('.current');
-            if(currentPageNum.text() === '1'){
-                postAuthorName = $('#firstAuthor').find('.lnkChanged').text().trim();
-                getPostsByPage($(document));
-            }else{
-                var firstPageUrl = pageDivTop.find('a').eq(0).attr('href');
-                getPageByUrl(firstPageUrl, function(page){
-                    postAuthorName = page.find('#firstAuthor').find('.lnkChanged').text().trim();
-                    getPostsByPage(page);
-                });
-            }
-        }else{
-            postAuthorName = $('#firstAuthor').find('.lnkChanged').text().trim();
-            getPostsByPage($(document));
-        }
-    }
-    function getPostsByPage(page){
-        var posts = page.find('.post'),
-        cloneEl,
-        titltInfo,
-        htmlStr = '';
-        posts.each(function(idx, el){
-            el = $(el);
-            //get title
-            totalPosts++;
-            if(el.prev().is('table')){
-                titltInfo = getTitleInfo(el.prev());
-            }else{
-                //get firstAuthor
-                titltInfo = getTitleInfo(page.find('#firstAuthor'));
-            }
-            htmlStr += '<div class="swrap';
-            if(titltInfo.isPostAuthor){
-                htmlStr += ' author">';
-            }else{
-                htmlStr += '">';
-            }
-            htmlStr += '<p class="jz-stitle">' + totalPosts + '#&nbsp;&nbsp;' + titltInfo.content + '</p>';
-            //get content
-            cloneEl = $(el).clone();
-            cloneEl.find('a[href="http://m.tianya.cn/web/"]').remove();
-            cloneEl.find('.post-jb, .fromwap').remove();
-            htmlStr += '<div class="jz-scontent">' + cloneEl.html() + '</div></div>'
-        });
-        var port = chrome.extension.connect({name : 'appendcontent'});
-        port.postMessage({
-            content: htmlStr
-        });
-    }
-    function getTitleInfo(table){
-        var author = table.find('a').eq(0),
-        isPostAuthor = false;
-        if(author.text().trim() === postAuthorName){
-            //is post author
-            isPostAuthor = true;
-        }
-        var cloneAuthor = author.parent().clone();
-        cloneAuthor.find('span').remove();
-        return{
-            isPostAuthor: isPostAuthor,
-            content: cloneAuthor.html()
-        }
-    }
-    function getPageByUrl(url, callback){
-        $.get(url, function(pageHtml){
-            var div = $('<div>');
-            div[0].innerHTML = pageHtml;
-            callback(div);
-        });
-    }
-    function getNextPageUrl(pageNav){
-        var nextA = pageNav.find('.current').next();
+    var itemNum = 1;
+    jiZhuReaderGetPageContent.findNextLink = function(doc){
+        var nextA = $('#post_head .atl-pages strong', doc).next('a').clone();
         if(nextA.length === 1){
-            return nextA.attr('href');
+            console.log('found Link: ' + nextA[0].href);
+            return nextA[0].href;
         }
         return false;
+    }
+    jiZhuReader.getPageContent = function(doc, url){
+        //override
+        doc = doc || document;
+        url = url || window.location.href;
+        var title = $('#post_head .s_title', doc).text();
+        var port = chrome.extension.connect({name: 'articlefrompage'});
+        port.postMessage({
+            content: getContent(doc),
+            title: title,
+            url: url
+        });
+        jiZhuReaderGetPageContent.getContentTimer = setTimeout(function(){
+            findNextPageContent(doc);
+        } , 5000);
+    }
+    function getContent(doc){
+        var commentItems = $('.atl-item', doc);
+        var title;
+        var content;
+        var htmlStr = '';
+        commentItems.each(function(idx, el){
+            if(itemNum === 1){
+                title = $('#post_head', doc).find('.atl-info').html();
+            }else{
+                title = $(el).find('.atl-info').html();
+            }
+            var richText = $(el).find('.bbs-content');
+            richText.find('img').attr('src', function(){
+                return this.getAttribute('original');
+            });
+            content = richText.html();
+            htmlStr += '<p class="jz-stitle">' + (itemNum++) + '#&nbsp;&nbsp;' + title + '</p>' + '<div class="jz-scontent">' + content + '</div>';
+        });
+        return htmlStr;
+    }
+    function findNextPageContent(doc){
+        var nextLinkHref = jiZhuReaderGetPageContent.findNextLink(doc);
+        if(nextLinkHref){
+            jiZhuReaderGetPageContent.getDocByUrl(nextLinkHref, function(doc){
+                jiZhuReader.getPageContent(doc, nextLinkHref);
+            });
+        }
     }
 })(jQuery);
