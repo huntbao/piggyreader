@@ -29,10 +29,10 @@
 饥猪阅读（Piggy Reader）只做一件事情：提升浏览器上阅读网页时的体验！欢迎大家使用！
 
 # How to use #
-After install the plugin, you can:
+After installing this plugin, you can:
 
 1. Click the plugin's icon in the top right corner of the browser.
-2. Right click on the page, select "Piggy Reader" item of the context menu.
+2. Right click on the page, selecting "Piggy Reader" item of the context menu.
 
 **Tips: If the page is opened before installing the plugin, then your should refresh the page to use this plugin, otherwise nothing happens.**
 
