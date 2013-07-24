@@ -30,6 +30,7 @@
 
 # How to use #
 After install the plugin, you can:
+
 1. Click the plugin's icon in the top right corner of the browser.
 2. Right click on the page, select "Piggy Reader" item of the context menu.
 
