@@ -26,7 +26,7 @@
         },
         {
             "js": [ "js/sites/wenku.baidu.com.js" ],
-            "matches": [ "http://wenku.baidu.com/view/*" ]
+            "matches": [ "http://wenku.baidu.com/view/*", "http://wapwenku.baidu.com/view/*" ]
         }
     ],
     "default_locale": "zh_CN",

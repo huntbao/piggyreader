@@ -54,5 +54,8 @@
     },
     "ClipFailedTip": {
         "message": "<div class=\"jz-clipfailed-tip\">Sorry, no content has been found~~</div>"
+    },
+    "LoadingTip": {
+        "message": "<div class=\"jz-loading-tip\">Loading content...</div>"
     }
 }

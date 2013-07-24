@@ -41,6 +41,7 @@
             var self = this;
             if(data.content !== ''){
                 var section = $('<section>', {'class': 'jz-addcontent', html: data.content});
+                self.jzArticle.find('.jz-loading-tip').remove();
                 self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
                 prettyPrint();
             }

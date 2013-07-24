@@ -54,5 +54,8 @@
     },
     "ClipFailedTip": {
         "message": "<div class=\"jz-clipfailed-tip\">抱歉，没有找到有效的网页正文~~</div>"
+    },
+    "LoadingTip": {
+        "message": "<div class=\"jz-loading-tip\">正在请求内容，请稍候...</div>"
     }
 }

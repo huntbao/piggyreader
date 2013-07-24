@@ -125,6 +125,11 @@ a:hover{
     word-wrap: break-word;
     overflow: hidden;
 }
+.jz-loading-tip{
+    background:url(images/loading.gif) no-repeat;
+    padding-left: 40px;
+    line-height: 33px;
+}
 .jz-article img{
     max-width: 100%;
     display: block;
