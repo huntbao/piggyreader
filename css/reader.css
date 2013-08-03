@@ -31,9 +31,6 @@ body{
     background: url(images/itembg.png);
     overflow-x: hidden;
 }
-font{
-    font: 16px/1.7 Georgia, Arial, "\5b8b\4f53", sans-serif;
-}
 a:visited, a:link{
     color: #06c;
     text-decoration: none;
@@ -49,9 +46,9 @@ a:hover{
     bottom: 0;
     width: 150px;
 }
-.jz-sider:hover .jz-editbtn,
-.jz-sider:hover .jz-printbtn,
-.jz-sider:hover .jz-helpbtn{
+.jz-sider.hover .jz-editbtn,
+.jz-sider.hover .jz-printbtn,
+.jz-sider.hover .jz-helpbtn{
     opacity: 1;
 }
 .jz-actionbtn{
@@ -140,7 +137,6 @@ a:hover{
 .jz-stitle{
     font-size: 12px;
     font-family: tahoma;
-    -webkit-text-size-adjust: none;
     padding: 2px 4px;
     background-color: #f7f7f7;
     margin: 36px 0 12px;
@@ -222,8 +218,8 @@ a:hover{
     padding: 15px;
     overflow-y: auto;
 }
-.jz-mailto-link:link,
-.jz-mailto-link:visited{
+.jz-highlight-link:link,
+.jz-highlight-link:visited{
     color: #c00;
     text-decoration: underline;
     font-style: italic;

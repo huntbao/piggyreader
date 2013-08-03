@@ -68,6 +68,16 @@
                 }
             });
         },
+        saveContent: function(noteContent){
+            var self = this;
+            var port = chrome.extension.connect({name: 'savecontent'});
+            if(!noteContent) return;
+            port.postMessage({
+                noteContent: noteContent,
+                noteTitle: document.title,
+                noteUrl: window.location.href
+            });
+        },
         addWindowEventListener: function(){
             var self = this;
             if(self.eventInited) return;
@@ -81,6 +91,9 @@
                         break;
                     case 'removeiframe':
                         self.removeIframe();
+                        break;
+                    case 'savecontent':
+                        self.saveContent(e.data.noteContent);
                         break;
                     default:
                         break;

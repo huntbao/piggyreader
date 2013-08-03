@@ -21,6 +21,14 @@ author @huntbao*/
     background-color: #06c;
     color: #fff !important;
 }
+a:visited, a:link{
+    color: #06c;
+    text-decoration: none;
+}
+a:hover{
+    color: #c00;
+    text-decoration: underline;
+}
 body{
     background-color: #fff;
     color: #666;
@@ -56,7 +64,7 @@ body{
 .content li{
     overflow: hidden;
     list-style: none;
-    margin: 8px 0 16px;
+    margin: 8px 0 30px;
 }
 .content .tiptext{
     margin-bottom: 8px;
@@ -65,12 +73,12 @@ body{
     margin-bottom: 8px;
     color: #888;
 }
-.content label input{
-    margin-right: 8px;
-    vertical-align: middle;
+.content label{
+    display: block;
+    margin-bottom: 8px;
 }
-.content label span{
-    display: inline-block;
+.content label input{
+    margin-right: 4px;
     vertical-align: middle;
 }
 .content .optionname{
@@ -80,7 +88,23 @@ body{
 }
 .content .optionset{
     float: left;
-    width: 470px;
+    margin-right: 40px;
+}
+.note-logo{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.evernote-logo,
+.yinxiang-logo{
+    background-image: url(images/evernote.png);
+}
+.saveto-tip{
+    margin-left: 160px;
+    clear: both;
 }
 .copyright{
     text-align: center;

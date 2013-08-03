@@ -20,7 +20,7 @@
                         self.appendContentHandler(port);
                         break;
                     default: 
-			break;
+                        break;
                 }
             });
         },

@@ -4,9 +4,18 @@
     'use strict';
     window.JiZhuReaderSettings = {
         init: function(){
-            var self = this,
-            jiZhuReaderOptions = window.jiZhuReaderOptions;
+            var self = this;
             self.i18nPage();
+            self.initFontSize();
+        },
+        i18nPage: function(){
+            document.title = chrome.i18n.getMessage('JiZhuReaderOption');
+            $('.i18n').each(function(idx, el){
+               $(this).text(chrome.i18n.getMessage($(this).data('i18n')));
+            });
+        },
+        initFontSize: function(){
+            var jiZhuReaderOptions = window.jiZhuReaderOptions;
             var demonstrateFontSize = $('#demonstratefontsize'),
             changeFunc = function(fs){
                 demonstrateFontSize.css('font-size', fs + 'px');
@@ -17,14 +26,6 @@
                 changeFunc(fontSize);
                 jiZhuReaderOptions.fontSize = fontSize;
             }).val(jiZhuReaderOptions.fontSize).trigger('change');
-        },
-        i18nPage: function(){
-            var self = this;
-            document.title = chrome.i18n.getMessage('JiZhuReaderOption');
-            $('#option').text(chrome.i18n.getMessage('Option'));
-            $('#readerfontsize').text(chrome.i18n.getMessage('ReaderFontSize'));
-            $('#copyright').text(chrome.i18n.getMessage('Copyright'));
-            $('#demonstratefontsize').text(chrome.i18n.getMessage('ExtensionName'));
         }
     }
     $(function(){

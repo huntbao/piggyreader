@@ -32,6 +32,7 @@
                         break;
                     case 'superaddtoreader':
                         self.superaddtoreaderHandler(request.data);
+                        break;
                     default:
                         break;
                 }
@@ -75,12 +76,18 @@
                 self.editContent();
             }).attr('title', chrome.i18n.getMessage("Edit"));
             $('#jz-printbtn').click(function(){
+                $('#jz-sider').removeClass('hover');
                 window.print();
             }).attr('title', chrome.i18n.getMessage("Print"));
             $('#jz-helpbtn').click(function(){
                 self.showHelpTip();
                 return false;
             }).attr('title', chrome.i18n.getMessage("Help"));
+            $('#jz-sider').mouseenter(function(){
+                $(this).addClass('hover');
+            }).mouseleave(function(){
+                $(this).removeClass('hover');
+            })
             $(document).keydown(function(e){
                 if(e.which === 27){
                     parent.postMessage({name: 'removeiframe'}, '*');
@@ -99,6 +106,10 @@
         },
         showHelpTip: function(){
             var self = this;
+            self.showModal(chrome.i18n.getMessage('HelpModalTip'));
+        },
+        showModal: function(content, title){
+            var self = this;
             var modalBackdrop = $('<div>', {
                 class: 'jz-modal-backdrop'
             }).appendTo(document.body);
@@ -111,14 +122,15 @@
                 '   <div class="jz-modal-bd"></div>' +
                 '</div>';
             var modal = $(modalTpl);
-            modal.find('h3').text(chrome.i18n.getMessage('HelpModalTitle'));
-            modal.find('.jz-modal-bd').html(chrome.i18n.getMessage('HelpModalTip'));
+            modal.find('h3').append(title || chrome.i18n.getMessage('ExtensionName'));
+            modal.find('.jz-modal-bd').append(content);
             modal.appendTo(document.body);
             var closeModal = function(){
                 $(document.body).off('click.closemodal');
                 modal.fadeOut(function(){
                     modal.remove();
                     modalBackdrop.remove();
+                    self.modal = null;
                 });
             }
             $(document.body).on('click.closemodal', function(e){
@@ -132,6 +144,7 @@
                 closeModal();
                 return false;
             });
+            self.modal = modal;
         }
     }
     $(function(){

@@ -28,6 +28,14 @@
             set: function(value){
                 setOption('fontSize', value);
             }
+        },
+        saveTo: {
+            get: function(){
+                return getOption('saveTo', '');
+            },
+            set: function(value){
+                setOption('saveTo', value);
+            }
         }
     });
     window.jiZhuReaderOptions = jiZhuReaderOptions;

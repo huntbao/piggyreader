@@ -37,6 +37,15 @@
     "Edit": {
         "message": "编辑"
     },
+    "SaveNote": {
+        "message": "保存为笔记"
+    },
+    "CannotSaveBlankNote": {
+        "message": "不能保存空笔记"
+    },
+    "IsSavingNote": {
+        "message": "正在保存空笔记..."
+    },
     "Save": {
         "message": "保存"
     },
@@ -46,11 +55,8 @@
     "Help": {
         "message": "帮助"
     },
-    "HelpModalTitle": {
-        "message": "饥猪阅读"
-    },
     "HelpModalTip": {
-        "message": "欢迎使用饥猪阅读（Piggy Reader）！<br />在使用过程中遇到任何问题，请<a href=\"mailto:gzooler@gmail.com\" target=\"_blank\" class=\"jz-mailto-link\">联系我</a>，谢谢。"
+        "message": "欢迎使用饥猪阅读（Piggy Reader）！<br />在使用过程中遇到任何问题，请<a href=\"mailto:gzooler@gmail.com\" target=\"_blank\" class=\"jz-highlight-link\">联系我</a>，谢谢。"
     },
     "ClipFailedTip": {
         "message": "<div class=\"jz-clipfailed-tip\">抱歉，没有找到有效的网页正文~~</div>"
