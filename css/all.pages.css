@@ -1,6 +1,6 @@
 ﻿/*Piggy Reader
 author @huntbao*/
-#jizhureader-iframe{
+#jizhureader-iframe {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -11,6 +11,7 @@ author @huntbao*/
     left: -100%;
     z-index: 2147483647 !important;
 }
+
 html.jizhureader-beforereader,
 html > body.jizhureader-beforereader,
 body.jizhureader-beforereader {
@@ -19,6 +20,7 @@ body.jizhureader-beforereader {
     padding: 0 !important;
     border: 0 !important;
 }
+
 html.jizhureader-reader,
 html > body.jizhureader-reader,
 body.jizhureader-reader {
@@ -26,11 +28,13 @@ body.jizhureader-reader {
     overflow-x: hidden !important;
     overflow-y: hidden !important;
 }
+
 body.jizhureader-beforereader object,
 body.jizhureader-beforereader embed,
 body.jizhureader-beforereader iframe {
     visibility: hidden !important;
 }
+
 html.jizhureader-beforereader #jizhureader-iframe,
 html > body.jizhureader-beforereader #jizhureader-iframe,
 body.jizhureader-beforereader #jizhureader-iframe,
