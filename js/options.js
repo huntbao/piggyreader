@@ -1,26 +1,26 @@
 ﻿//Piggy Reader
 //author @huntbao
-(function($){
+(function ($) {
     'use strict';
     window.JiZhuReaderSettings = {
-        init: function(){
+        init: function () {
             var self = this;
             self.i18nPage();
             self.initFontSize();
         },
-        i18nPage: function(){
+        i18nPage: function () {
             document.title = chrome.i18n.getMessage('JiZhuReaderOption');
-            $('.i18n').each(function(idx, el){
-               $(this).text(chrome.i18n.getMessage($(this).data('i18n')));
+            $('.i18n').each(function (idx, el) {
+                $(this).text(chrome.i18n.getMessage($(this).data('i18n')));
             });
         },
-        initFontSize: function(){
+        initFontSize: function () {
             var jiZhuReaderOptions = window.jiZhuReaderOptions;
             var demonstrateFontSize = $('#demonstratefontsize'),
-            changeFunc = function(fs){
-                demonstrateFontSize.css('font-size', fs + 'px');
-            }
-            $('#fontsize').change(function(){
+                changeFunc = function (fs) {
+                    demonstrateFontSize.css('font-size', fs + 'px');
+                }
+            $('#fontsize').change(function () {
                 var fontSize = $(this).val();
                 $(this).next().text(fontSize);
                 changeFunc(fontSize);
@@ -28,7 +28,7 @@
             }).val(jiZhuReaderOptions.fontSize).trigger('change');
         }
     }
-    $(function(){
+    $(function () {
         JiZhuReaderSettings.init();
     });
 })(jQuery);

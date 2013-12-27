@@ -1,8 +1,8 @@
 ﻿//Piggy Reader
 //author @huntbao
-(function($){
+(function ($) {
     'use strict';
-    jiZhuReader.getPageContent = function(){
+    jiZhuReader.getPageContent = function () {
         //override
         var titleCon = $('#zh-question-title').clone();
         var questionDetail = $('#zh-question-detail').clone();
@@ -16,17 +16,17 @@
             url: window.location.href
         });
     }
-    function getContent(){
+    function getContent() {
         var commentItems = $('.zm-item-answer'),
-        title,
-        content,
-        htmlStr = '';
-        commentItems.each(function(idx, el){
-            title = $(el).find('.zm-item-answer-author-wrap').text() 
-                + '&nbsp;'+ $(el).find('.zm-item-vote-info').data('votecount') + '&nbsp;票' 
+            title,
+            content,
+            htmlStr = '';
+        commentItems.each(function (idx, el) {
+            title = $(el).find('.zm-item-answer-author-wrap').text()
+                + '&nbsp;' + $(el).find('.zm-item-vote-info').data('votecount') + '&nbsp;票'
                 + '&nbsp;' + $(el).find('.toggle-comment').text();
             var richText = $(el).find('.zm-item-rich-text');
-            richText.find('img').attr('src', function(){
+            richText.find('img').attr('src', function () {
                 return $(this).data('actualsrc');
             });
             content = richText.html();

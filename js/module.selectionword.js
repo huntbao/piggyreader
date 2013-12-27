@@ -2,6 +2,7 @@
 //author @huntbao
 (function ($) {
     'use strict';
+
     var selectionWord = {
 
         init: function () {
@@ -23,7 +24,7 @@
             }
         }
 
-    }
+    };
 
     App.selectionWord = selectionWord;
 

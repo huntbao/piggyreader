@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/reader.js" afterPath="$PROJECT_DIR$/js/module.reader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/all.pages.css" afterPath="$PROJECT_DIR$/css/all.pages.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/options.css" afterPath="$PROJECT_DIR$/css/options.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/reader.css" afterPath="$PROJECT_DIR$/css/reader.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reader.html" afterPath="$PROJECT_DIR$/reader.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/all.pages.js" afterPath="$PROJECT_DIR$/js/all.pages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/background.js" afterPath="$PROJECT_DIR$/js/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sites/bbs.tianya.cn.js" afterPath="$PROJECT_DIR$/js/sites/bbs.tianya.cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sites/douban.com.js" afterPath="$PROJECT_DIR$/js/sites/douban.com.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/getpagecontent.js" afterPath="$PROJECT_DIR$/js/getpagecontent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.reader.shell.js" afterPath="$PROJECT_DIR$/js/module.reader.shell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.selectionword.js" afterPath="$PROJECT_DIR$/js/module.selectionword.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/options.js" afterPath="$PROJECT_DIR$/js/options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/settings.js" afterPath="$PROJECT_DIR$/js/settings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sites/wenku.baidu.com.js" afterPath="$PROJECT_DIR$/js/sites/wenku.baidu.com.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sites/zhihu.com.js" afterPath="$PROJECT_DIR$/js/sites/zhihu.com.js" />
     </list>
     <ignored path="piggyreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,19 +35,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reader.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/reader.css">
+      <file leaf-file-name="module.selectionword.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.selectionword.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6302">
+            <state line="22" column="17" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="805">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.reader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.reader.js">
+      <file leaf-file-name="module.reader.shell.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="34" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3841">
+            <state line="13" column="62" selection-start="356" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -51,20 +55,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.selectionword.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.selectionword.js">
+      <file leaf-file-name="background.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/background.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+            <state line="57" column="18" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.36568847" vertical-offset="964" max-vertical-offset="2300">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.reader.shell.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
+      <file leaf-file-name="getpagecontent.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/getpagecontent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.1535039" vertical-offset="0" max-vertical-offset="899">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3657">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,19 +93,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/css/all.pages.css" />
-        <option value="$PROJECT_DIR$/css/options.css" />
-        <option value="$PROJECT_DIR$/js/reader.js" />
-        <option value="$PROJECT_DIR$/js/selection.js" />
-        <option value="$PROJECT_DIR$/js/selectionword.js" />
-        <option value="$PROJECT_DIR$/css/reader.css" />
         <option value="$PROJECT_DIR$/js/module.main.js" />
         <option value="$PROJECT_DIR$/js/module.reader.main.js" />
         <option value="$PROJECT_DIR$/reader.html" />
         <option value="$PROJECT_DIR$/js/module.reader.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/js/all.pages.js" />
+        <option value="$PROJECT_DIR$/js/getpagecontent.js" />
+        <option value="$PROJECT_DIR$/js/options.js" />
+        <option value="$PROJECT_DIR$/js/settings.js" />
+        <option value="$PROJECT_DIR$/js/sites/zhihu.com.js" />
+        <option value="$PROJECT_DIR$/js/sites/wenku.baidu.com.js" />
+        <option value="$PROJECT_DIR$/js/sites/douban.com.js" />
+        <option value="$PROJECT_DIR$/js/sites/bbs.tianya.cn.js" />
         <option value="$PROJECT_DIR$/js/module.selectionword.js" />
         <option value="$PROJECT_DIR$/js/module.reader.shell.js" />
+        <option value="$PROJECT_DIR$/js/background.js" />
       </list>
     </option>
   </component>
@@ -164,6 +173,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="piggyreader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="piggyreader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sites" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,71 +328,21 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/reader.css">
+    <entry file="file://$PROJECT_DIR$/js/getpagecontent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="17" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0" vertical-offset="1100" max-vertical-offset="5500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="440" selection-end="440" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="4125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="36" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.88744587" vertical-offset="0" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/prettify.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.pages.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/options.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="22" selection-start="352" selection-end="352" vertical-scroll-proportion="0.56159824" vertical-offset="0" max-vertical-offset="3174">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6302">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="899">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3657">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/lib/jps.js">
+    <entry file="file://$PROJECT_DIR$/js/module.reader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058">
-          <folding />
+        <state line="24" column="54" selection-start="746" selection-end="761" vertical-scroll-proportion="0.23025584" vertical-offset="345" max-vertical-offset="3841">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -378,23 +355,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader.html">
+    <entry file="file://$PROJECT_DIR$/js/options.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="945" selection-end="945" vertical-scroll-proportion="-20.444445" vertical-offset="0" max-vertical-offset="828">
+        <state line="23" column="43" selection-start="878" selection-end="878" vertical-scroll-proportion="0.5884316" vertical-offset="0" max-vertical-offset="899">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1081">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="44" selection-start="163" selection-end="163" vertical-scroll-proportion="0.20467186" vertical-offset="0" max-vertical-offset="6302">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
+    <entry file="file://$PROJECT_DIR$/js/lib/jps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="23" selection-start="1721" selection-end="1721" vertical-scroll-proportion="-24.148148" vertical-offset="360" max-vertical-offset="1219">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1058">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.js">
+    <entry file="file://$PROJECT_DIR$/js/lib/extract-content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="34" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3841">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="20079">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sites/zhihu.com.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="966">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sites/wenku.baidu.com.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1357">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sites/douban.com.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1518">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sites/bbs.tianya.cn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1426">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/all.pages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="40" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.8720801" vertical-offset="688" max-vertical-offset="2530">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -403,14 +441,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.selectionword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+        <state line="22" column="17" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="805">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="151" selection-end="151" vertical-scroll-proportion="0.1535039" vertical-offset="0" max-vertical-offset="899">
+        <state line="13" column="62" selection-start="356" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="690">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="18" selection-start="1823" selection-end="1823" vertical-scroll-proportion="0.36568847" vertical-offset="964" max-vertical-offset="2300">
           <folding />
         </state>
       </provider>

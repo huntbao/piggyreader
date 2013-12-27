@@ -1,17 +1,17 @@
 ﻿//Piggy Reader
 //author @huntbao
-(function(undefined){
+(function (undefined) {
     'use strict';
     var jiZhuReaderOptions = {};
-    var getOption = function(key, defaultValue){
+    var getOption = function (key, defaultValue) {
         var options = JSON.parse(window.localStorage[jiZhuReaderOptions.localstoragekey] || '{}');
-        if(options[key] === undefined){
+        if (options[key] === undefined) {
             return defaultValue;
-        }else{
+        } else {
             return options[key];
         }
     }
-    var setOption = function(key, value){
+    var setOption = function (key, value) {
         var options = JSON.parse(window.localStorage[jiZhuReaderOptions.localstoragekey] || '{}');
         options[key] = value;
         window.localStorage[jiZhuReaderOptions.localstoragekey] = JSON.stringify(options);
@@ -22,18 +22,18 @@
     });
     Object.defineProperties(jiZhuReaderOptions, {
         fontSize: {
-            get: function(){
+            get: function () {
                 return getOption('fontSize', 16);
             },
-            set: function(value){
+            set: function (value) {
                 setOption('fontSize', value);
             }
         },
         saveTo: {
-            get: function(){
+            get: function () {
                 return getOption('saveTo', '');
             },
-            set: function(value){
+            set: function (value) {
                 setOption('saveTo', value);
             }
         }

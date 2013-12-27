@@ -1,47 +1,47 @@
 ﻿//Piggy Reader
 //author @huntbao
-(function($){
+(function ($) {
     'use strict';
     window.jiZhuReader = {
-        create: function(){
+        create: function () {
             var self = this;
-            if(self.iframe){
+            if (self.iframe) {
                 return;
             }
             self.dealPage();
             self.insertIframe();
             self.addWindowEventListener();
         },
-        dealPage: function(){
+        dealPage: function () {
             var self = this,
-            beforeReaderCls = 'jizhureader-beforereader',
-            readerCls = 'jizhureader-reader',
-            htmlAndBody = $('html, body').addClass(beforeReaderCls);
-            self.hidePage = function(){
+                beforeReaderCls = 'jizhureader-beforereader',
+                readerCls = 'jizhureader-reader',
+                htmlAndBody = $('html, body').addClass(beforeReaderCls);
+            self.hidePage = function () {
                 htmlAndBody.addClass(beforeReaderCls);
             }
-            self.removeIframe = function(){
+            self.removeIframe = function () {
                 htmlAndBody.removeClass(beforeReaderCls).removeClass(readerCls);
                 self.iframe.animate({
                     left: '-100%'
-                }, function(){
+                }, function () {
                     self.iframe.remove();
                     self.iframe = null;
                 });
                 //clear get page content timer
                 clearTimeout(jiZhuReaderGetPageContent.getContentTimer);
             }
-            self.afterInitReader = function(){
+            self.afterInitReader = function () {
                 $(window).scrollTop(0);
                 htmlAndBody.addClass(readerCls);
             }
-            $(document).keydown(function(e){
-                if(e.which === 27){
+            $(document).keydown(function (e) {
+                if (e.which === 27) {
                     self.removeIframe();
                 }
             });
         },
-        insertIframe: function(){
+        insertIframe: function () {
             var self = this;
             self.iframe = $('<iframe>', {
                 id: 'jizhureader-iframe',
@@ -50,12 +50,12 @@
                 scrolling: 'auto',
                 src: chrome.extension.getURL('reader.html')
             }).appendTo(document.body).animate({
-                left: '0%'
-            });
+                    left: '0%'
+                });
         },
-        getPageContent: function(){
+        getPageContent: function () {
             var self = this;
-            window.jiZhuReaderGetPageContent.getCurrentContent(function(content){
+            window.jiZhuReaderGetPageContent.getCurrentContent(function (content) {
                 var port = chrome.extension.connect({name: 'articlefrompage'});
                 port.postMessage({
                     content: content || chrome.i18n.getMessage("ClipFailedTip"),
@@ -63,26 +63,26 @@
                     url: window.location.href
                 });
                 var l = window.location;
-                if(l.pathname !== ''){
+                if (l.pathname !== '') {
                     jiZhuReaderGetPageContent.findNextPageContent(document, l.origin + l.pathname + l.search, content);
                 }
             });
         },
-        saveContent: function(noteContent){
+        saveContent: function (noteContent) {
             var self = this;
             var port = chrome.extension.connect({name: 'savecontent'});
-            if(!noteContent) return;
+            if (!noteContent) return;
             port.postMessage({
                 noteContent: noteContent,
                 noteTitle: document.title,
                 noteUrl: window.location.href
             });
         },
-        addWindowEventListener: function(){
+        addWindowEventListener: function () {
             var self = this;
-            if(self.eventInited) return;
-            window.addEventListener('message', function(e){
-                switch(e.data.name){
+            if (self.eventInited) return;
+            window.addEventListener('message', function (e) {
+                switch (e.data.name) {
                     case 'afterinitreader':
                         self.afterInitReader();
                         break;

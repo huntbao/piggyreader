@@ -11,7 +11,10 @@
     });
 
     $.jps.subscribe('lookup-word', function (word) {
-
+        var port = chrome.extension.connect({name: 'lookupword'});
+        port.postMessage({
+            word: word
+        });
     });
 
     $(function () {

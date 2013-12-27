@@ -1,50 +1,53 @@
 ﻿//Piggy Reader
 //author @huntbao
-(function($){
+(function ($) {
     'use strict';
-    jiZhuReader.getPageContent = function(){
+    jiZhuReader.getPageContent = function () {
         var initPage = false;
-        function getDocByUrl(url){
+
+        function getDocByUrl(url) {
             var port = chrome.extension.connect({name: 'articlefrompage'});
             port.postMessage({
                 content: chrome.i18n.getMessage("LoadingTip"),
                 title: document.title
             });
-            jiZhuReaderGetPageContent.getDocByUrl(url, function(doc){
-                if(!initPage){
+            jiZhuReaderGetPageContent.getDocByUrl(url, function (doc) {
+                if (!initPage) {
                     initPage = true;
                     var prevLink = $('a[accesskey="4"]', doc);
-                    if(prevLink.length === 1){
+                    if (prevLink.length === 1) {
                         getDocByUrl(prevLink[0].href.replace(/pn=\d+/, 'pn=1'));
                         return;
                     }
                 }
                 var content = getContent(doc);
-                if(content){
+                if (content) {
                     var port = chrome.extension.connect({name: 'articlefrompage'});
                     port.postMessage({
                         content: content
                     });
-                    jiZhuReaderGetPageContent.getContentTimer = setTimeout(function(){
+                    jiZhuReaderGetPageContent.getContentTimer = setTimeout(function () {
                         var nextLink = $('a[accesskey="6"]', doc);
-                        if(nextLink.length === 1){
+                        if (nextLink.length === 1) {
                             getDocByUrl(nextLink[0].href);
                         }
-                    } , 10);
+                    }, 10);
                 }
             });
         }
-        function getContent(doc){
+
+        function getContent(doc) {
             var xreader = $('.xreader', doc);
             var content = '';
-            if(xreader.length === 1){
+            if (xreader.length === 1) {
                 xreader.find('.page_info').remove();
-                content  = xreader.html();
+                content = xreader.html();
                 return content;
             }
         }
+
         var url = window.location.href;
-        if(url.indexOf('wapwenku.baidu.com') === -1){
+        if (url.indexOf('wapwenku.baidu.com') === -1) {
             url = url.replace('wenku.baidu.com', 'wapwenku.baidu.com');
         }
         getDocByUrl(url);
