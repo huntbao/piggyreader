@@ -11,9 +11,7 @@
 
         init: function (data) {
             var self = this;
-            if (self.__layerEl) {
-                self.__layerEl.remove();
-            }
+            self.__hideLayer();
             self.__layerEl = $(Mustache.to_html(dictLayerTpl, data.dictData));
             self.__layerEl.appendTo(document.body);
             var layerElHeight = self.__layerEl.height();
