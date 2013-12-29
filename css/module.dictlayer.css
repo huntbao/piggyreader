@@ -7,7 +7,7 @@ author @huntbao*/
     -webkit-transition: opacity .38s;
     transition: opacity .38s;
     opacity: 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .mod-dict-layer.opacity-ani {
