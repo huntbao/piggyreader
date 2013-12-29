@@ -1,0 +1,60 @@
+﻿/*Piggy Reader
+author @huntbao*/
+.mod-dict-layer {
+    width: 400px;
+    position: absolute;
+    -moz-transition: opacity .38s;
+    -webkit-transition: opacity .38s;
+    transition: opacity .38s;
+    opacity: 0;
+    font-size: 14px;
+}
+
+.mod-dict-layer.opacity-ani {
+    opacity: 1;
+}
+
+.mod-dict-layer .arrow {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.mod-dict-layer .arrow-shadow {
+    -webkit-box-shadow: 0 0 6px 0 #777;
+    -webkit-transform: rotate(45deg);
+    background-color: #fffefd;
+    height: 30px;
+    width: 30px;
+    left: 182px;
+    position: absolute;
+    top: 16px;
+}
+
+.mod-dict-layer .layer-content {
+    -webkit-box-shadow: 0 0 3px 0 #acacac;
+    border: 1px solid #acacac;
+    border-radius: 4px;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    max-height: 300px;
+    overflow: auto;
+    word-wrap: break-word;
+    background: -webkit-linear-gradient(top, rgba(255, 254, 253, .99), rgba(238, 238, 238, .99));
+    padding: 1px;
+}
+
+.mod-dict-layer .layer-content-wrap {
+    margin: 20px;
+}
+
+.dict-layer-bottom .arrow {
+    top: -2px;
+}
+
+.dict-layer-bottom .arrow-shadow {
+    top: -25px;
+    background-color: rgba(238, 238, 238, .99);
+}

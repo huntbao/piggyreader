@@ -3,23 +3,38 @@
 (function ($) {
     'use strict';
     $.jps.subscribe('init-reader', function () {
-        App.reader.init();
+        App.modules.reader.init();
     });
 
-    $.jps.subscribe('init-selectionword', function () {
-        App.selectionWord.init();
+    $.jps.subscribe('init-selectionphrase', function (container) {
+        App.modules.selectionPhrase.init(container);
     });
 
-    $.jps.subscribe('lookup-word', function (word) {
-        var port = chrome.extension.connect({name: 'lookupword'});
+    $.jps.subscribe('lookup-phrase', function (data) {
+        if (data.isSamePhraseWithPrevious) {
+            if (App.modules.dictLayer.isLayerShown()) {
+                return;
+            }
+        }
+        $.jps.publish('hide-dict-layer');
+        var port = chrome.extension.connect({name: 'lookup-phrase'});
         port.postMessage({
-            word: word
+            phrase: data.phrase,
+            position: data.position
         });
+    });
+
+    $.jps.subscribe('init-dict-layer', function (dictData) {
+        App.modules.dictLayer.init(dictData);
+    });
+
+    $.jps.subscribe('hide-dict-layer', function () {
+        App.modules.dictLayer.hideLayer();
     });
 
     $(function () {
         $.jps.publish('init-reader');
-        $.jps.publish('init-selectionword');
+        $.jps.publish('init-selectionphrase', $('#jz-contentwrap'));
     });
 
 }(jQuery));

@@ -21,8 +21,8 @@
                     case 'appendcontent':
                         self.appendContentHandler(port);
                         break;
-                    case 'lookupword':
-                        self.lookupWordHandler(port);
+                    case 'lookup-phrase':
+                        self.lookupPhraseHandler(port);
                         break;
                     default:
                         break;
@@ -51,11 +51,21 @@
             });
         },
 
-        lookupWordHandler: function (port) {
+        lookupPhraseHandler: function (port) {
             var self = this;
             port.onMessage.addListener(function (data) {
-                console.log(data);
-                //var url = 'http://dict.youdao.com/fsearch?client=deskdict&keyfrom=chrome.extension&q='+encodeURIComponent(word)+'&pos=-1&doctype=xml&xmlVersion=3.2&dogVersion=1.0&vendor=unknown&appVer=3.1.17.4208&le=eng'
+                $.ajax({
+                    url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
+                    success: function (xmlDoc) {
+                        chrome.tabs.sendRequest(port.sender.tab.id, {
+                            name: 'lookupphrase-result',
+                            data: {
+                                dictData: self.getDictData($(xmlDoc)),
+                                position: data.position
+                            }
+                        });
+                    }
+                });
             });
         },
 
@@ -85,6 +95,21 @@
             return {
                 fontSize: window.jiZhuReaderOptions.fontSize + 'px'
             }
+        },
+
+        getDictData: function (xmlDoc) {
+            var self = this;
+            var trans= [];
+            var translation = xmlDoc.find('custom-translation content');
+            $.each(translation, function (idx, tr) {
+               trans.push($(tr).text())
+            });
+            var o = {
+                phrase: xmlDoc.find('return-phrase').text(),
+                phoneticSymbol: xmlDoc.find('phonetic-symbol').text(),
+                translation: trans
+            }
+            return o;
         }
 
     };

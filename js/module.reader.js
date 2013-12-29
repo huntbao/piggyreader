@@ -36,6 +36,9 @@
                     case 'superaddtoreader':
                         self.superaddtoreaderHandler(request.data);
                         break;
+                    case 'lookupphrase-result':
+                        self.lookupPhraseResultHandler(request.data);
+                        break;
                     default:
                         break;
                 }
@@ -154,9 +157,16 @@
                 return false;
             });
             self.modal = modal;
+        },
+
+        lookupPhraseResultHandler: function (data) {
+            $.jps.publish('init-dict-layer', {
+                dictData: data.dictData,
+                position: data.position
+            });
         }
     };
 
-    App.reader = reader;
+    App.modules.reader = reader;
 
 })(jQuery);
