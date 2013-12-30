@@ -41,19 +41,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.dictlayer.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="module.dictlayer.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1495">
+            <state line="9" column="17" selection-start="229" selection-end="229" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="1495">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.dictlayer.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="module.dictlayer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="34" selection-start="1828" selection-end="1828" vertical-scroll-proportion="-0.05529412" vertical-offset="1312" max-vertical-offset="2162">
+            <state line="13" column="31" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2116">
               <folding />
             </state>
           </provider>
@@ -109,8 +109,8 @@
         <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/js/module.reader.shell.js" />
         <option value="$PROJECT_DIR$/js/module.selectionphrase.js" />
-        <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
         <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
+        <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
       </list>
     </option>
   </component>
@@ -447,11 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1482" selection-end="1482" vertical-scroll-proportion="-24.703703" vertical-offset="897" max-vertical-offset="1978" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="39" selection-start="738" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="2898">
@@ -487,16 +482,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
+    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1495">
+        <state line="13" column="31" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2116">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
+    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="34" selection-start="1828" selection-end="1828" vertical-scroll-proportion="-0.05529412" vertical-offset="1312" max-vertical-offset="2162">
+        <state line="9" column="17" selection-start="229" selection-end="229" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="1495">
           <folding />
         </state>
       </provider>
