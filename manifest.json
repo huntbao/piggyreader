@@ -16,7 +16,7 @@
                 "js/lib/mustache.js",
                 "js/module.common.shell.js",
                 "js/module.dictlayer.js",
-                "js/getpagecontent.js",
+                "js/module.getpagecontent.js",
                 "js/module.page.js",
                 "js/module.selectionphrase.js",
                 "js/module.page.shell.js"
@@ -54,6 +54,6 @@
     "options_page": "options.html",
     "name": "__MSG_ExtensionName__",
     "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
-    "version": "1.2.5",
+    "version": "1.3",
     "web_accessible_resources": [ "reader.html", "js/lib/jquery-1.10.2.min.map" ]
 }

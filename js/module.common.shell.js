@@ -9,7 +9,8 @@
     $.jps.subscribe('init-selectionphrase', function (data) {
         App.modules.selectionPhrase.init({
             container: data.container,
-            dictLookup: data.dictLookup || 'selection'
+            dictLookup: data.dictLookup || 'selection',
+            from: data.from
         });
     });
 
@@ -23,7 +24,8 @@
         var port = chrome.extension.connect({name: 'lookup-phrase'});
         port.postMessage({
             phrase: data.phrase,
-            position: data.position
+            position: data.position,
+            from: data.from
         });
     });
 

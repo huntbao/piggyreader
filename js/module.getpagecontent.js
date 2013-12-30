@@ -21,7 +21,7 @@
             var self = this;
             self.getDocByUrl(url, function (doc) {
                 var titleLevenshtein = doc.title.levenshtein(title);
-                console.log('title levenshtein distance: ' + titleLevenshtein);
+                //console.log('title levenshtein distance: ' + titleLevenshtein);
                 if (titleLevenshtein > Math.max(title.length, doc.title.length) / 2) {
                     //TODO: we suppose it is another page
                     return;
@@ -102,7 +102,7 @@
             var self = this;
             var matchUrl = self.getMatchUrl(baseUrl);
             self.convertRelativePathToAbsolutePathOfLinks(doc);
-            console.log('match link url prefix: ' + matchUrl);
+            //console.log('match link url prefix: ' + matchUrl);
             var links = doc.querySelectorAll('a[href ^= "' + matchUrl + '"]');
             var nextLinkUrl;
             var sameLengthLinks = [];
@@ -125,8 +125,8 @@
             sameLengthLinks.sort();
             lengthyLinks.sort();
             nextLinkUrl = sameLengthLinks[0] || lengthyLinks[0];
-            console.log('next link found: ' + nextLinkUrl);
-            console.log('time cost: ' + (Date.now() - date));
+            //console.log('next link found: ' + nextLinkUrl);
+            //console.log('time cost: ' + (Date.now() - date));
             return nextLinkUrl;
         },
         getMatchUrl: function (url) {

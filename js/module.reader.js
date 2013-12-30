@@ -40,6 +40,7 @@
                         self.superaddtoreaderHandler(request.data);
                         break;
                     case 'lookupphrase-result':
+                        if (request.data.from !== 'reader') return;
                         self.lookupPhraseResultHandler(request.data);
                         break;
                     default:
@@ -66,7 +67,8 @@
             $(document.body).css('font-size', settings.fontSize);
             $.jps.publish('init-selectionphrase', {
                 container: $('#jz-contentwrap'),
-                dictLookup: settings.dictJzpage || 'selection'
+                dictLookup: settings.dictJzpage || 'selection',
+                from: 'reader'
             });
             self.__settings = settings;
         },

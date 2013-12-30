@@ -12,10 +12,12 @@
                     __settings = request.data;
                     $.jps.publish('init-selectionphrase', {
                         container: $(document.body),
-                        dictLookup: __settings.dictHostpage || 'selection'
+                        dictLookup: __settings.dictHostpage || 'selection',
+                        from: 'page'
                     });
                     break;
                 case 'lookupphrase-result':
+                    if (request.data.from !== 'page') return;
                     $.jps.publish('init-dict-layer', {
                         dictData: request.data.dictData,
                         position: request.data.position,

@@ -56,7 +56,6 @@
         lookupPhraseHandler: function (port) {
             var self = this;
             port.onMessage.addListener(function (data) {
-                console.log(data)
                 $.ajax({
                     url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
                     success: function (xmlDoc) {
@@ -64,7 +63,8 @@
                             name: 'lookupphrase-result',
                             data: {
                                 dictData: self.getDictData($(xmlDoc)),
-                                position: data.position
+                                position: data.position,
+                                from: data.from
                             }
                         });
                     }
@@ -120,10 +120,26 @@
             $.each(translation, function (idx, tr) {
                trans.push($(tr).text())
             });
+            var moreTrans = [];
+            var moreTranslatioin = xmlDoc.find('web-translation');
+            $.each(moreTranslatioin, function (idx, tr) {
+                moreTrans.push({
+                    key: $(tr).find('key').text(),
+                    value: (function () {
+                        var _trans = [];
+                        $.each($(tr).find('trans value'), function () {
+                            _trans.push($(this).text())
+                        });
+                        return _trans.join(', ');
+                    }())
+                })
+            });
             var o = {
                 phrase: xmlDoc.find('return-phrase').text(),
                 phoneticSymbol: xmlDoc.find('phonetic-symbol').text(),
-                translation: trans
+                translation: trans,
+                hasMore: moreTrans.length > 0,
+                moreTranslatioin: moreTrans
             }
             return o;
         }

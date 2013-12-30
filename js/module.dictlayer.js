@@ -81,6 +81,17 @@
         '               <div class="jz-phrase-tran">{{.}}</div>' +
         '           {{/translation}}' +
         '           </div>' +
+        '           {{#hasMore}}' +
+        '           <div class="jz-trans-moreitems">' +
+        '               <div class="jz-trans-more"></div>' +
+        '           {{#moreTranslatioin}}' +
+        '               <div class="jz-phrase-tran">' +
+        '                   <span class="jz-phrase-key">{{key}}: </span>' +
+        '                   <span class="jz-phrase-value">{{value}}</span>' +
+        '               </div>' +
+        '           {{/moreTranslatioin}}' +
+        '           </div>' +
+        '           {{/hasMore}}' +
         '       </div>' +
         '   </div>' +
         '</div>';

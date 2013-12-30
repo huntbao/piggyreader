@@ -13,10 +13,13 @@
 
         __prevPointedFocusOffset: null,
 
+        __options: null,
+
         init: function (options) {
             var self = this;
+            self.__options = options;
             var container = options.container || $(document);
-            if (options.dictLookup === 'selection') {
+            if (self.__options.dictLookup === 'selection') {
                 $(container).mouseup(function (e) {
                     setTimeout(function () {
                         self.getSelectedPhrase({
@@ -28,7 +31,7 @@
                     }, 0);
                 });
             }
-            if (options.dictLookup === 'hover') {
+            if (self.__options.dictLookup === 'hover') {
                 container.mousemove(function (e) {
                     e.stopPropagation();
                     clearTimeout(self.__mousemoveTimer);
@@ -61,7 +64,8 @@
                     $.jps.publish('lookup-phrase', {
                         phrase: selectedPhrase,
                         position: self.getSeletionPosition(sel, position),
-                        isSamePhraseWithPrevious: isSamePhraseWithPrevious
+                        isSamePhraseWithPrevious: isSamePhraseWithPrevious,
+                        from: self.__options.from
                     });
                 }
             } else {
