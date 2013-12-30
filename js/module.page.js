@@ -3,6 +3,7 @@
 (function ($) {
     'use strict';
     window.jiZhuReader = {
+
         create: function () {
             var self = this;
             if (self.iframe) {
@@ -12,11 +13,12 @@
             self.insertIframe();
             self.addWindowEventListener();
         },
+
         dealPage: function () {
-            var self = this,
-                beforeReaderCls = 'jizhureader-beforereader',
-                readerCls = 'jizhureader-reader',
-                htmlAndBody = $('html, body').addClass(beforeReaderCls);
+            var self = this;
+            var beforeReaderCls = 'jizhureader-beforereader';
+            var readerCls = 'jizhureader-reader';
+            var htmlAndBody = $('html, body').addClass(beforeReaderCls);
             self.hidePage = function () {
                 htmlAndBody.addClass(beforeReaderCls);
             }
@@ -41,6 +43,7 @@
                 }
             });
         },
+
         insertIframe: function () {
             var self = this;
             self.iframe = $('<iframe>', {
@@ -53,6 +56,7 @@
                     left: '0%'
                 });
         },
+
         getPageContent: function () {
             var self = this;
             window.jiZhuReaderGetPageContent.getCurrentContent(function (content) {
@@ -68,6 +72,7 @@
                 }
             });
         },
+
         saveContent: function (noteContent) {
             var self = this;
             var port = chrome.extension.connect({name: 'savecontent'});
@@ -78,6 +83,7 @@
                 noteUrl: window.location.href
             });
         },
+
         addWindowEventListener: function () {
             var self = this;
             if (self.eventInited) return;
@@ -101,5 +107,6 @@
             }, true);
             self.eventInited = true;
         }
+
     }
 })(jQuery);

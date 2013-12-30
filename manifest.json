@@ -1,6 +1,6 @@
 {
     "background": {
-        "scripts": [ "js/lib/jquery-1.10.2.min.js", "js/lib/extract-content.js", "js/settings.js", "js/background.js" ]
+        "scripts": [ "js/lib/jquery-1.10.2.min.js", "js/lib/extract-content.js", "js/module.settings.js", "js/background.js" ]
     },
     "browser_action": {
         "default_icon": "images/icons/19x19.png",
@@ -8,8 +8,20 @@
     },
     "content_scripts": [
         {
-            "js": [ "js/lib/jquery-1.10.2.min.js", "js/lib/string.levenshtein.js", "js/lib/extract-content.js", "js/getpagecontent.js", "js/all.pages.js" ],
-            "css": [ "css/all.pages.css" ],
+            "js": [
+                "js/lib/jquery-1.10.2.min.js",
+                "js/lib/string.levenshtein.js",
+                "js/lib/extract-content.js",
+                "js/lib/jps.js",
+                "js/lib/mustache.js",
+                "js/module.common.shell.js",
+                "js/module.dictlayer.js",
+                "js/getpagecontent.js",
+                "js/module.page.js",
+                "js/module.selectionphrase.js",
+                "js/module.page.shell.js"
+            ],
+                "css": [ "css/all.pages.css", "css/module.dictlayer.css" ],
             "matches": [ "http://*/*", "https://*/*" ]
         },
         {

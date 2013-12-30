@@ -3,6 +3,9 @@
 (function ($) {
     'use strict';
     var reader = {
+
+        __settings: {},
+
         init: function () {
             var self = this;
             self.currentPageNum = 1;
@@ -61,6 +64,11 @@
                 self.jzSubtitle.html(data.subtitle);
             }
             $(document.body).css('font-size', settings.fontSize);
+            $.jps.publish('init-selectionphrase', {
+                container: $('#jz-contentwrap'),
+                dictLookup: settings.dictJzpage || 'selection'
+            });
+            self.__settings = settings;
         },
 
         superaddtoreaderHandler: function (data) {
@@ -160,9 +168,11 @@
         },
 
         lookupPhraseResultHandler: function (data) {
+            var self = this;
             $.jps.publish('init-dict-layer', {
                 dictData: data.dictData,
-                position: data.position
+                position: data.position,
+                hover: self.__settings.dictJzpage === 'hover'
             });
         }
     };

@@ -29,12 +29,20 @@
                 setOption('fontSize', value);
             }
         },
-        saveTo: {
+        dictHostpage: {
             get: function () {
-                return getOption('saveTo', '');
+                return getOption('dictHostpage', '');
             },
             set: function (value) {
-                setOption('saveTo', value);
+                setOption('dictHostpage', value);
+            }
+        },
+        dictJzpage: {
+            get: function () {
+                return getOption('dictJzpage', '');
+            },
+            set: function (value) {
+                setOption('dictJzpage', value);
             }
         }
     });

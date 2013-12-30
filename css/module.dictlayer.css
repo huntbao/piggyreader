@@ -1,6 +1,9 @@
 ﻿/*Piggy Reader
 author @huntbao*/
-.mod-dict-layer {
+.body {
+    background-color: #000;
+}
+.jz-mod-dict-layer {
     width: 400px;
     position: absolute;
     -moz-transition: opacity .38s;
@@ -8,23 +11,25 @@ author @huntbao*/
     transition: opacity .38s;
     opacity: 0;
     font-size: 16px;
+    z-index: 2147483647 !important;
 }
 
-.mod-dict-layer.opacity-ani {
+.jz-mod-dict-layer.jz-opacity-ani {
     opacity: 1;
 }
 
-.mod-dict-layer .arrow {
+.jz-mod-dict-layer .jz-arrow {
     position: relative;
     height: 20px;
     overflow: hidden;
     z-index: 2;
 }
 
-.mod-dict-layer .arrow-shadow {
-    -webkit-box-shadow: 0 0 6px 0 #777;
+.jz-mod-dict-layer .jz-arrow-shadow {
+    -webkit-box-shadow: 1px 1px 6px 0 #777;
     -webkit-transform: rotate(45deg);
     background-color: #fffefd;
+    border: 1px solid #acacac;
     height: 30px;
     width: 30px;
     left: 182px;
@@ -32,8 +37,8 @@ author @huntbao*/
     top: 16px;
 }
 
-.mod-dict-layer .layer-content {
-    -webkit-box-shadow: 0 0 3px 0 #acacac;
+.jz-mod-dict-layer .jz-layer-content {
+    -webkit-box-shadow: 1px 1px 3px 0 #acacac;
     border: 1px solid #acacac;
     border-radius: 4px;
     position: relative;
@@ -46,15 +51,16 @@ author @huntbao*/
     padding: 1px;
 }
 
-.mod-dict-layer .layer-content-wrap {
+.jz-mod-dict-layer .jz-layer-content-wrap {
     margin: 20px;
 }
 
-.dict-layer-bottom .arrow {
+.jz-dict-layer-bottom .jz-arrow {
     top: -2px;
 }
 
-.dict-layer-bottom .arrow-shadow {
+.jz-dict-layer-bottom .jz-arrow-shadow {
     top: -25px;
     background-color: rgba(238, 238, 238, .99);
+    border: none;
 }

@@ -29,7 +29,7 @@
     },
     "Copyright": {
         "description": "piggy reader",
-        "message": "©2013 - 饥猪阅读"
+        "message": "©2013-2014 - 饥猪阅读"
     },
     "Goback": {
         "message": "返回(Esc)"
@@ -63,5 +63,29 @@
     },
     "LoadingTip": {
         "message": "<div class=\"jz-loading-tip\">正在请求内容，请稍候...</div>"
+    },
+    "GeneralOption": {
+        "message": "通用选项"
+    },
+    "DictOption": {
+        "message": "查询选项"
+    },
+    "DictHostpage": {
+        "message": "原始页面"
+    },
+    "DictJzPage": {
+        "message": "饥猪阅读页面"
+    },
+    "DictSelection": {
+        "message": "划词/双击"
+    },
+    "DictMouse": {
+        "message": "鼠标悬停"
+    },
+    "OptionSavedTip": {
+        "message": "选项已保存，请刷新已打开的页面"
+    },
+    "Disabled": {
+        "message": "禁用"
     }
 }
