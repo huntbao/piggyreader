@@ -1,0 +1,32 @@
+﻿//Piggy Reader
+//author @huntbao
+(function ($) {
+    'use strict';
+
+    $(function () {
+        var __settings = null;
+        chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
+            if (!sender || sender.id !== chrome.i18n.getMessage("@@extension_id")) return;
+            switch (request.name) {
+                case 'settings':
+                    __settings = request.data;
+                    $.jps.publish('init-selectionphrase', {
+                        container: $(document.body),
+                        dictLookup: __settings.dictHostpage || 'selection'
+                    });
+                    break;
+                case 'lookupphrase-result':
+                    $.jps.publish('init-dict-layer', {
+                        dictData: request.data.dictData,
+                        position: request.data.position,
+                        hover: __settings.dictHostpage === 'hover'
+                    });
+                    break;
+                default:
+                    break;
+            }
+        });
+        chrome.extension.connect({name: 'getsettings'}).postMessage();
+    });
+
+}(jQuery));

@@ -13,37 +13,41 @@
 
         __prevPointedFocusOffset: null,
 
-        init: function (container) {
+        init: function (options) {
             var self = this;
-            container = container || $(document);
-            $(container).mouseup(function (e) {
-                setTimeout(function () {
-                    self.getSelectedPhrase({
-                        left: e.pageX,
-                        top: e.pageY,
-                        clientX: e.clientX,
-                        clientY: e.clientY
-                    });
-                }, 0);
-            });
-            container.mousemove(function (e) {
-                e.stopPropagation();
-                clearTimeout(self.__mousemoveTimer);
-                self.__mousemoveTimer = setTimeout(function () {
-                    self.getPointedPhrase({
-                        left: e.pageX,
-                        top: e.pageY,
-                        clientX: e.clientX,
-                        clientY: e.clientY
-                    });
-                }, 300);
-            });
-            $(container).mouseleave(function (e) {
-                clearTimeout(self.__mousemoveTimer);
-                $.jps.publish('hide-dict-layer');
-                var sel = window.getSelection();
-                sel.removeAllRanges();
-            });
+            var container = options.container || $(document);
+            if (options.dictLookup === 'selection') {
+                $(container).mouseup(function (e) {
+                    setTimeout(function () {
+                        self.getSelectedPhrase({
+                            left: e.pageX,
+                            top: e.pageY,
+                            clientX: e.clientX,
+                            clientY: e.clientY
+                        });
+                    }, 0);
+                });
+            }
+            if (options.dictLookup === 'hover') {
+                container.mousemove(function (e) {
+                    e.stopPropagation();
+                    clearTimeout(self.__mousemoveTimer);
+                    self.__mousemoveTimer = setTimeout(function () {
+                        self.getPointedPhrase({
+                            left: e.pageX,
+                            top: e.pageY,
+                            clientX: e.clientX,
+                            clientY: e.clientY
+                        });
+                    }, 300);
+                });
+                $(container).mouseleave(function (e) {
+                    clearTimeout(self.__mousemoveTimer);
+                    $.jps.publish('hide-dict-layer');
+                    var sel = window.getSelection();
+                    sel.removeAllRanges();
+                });
+            }
         },
 
         getSelectedPhrase: function (position, isSamePhraseWithPrevious) {
@@ -53,13 +57,15 @@
             selectedPhrase = $.trim(selectedPhrase);
             if (selectedPhrase) {
                 var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '');
-                if (/^[a-z]*$/g.test(testPhrase)) {
+                if (/^[a-z]+$/g.test(testPhrase)) {
                     $.jps.publish('lookup-phrase', {
                         phrase: selectedPhrase,
                         position: self.getSeletionPosition(sel, position),
                         isSamePhraseWithPrevious: isSamePhraseWithPrevious
                     });
                 }
+            } else {
+                $.jps.publish('hide-dict-layer');
             }
         },
 

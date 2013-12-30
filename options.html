@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8"/>
         <title>{{JiZhuReaderOption}}</title>
-        <link rel="stylesheet" href="css/options.css" type="text/css" />
+        <link rel="stylesheet" href="css/module.options.css" type="text/css" />
         <base target="_blank" />
     </head>
     <body>
@@ -12,6 +12,7 @@
                 <h2 class="title i18n" data-i18n="Option"></h2>
                 <div class="content">
                     <ul>
+                        <li class="sep-line i18n" data-i18n="GeneralOption"></li>
                         <li>
                             <div class="optionname i18n" data-i18n="ReaderFontSize"></div>
                             <div class="optionset">
@@ -21,13 +22,35 @@
                                 <div id="demonstratefontsize" class="demonstrate i18n" data-i18n="ExtensionName"></div>
                             </div>
                         </li>
+                        <li class="sep-line i18n" data-i18n="DictOption"></li>
+                        <li>
+                            <div class="optionname i18n" data-i18n="DictHostpage"></div>
+                            <div class="optionset">
+                                <div class="tiptext">
+                                    <label><input type="radio" name="dictHostpage" value="selection" checked /><span class="i18n" data-i18n="DictSelection"></span></label>
+                                    <label><input type="radio" name="dictHostpage" value="hover" /><span class="i18n" data-i18n="DictMouse"></span></label>
+                                    <label><input type="radio" name="dictHostpage" value="disabled" /><span class="i18n" data-i18n="Disabled"></span></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="optionname i18n" data-i18n="DictJzPage"></div>
+                            <div class="optionset">
+                                <div class="tiptext">
+                                    <label><input type="radio" name="dictJzpage" value="selection" checked /><span class="i18n" data-i18n="DictSelection"></span></label>
+                                    <label><input type="radio" name="dictJzpage" value="hover" /><span class="i18n" data-i18n="DictMouse"></span></label>
+                                    <label><input type="radio" name="dictJzpage" value="disabled" /><span class="i18n" data-i18n="Disabled"></span></label>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
+                <div class="options-tip i18n" data-i18n="OptionSavedTip" id="options-tip"></div>
             </div>
             <div class="copyright i18n" data-i18n="Copyright"></div>
         </div>
         <script src="js/lib/jquery-1.10.2.min.js"></script>
-        <script src="js/settings.js"></script>
-        <script src="js/options.js"></script>
+        <script src="js/module.settings.js"></script>
+        <script src="js/module.options.js"></script>
     </body>
 </html>

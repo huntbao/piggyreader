@@ -17,8 +17,8 @@
             var layerElHeight = self.__layerEl.height();
             if (data.position.clientY + layerElHeight > $(window).height()) {
                 data.position.top -= layerElHeight + 20;
-                self.__layerEl.find('.arrow').appendTo(self.__layerEl);
-                self.__layerEl.addClass('dict-layer-bottom');
+                self.__layerEl.find('.jz-arrow').appendTo(self.__layerEl);
+                self.__layerEl.addClass('jz-dict-layer-bottom');
             }
             self.__layerEl.css({
                 left: data.position.left - self.__layerEl.width() / 2,
@@ -27,17 +27,19 @@
             self.__layerEl.mouseup(function (e) {
                 e.stopPropagation();
             });
-            self.__layerEl.mouseenter(function () {
-                self.__isEntered = true;
-            });
-            self.__layerEl.mouseleave(function () {
-                self.__isEntered = false;
-                self.__hideLayer();
-            });
+            if (data.hover) {
+                self.__layerEl.mouseenter(function () {
+                    self.__isEntered = true;
+                });
+                self.__layerEl.mouseleave(function () {
+                    self.__isEntered = false;
+                    self.__hideLayer();
+                });
+            }
             $(document).mouseup(function () {
                 self.__hideLayer();
             });
-            self.__layerEl.addClass('opacity-ani');
+            self.__layerEl.addClass('jz-opacity-ani');
         },
 
         hideLayer: function () {
@@ -62,21 +64,21 @@
     };
 
     var dictLayerTpl = '' +
-        '<div class="mod-dict-layer">' +
-        '   <div class="arrow">' +
-        '       <div class="arrow-shadow"></div>' +
+        '<div class="jz-mod-dict-layer">' +
+        '   <div class="jz-arrow">' +
+        '       <div class="jz-arrow-shadow"></div>' +
         '   </div>' +
-        '   <div class="layer-content">' +
-        '       <div class="layer-content-wrap">' +
-        '           <div class="phrase-wrap">' +
-        '               <span class="phrase">{{phrase}}</span>' +
+        '   <div class="jz-layer-content">' +
+        '       <div class="jz-layer-content-wrap">' +
+        '           <div class="jz-phrase-wrap">' +
+        '               <span class="jz-phrase">{{phrase}}</span>' +
         '               {{#phoneticSymbol}}' +
-        '               <span class="phonetic-symbol">[{{phoneticSymbol}}]</span>' +
+        '               <span class="jz-phonetic-symbol">[{{phoneticSymbol}}]</span>' +
         '               {{/phoneticSymbol}}' +
         '           </div>' +
-        '           <div class="trans-items">' +
+        '           <div class="jz-trans-items">' +
         '           {{#translation}}' +
-        '               <div class="phrase-tran">{{.}}</div>' +
+        '               <div class="jz-phrase-tran">{{.}}</div>' +
         '           {{/translation}}' +
         '           </div>' +
         '       </div>' +

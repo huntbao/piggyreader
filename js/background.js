@@ -24,6 +24,8 @@
                     case 'lookup-phrase':
                         self.lookupPhraseHandler(port);
                         break;
+                    case 'getsettings':
+                        self.getSettingsHandler(port);
                     default:
                         break;
                 }
@@ -54,6 +56,7 @@
         lookupPhraseHandler: function (port) {
             var self = this;
             port.onMessage.addListener(function (data) {
+                console.log(data)
                 $.ajax({
                     url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
                     success: function (xmlDoc) {
@@ -65,6 +68,16 @@
                             }
                         });
                     }
+                });
+            });
+        },
+
+        getSettingsHandler: function (port) {
+            var self = this;
+            port.onMessage.addListener(function (data) {
+                chrome.tabs.sendRequest(port.sender.tab.id, {
+                    name: 'settings',
+                    data: self.getSettings()
                 });
             });
         },
@@ -92,8 +105,11 @@
         },
 
         getSettings: function () {
+            var options = window.jiZhuReaderOptions;
             return {
-                fontSize: window.jiZhuReaderOptions.fontSize + 'px'
+                fontSize: options.fontSize + 'px',
+                dictHostpage: options.dictHostpage,
+                dictJzpage: options.dictJzpage
             }
         },
 
