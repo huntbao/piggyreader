@@ -43,10 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.dictlayer.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="module.dictlayer.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="17" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.8376471" vertical-offset="599" max-vertical-offset="1702">
+            <state line="57" column="17" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="1702">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.16487455" vertical-offset="0" max-vertical-offset="1472">
               <folding />
             </state>
           </provider>
@@ -87,6 +96,7 @@
         <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -425,9 +435,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="17" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.8376471" vertical-offset="599" max-vertical-offset="1702">
+        <state line="57" column="17" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0" vertical-offset="599" max-vertical-offset="1702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.16487455" vertical-offset="0" max-vertical-offset="1472">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,9 @@
 饥猪阅读（Piggy Reader）
 ===========
 
+# 更新（Upate） #
+
+1. 2013.12.30 添加词典功能（dictionary function added）。
 
 # 在线安装（Online Install） #
 请点击Chrome Webstore的安装地址，直接安装插件： [去商店直接安装（Install address）](https://chrome.google.com/webstore/detail/%E9%A5%A5%E7%8C%AA%E9%98%85%E8%AF%BB/jfckifkogfenafeakigpkjlifbkklmih?hl=zh-CN)
