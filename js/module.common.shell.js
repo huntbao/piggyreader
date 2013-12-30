@@ -5,9 +5,6 @@
     window.App = {
         modules: {}
     };
-    $.jps.subscribe('init-reader', function () {
-        App.modules.reader.init();
-    });
 
     $.jps.subscribe('init-selectionphrase', function (data) {
         App.modules.selectionPhrase.init({

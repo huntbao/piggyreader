@@ -1,8 +1,5 @@
 ﻿/*Piggy Reader
 author @huntbao*/
-.body {
-    background-color: #000;
-}
 .jz-mod-dict-layer {
     width: 400px;
     position: absolute;
@@ -10,7 +7,6 @@ author @huntbao*/
     -webkit-transition: opacity .38s;
     transition: opacity .38s;
     opacity: 0;
-    font-size: 16px;
     z-index: 2147483647 !important;
 }
 
