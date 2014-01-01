@@ -21,6 +21,8 @@
             var container = options.container || $(document);
             if (self.__options.dictLookup === 'selection') {
                 $(container).mouseup(function (e) {
+                    if ($(e.target).is('input, textarea')) return;
+                    if ($(e.currentTarget).prop('contenteditable') === 'true') return;
                     setTimeout(function () {
                         self.getSelectedPhrase({
                             left: e.pageX,
