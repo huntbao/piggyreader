@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/background.js" afterPath="$PROJECT_DIR$/js/module.background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.background.js" afterPath="$PROJECT_DIR$/js/module.background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="piggyreader.iws" />
@@ -27,13 +27,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="module.background.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/module.background.js">
+      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="22" selection-start="751" selection-end="751" vertical-scroll-proportion="-0.16352941" vertical-offset="714" max-vertical-offset="5681">
+            <state line="10" column="32" selection-start="360" selection-end="360" vertical-scroll-proportion="-8.518518" vertical-offset="0" max-vertical-offset="1748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.background.shell.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.background.shell.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="33" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.evernote.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/module.evernote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="55" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.91882354" vertical-offset="691" max-vertical-offset="1886">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.util.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="22" selection-start="482" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,8 +100,11 @@
         <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/module.background.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/js/module.util.js" />
+        <option value="$PROJECT_DIR$/js/module.background.shell.js" />
+        <option value="$PROJECT_DIR$/js/module.evernote.js" />
       </list>
     </option>
   </component>
@@ -108,6 +140,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -142,7 +175,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,6 +194,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -172,23 +212,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -233,7 +265,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16905287" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -243,6 +274,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -266,6 +298,15 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/module.background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="22" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0" vertical-offset="575" max-vertical-offset="5704">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_locales/zh_CN/messages.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="24" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.7941176" vertical-offset="1265" max-vertical-offset="2231" />
@@ -286,24 +327,9 @@
         <state line="11" column="4" selection-start="193" selection-end="224" vertical-scroll-proportion="0.3166458" vertical-offset="0" max-vertical-offset="1150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.13529412" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="341" selection-end="341" vertical-scroll-proportion="0.29764706" vertical-offset="0" max-vertical-offset="1012" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.4317647" vertical-offset="392" max-vertical-offset="4324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.page.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="897" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
@@ -336,16 +362,62 @@
         <state line="88" column="65" selection-start="3124" selection-end="3124" vertical-scroll-proportion="0.75242716" vertical-offset="1381" max-vertical-offset="2415" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
+    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="72" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.7205346" vertical-offset="810" max-vertical-offset="1633">
+        <state line="10" column="7" selection-start="71" selection-end="225" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.page.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.21647058" vertical-offset="0" max-vertical-offset="874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="71" selection-end="112" vertical-scroll-proportion="0.13529412" vertical-offset="0" max-vertical-offset="1012">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="22" selection-start="751" selection-end="751" vertical-scroll-proportion="-0.16352941" vertical-offset="714" max-vertical-offset="5681">
+        <state line="16" column="36" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3611">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="360" selection-end="360" vertical-scroll-proportion="-8.518518" vertical-offset="0" max-vertical-offset="1748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="482" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.background.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="33" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.evernote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="55" selection-start="3667" selection-end="3667" vertical-scroll-proportion="0.91882354" vertical-offset="691" max-vertical-offset="1886">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

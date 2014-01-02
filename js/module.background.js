@@ -2,102 +2,13 @@
 //author @huntbao
 (function ($) {
     'use strict';
-    window.jiZhuReaderBackground = {
+    var background = {
 
         init: function () {
             var self = this;
             self.initConnect();
             self.browserAction();
             self.createContextMenu();
-            self.testEvernote();
-        },
-
-        testEvernote: function () {
-            var self = this;
-            var hostName = "https://sandbox.evernote.com";
-            var options, oauth;
-            options = {
-                consumerKey: 'huntbao-7034',
-                consumerSecret: '797a1474b0a48e20',
-                callbackUrl: 'gotAuth.html',
-                signatureMethod: 'HMAC-SHA1'
-            };
-            oauth = OAuth(options);
-            var app = {
-                success: function (data) {
-                    var isCallBackConfirmed = false;
-                    var token = '';
-                    var vars = data.text.split("&");
-                    for (var i = 0; i < vars.length; i++) {
-                        var y = vars[i].split('=');
-                        if (y[0] === 'oauth_token') {
-                            token = y[1];
-                        } else if (y[0] === 'oauth_token_secret') {
-                            self.oauth_token_secret = y[1];
-                            localStorage.setItem("oauth_token_secret", y[1]);
-                        } else if (y[0] === 'oauth_callback_confirmed') {
-                            isCallBackConfirmed = true;
-                        }
-                    }
-                    var ref;
-                    if (isCallBackConfirmed) {
-                        // step 2
-                        ref = window.open(hostName + '/OAuth.action?oauth_token=' + token, '_blank');
-                        ref.addEventListener('loadstart', function (event) {
-                            var loc = event.url;
-                            if (loc.indexOf(hostName + '/Home.action?gotOAuth.html?') >= 0) {
-                                var index, verifier = '';
-                                var got_oauth = '';
-                                var params = loc.substr(loc.indexOf('?') + 1);
-                                params = params.split('&');
-                                for (var i = 0; i < params.length; i++) {
-                                    var y = params[i].split('=');
-                                    if (y[0] === 'oauth_verifier') {
-                                        verifier = y[1];
-                                    } else if (y[0] === 'gotOAuth.html?oauth_token') {
-                                        got_oauth = y[1];
-                                    }
-                                }
-                            }
-                            // step 3
-                            oauth.setVerifier(verifier);
-                            oauth.setAccessToken([got_oauth, localStorage.getItem("oauth_token_secret")]);
-                            var getData = {'oauth_verifier': verifier};
-                            ref.close();
-                            oauth.request({
-                                'method': 'GET',
-                                'url': hostName + '/oauth',
-                                'success': app.success,
-                                'failure': app.failure
-                            });
-                        });
-                    } else {
-                        // Step 4 : Get the final token
-                        var querystring = app.getQueryParams(data.text);
-                        var authTokenEvernote = querystring.oauth_token;
-                        // authTokenEvernote can now be used to send request to the Evernote Cloud API
-
-                        // Here, we connect to the Evernote Cloud API and get a list of all of the
-                        // notebooks in the authenticated user's account:
-                        var noteStoreURL = querystring.edam_noteStoreUrl;
-                        var noteStoreTransport = new Thrift.BinaryHttpTransport(noteStoreURL);
-                        var noteStoreProtocol = new Thrift.BinaryProtocol(noteStoreTransport);
-                        var noteStore = new NoteStoreClient(noteStoreProtocol);
-                        noteStore.listNotebooks(authTokenEvernote, function (notebooks) {
-                            console.log(notebooks);
-                        });
-                    }
-                },
-                failure: function (error) {
-                    console.log('error ' + error.text);
-                }
-            };
-            oauth.request({
-                method: 'GET',
-                url: hostName + '/oauth',
-                success: app.success,
-                failure: app.failure
-            });
         },
 
         initConnect: function () {
@@ -236,8 +147,6 @@
 
     };
 
-    $(function () {
-        jiZhuReaderBackground.init();
-    });
+    App.modules.background = background;
 
 })(jQuery);
