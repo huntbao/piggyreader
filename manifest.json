@@ -1,6 +1,12 @@
 {
     "background": {
-        "scripts": [ "js/lib/jquery-1.10.2.min.js", "js/lib/extract-content.js", "js/module.settings.js", "js/background.js" ]
+        "scripts": [
+            "js/lib/jquery-1.10.2.min.js",
+            "js/lib/extract-content.js",
+            "js/lib/evernote-sdk-minified.js",
+            "js/lib/jsOAuth-1.3.7.min.js",
+            "js/module.settings.js",
+            "js/module.background.js" ]
     },
     "browser_action": {
         "default_icon": "images/icons/19x19.png",
