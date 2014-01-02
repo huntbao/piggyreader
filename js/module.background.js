@@ -115,6 +115,7 @@
                         break;
                     case 'getsettings':
                         self.getSettingsHandler(port);
+                        break;
                     default:
                         break;
                 }
@@ -221,7 +222,7 @@
                         });
                         return _trans.join(', ');
                     }())
-                })
+                });
             });
             var o = {
                 phrase: xmlDoc.find('return-phrase').text(),
