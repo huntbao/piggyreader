@@ -25,16 +25,6 @@
 
         getOAuth: function () {
             var self = this;
-            if (localStorage['authTokenEvernote']) {
-                //self.getNotebook();
-                //self.getUser();
-                self.createNote({
-                    title: 'aaa',
-                    content: 'bbb',
-                    sourceURL: 'http://www.baidu.com'
-                });
-                return;
-            }
             var options, oauth;
             options = {
                 consumerKey: 'huntbao-7034',
@@ -133,7 +123,7 @@
             nBody += '<!DOCTYPE en-note SYSTEM "http://xml.evernote.com/pub/enml2.dtd">';
             nBody += '<en-note>' + self.getENML(noteData.content) + '</en-note>';
             var attributes = new NoteAttributes();
-            attributes.sourceURL = noteData.sourceURL;
+            attributes.sourceURL = noteData.url;
             var note = new Note();
             note.title = noteData.title.trim();
             note.content = nBody.trim();
@@ -178,47 +168,57 @@
             }
         },
 
+
         getENML: function (html) {
             var self = this;
-            html = html.replace(/(<([^>]+)>)/g, function($0, $1, $2){
-                // html5 tags
-                if (/^(article|aside|bdi|command|details|dialog|summary|figure|figcaption|footer|header|mark|meter|nav|progress|ruby|rt|rp|section|time|wbr)$/.test($2)) {
-                    return '<div>';
-                }
-                return $0.toLowerCase();
-            });
-            var node = $('<div>').html(html);
-            node.find('applet,base,basefont,bgsound,blink,body,button,dir,embed,fieldset,form,frame,frameset,head,html,iframe,ilayer,input,isindex,label,layer,egend,link,marquee,menu,meta,noframes,noscript,object,optgroup,option,param,plaintext,script,select,style,textarea,xml').remove();
-            var els = node.find('*');
-            var tagName;
-            var attributes;
-            var attr;
-            var validTags = /^(a|abbr|acronym|address|area|b|bdo|big|blockquote|br|caption|center|cite|code|col|colgroup|dd|del|dfn|div|dl|dt|em|font|h1|h2|h3|h4|h5|h6|hr|i|img|ins|kbd|li|map|ol|p|pre|q|s|samp|small|span|strike|strong|sub|sup|table|tbody|td|tfoot|th|thead|title|tr|tt|u|ul|var|xmp)$/;
-            $.each(els, function (idx, el) {
-                tagName = el.tagName.toLowerCase();
-                if (!validTags.test(tagName)) {
-                    $(el).remove();
-                } else {
-                    attributes = $.map(el.attributes, function(item) {
-                        return item.name;
-                    });
-                    for (var i = attributes.length - 1; i >= 0; i--) {
-                        attr = attributes[i];
-                        if (attr === 'href' && tagName === 'a') {
-                            if (!/^(http:|https:|file:)$/.test(el.protocol)) {
-                                el.removeAttribute(attr);
+            var results = '';
+            HTMLParser(html, {
+                start: function (tag, attrs, unary) {
+                    tag = self.getValidTags(tag);
+                    if (tag) {
+                        results += "<" + tag;
+                        if (/^(a|img)$/.test(tag)) {
+                            for (var i = 0; i < attrs.length; i++) {
+                                if (/^(href|src)$/.test(attrs[i].name) && self.isENMLProtocol(attrs[i].escaped)) {
+                                    results += " " + attrs[i].name + '="' + attrs[i].escaped + '"';
+                                }
                             }
-                        } else if(attr === 'src' && tagName === 'img') {
-                            if (!self.isENMLProtocol(el.getAttribute(attr))) {
-                                el.removeAttribute(attr);
-                            }
-                        } else if (attr !== 'style') {
-                            el.removeAttribute(attr);
                         }
+                        results += (unary ? "/" : "") + ">";
                     }
+                },
+                end: function (tag) {
+                    tag = self.getValidTags(tag);
+                    if (tag) {
+                        results += "</" + tag + ">";
+                    }
+                },
+                chars: function (text) {
+                    results += text;
+                },
+                comment: function (text) {
+                    // results += "<!--" + text + "-->";
                 }
             });
-            return node.html().replace(/<br.*\/?>/g,'<br />').replace(/<hr.*\/?>/g,'<hr />');
+            return results;
+        },
+
+        __validTags: /^(a|abbr|acronym|address|area|b|bdo|big|blockquote|br|caption|center|cite|code|col|colgroup|dd|del|dfn|div|dl|dt|em|font|h1|h2|h3|h4|h5|h6|hr|i|img|ins|kbd|li|map|ol|p|pre|q|s|samp|small|span|strike|strong|sub|sup|table|tbody|td|tfoot|th|thead|title|tr|tt|u|ul|var|xmp)$/,
+
+        __blockHtml5Tags: /^(article|aside|details|dialog|summary|figure|footer|header|nav|section)$/,
+
+        __inlineHtml5Tags: /^(bdi|command|mark|meter|progress|ruby|rt|rp|time|wbr)$/,
+
+        getValidTags: function (tag) {
+            var self = this;
+            if (self.__blockHtml5Tags.test(tag)) {
+                tag = 'div';
+            } else if (self.__inlineHtml5Tags.test(tag)) {
+                tag = 'span';
+            }
+            if (self.__validTags.test(tag)) {
+                return tag;
+            }
         },
 
         isENMLProtocol: function (url) {
