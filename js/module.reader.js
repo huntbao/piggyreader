@@ -6,6 +6,8 @@
 
         __settings: {},
 
+        __pageInfo: null,
+
         init: function () {
             var self = this;
             self.currentPageNum = 1;
@@ -15,7 +17,6 @@
             self.jzSubtitle = $('#jz-subtitle');
             self.notifyParent();
             self.getPageContent();
-            self.initExtensionRequest();
             self.initActionBtn();
         },
 
@@ -28,31 +29,10 @@
             parent.postMessage({name: 'afterinitreader'}, '*');
         },
 
-        initExtensionRequest: function () {
-            var self = this;
-            chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
-                if (!sender || sender.id !== chrome.i18n.getMessage("@@extension_id")) return;
-                switch (request.name) {
-                    case 'sendarticletoreader':
-                        self.sendarticletoreaderHandler(request.data, request.settings);
-                        break;
-                    case 'superaddtoreader':
-                        self.superaddtoreaderHandler(request.data);
-                        break;
-                    case 'lookupphrase-result':
-                        if (request.data.from !== 'reader') return;
-                        self.lookupPhraseResultHandler(request.data);
-                        break;
-                    default:
-                        break;
-                }
-            });
-        },
-
         sendarticletoreaderHandler: function (data, settings) {
             var self = this;
             if (data.content !== '') {
-                var section = $('<section>', {'class': 'jz-addcontent', html: data.content});
+                var section = $('<div>', {'class': 'jz-addcontent', html: data.content});
                 self.jzArticle.find('.jz-loading-tip').remove();
                 self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
                 prettyPrint();
@@ -70,6 +50,7 @@
                 dictLookup: settings.dictJzpage || 'selection',
                 from: 'reader'
             });
+            self.__pageInfo = data;
             self.__settings = settings;
         },
 
@@ -77,9 +58,9 @@
             var self = this;
             if (data.content !== '') {
                 self.currentPageNum++;
-                var section = $('<section>', {class: 'jz-addcontent'}),
-                    pageContent = $('<div>', {class: 'jz-pagecontent', html: data.content}),
-                    pageNum = $('<h6>', {text: chrome.i18n.getMessage('Pagination', [self.currentPageNum]), class: 'jz-pagenum'});
+                var section = $('<div>', {class: 'jz-addcontent'});
+                var pageContent = $('<div>', {class: 'jz-pagecontent', html: data.content});
+                var pageNum = $('<h6>', {text: chrome.i18n.getMessage('Pagination', [self.currentPageNum]), class: 'jz-pagenum'});
                 section.append(pageNum).append(pageContent);
                 self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
                 prettyPrint(section[0]);
@@ -102,11 +83,21 @@
                 self.showHelpTip();
                 return false;
             }).attr('title', chrome.i18n.getMessage("Help"));
-            $('#jz-sider').mouseenter(function () {
+            $('#jz-sider').hover(function () {
                 $(this).addClass('hover');
-            }).mouseleave(function () {
-                    $(this).removeClass('hover');
-                })
+            }, function () {
+                if (self.jzContentWrap.attr('contenteditable') === 'true') return;
+                $(this).removeClass('hover');
+            });
+            $('#jz-evernote').click(function () {
+                var jzArticle = self.jzArticle.clone();
+                jzArticle.find('*[class]').removeAttr('class');
+                $.jps.publish('init-evernote-savemodal', {
+                    url: self.__pageInfo.url,
+                    title: self.__pageInfo.title,
+                    content: jzArticle.html()
+                });
+            }).attr('title', chrome.i18n.getMessage("SaveToEvernote"));
             $(document).keydown(function (e) {
                 if (e.which === 27) {
                     parent.postMessage({name: 'removeiframe'}, '*');
@@ -122,51 +113,17 @@
             } else {
                 self.jzContentWrap.attr('contenteditable', 'true').focus();
                 $('#jz-editbtn').attr('title', chrome.i18n.getMessage("Save"));
+                $('#jz-sider').addClass('hover');
             }
         },
 
         showHelpTip: function () {
-            var self = this;
-            self.showModal(chrome.i18n.getMessage('HelpModalTip'));
-        },
-
-        showModal: function (content, title) {
-            var self = this;
-            var modalBackdrop = $('<div>', {
-                class: 'jz-modal-backdrop'
-            }).appendTo(document.body);
-            var modalTpl =
-                '<div class="jz-modal jz-help-modal">' +
-                    '   <div class="jz-modal-hd">' +
-                    '       <button type="button" class="close">×</button>' +
-                    '       <h3></h3>' +
-                    '   </div>' +
-                    '   <div class="jz-modal-bd"></div>' +
-                    '</div>';
-            var modal = $(modalTpl);
-            modal.find('h3').append(title || chrome.i18n.getMessage('ExtensionName'));
-            modal.find('.jz-modal-bd').append(content);
-            modal.appendTo(document.body);
-            var closeModal = function () {
-                $(document.body).off('click.closemodal');
-                modal.fadeOut(function () {
-                    modal.remove();
-                    modalBackdrop.remove();
-                    self.modal = null;
-                });
-            }
-            $(document.body).on('click.closemodal', function (e) {
-                if (modal.has(e.target).length === 0) {
-                    closeModal();
-                    return false;
+            App.modules.modal.show({
+                button: null,
+                done: function (okBtn, modalBd, modal) {
+                    modalBd.append(chrome.i18n.getMessage('HelpModalTip'));
                 }
-                return true;
             });
-            modal.find('.close').click(function (e) {
-                closeModal();
-                return false;
-            });
-            self.modal = modal;
         },
 
         lookupPhraseResultHandler: function (data) {

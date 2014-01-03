@@ -3,20 +3,6 @@
 (function ($) {
     'use strict';
     var util = {
-
-        getParaValue: function (param, str) {
-            var paras = str.split('&');
-            var findValue;
-            $.each(paras, function (idx, para) {
-                var p = para.split('=');
-                if (p[0] === param) {
-                    findValue = p[1];
-                    return false;
-                }
-            });
-            return findValue;
-        },
-
         getQueryParams: function (str) {
             var paras = str.split('&');
             var queryParams = {};
@@ -25,9 +11,14 @@
                 queryParams[p[0]] = p[1];
             });
             return queryParams;
-        }
+        },
 
-    }
+        initI18n: function (container) {
+            $('.i18n', container).each(function () {
+                $(this).text(chrome.i18n.getMessage($(this).data('i18n')));
+            });
+        }
+    };
 
     App.modules.util = util;
 

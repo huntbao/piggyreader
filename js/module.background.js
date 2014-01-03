@@ -6,31 +6,8 @@
 
         init: function () {
             var self = this;
-            self.initConnect();
             self.browserAction();
             self.createContextMenu();
-        },
-
-        initConnect: function () {
-            var self = this;
-            chrome.extension.onConnect.addListener(function (port) {
-                switch (port.name) {
-                    case 'articlefrompage':
-                        self.articlefrompageHandler(port);
-                        break;
-                    case 'appendcontent':
-                        self.appendContentHandler(port);
-                        break;
-                    case 'lookup-phrase':
-                        self.lookupPhraseHandler(port);
-                        break;
-                    case 'getsettings':
-                        self.getSettingsHandler(port);
-                        break;
-                    default:
-                        break;
-                }
-            });
         },
 
         articlefrompageHandler: function (port) {

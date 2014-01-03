@@ -43,6 +43,9 @@
     "Save": {
         "message": "Save"
     },
+    "Cancel": {
+        "message": "Cancel"
+    },
     "Print": {
         "message": "Print"
     },
@@ -83,6 +86,12 @@
         "message": "Option saved, please refresh the opened page."
     },
     "Disabled": {
-        "message": "禁用"
+        "message": "Disabled"
+    },
+    "Savenote": {
+        "message": "Save note"
+    },
+    "ChooseNotebook": {
+        "message": "Choose notebook"
     }
 }

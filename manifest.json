@@ -10,7 +10,7 @@
             "js/module.background.shell.js",
             "js/module.util.js",
             "js/module.background.js",
-            "js/module.evernote.js"
+            "js/module.evernote.oauth.js"
         ]
     },
     "browser_action": {

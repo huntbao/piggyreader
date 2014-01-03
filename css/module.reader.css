@@ -54,6 +54,7 @@ a:hover {
 
 .jz-sider.hover .jz-editbtn,
 .jz-sider.hover .jz-printbtn,
+.jz-sider.hover .jz-evernote,
 .jz-sider.hover .jz-helpbtn {
     opacity: 1;
 }
@@ -95,9 +96,15 @@ a:hover {
     opacity: 0;
 }
 
+.jz-evernote {
+    background-image: url(images/evernote.png);
+    top: 180px;
+    opacity: 0;
+}
+
 .jz-helpbtn {
     background-image: url(images/help.png);
-    top: 180px;
+    top: 240px;
     opacity: 0;
 }
 
@@ -188,72 +195,6 @@ a:hover {
     text-align: right;
     border-top: 1px solid #666;
     padding-top: 4px;
-}
-
-.jz-modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #000;
-    opacity: 0.5;
-}
-
-.jz-modal {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    z-index: 2;
-    width: 560px;
-    margin-left: -280px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    outline: none;
-    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-}
-
-.jz-modal .jz-modal-hd {
-    padding: 9px 15px;
-    border-bottom: 1px solid #eee;
-    background: url(images/32x32.png) no-repeat 9px 9px;
-    text-indent: 32px;
-}
-
-.jz-modal .jz-modal-hd h3 {
-    margin: 0;
-    line-height: 30px;
-}
-
-.jz-modal .jz-modal-hd .close {
-    float: right;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    line-height: 30px !important;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    opacity: 0.2;
-    cursor: pointer;
-    border: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-}
-
-.jz-modal .jz-modal-hd .close:hover {
-    opacity: 0.4;
-}
-
-.jz-modal .jz-modal-bd {
-    position: relative;
-    max-height: 400px;
-    padding: 15px;
-    overflow-y: auto;
 }
 
 .jz-highlight-link:link,

@@ -49,6 +49,9 @@
     "Save": {
         "message": "保存"
     },
+    "Cancel": {
+        "message": "取消"
+    },
     "Print": {
         "message": "打印"
     },
@@ -87,5 +90,11 @@
     },
     "Disabled": {
         "message": "禁用"
+    },
+    "Savenote": {
+        "message": "保存笔记"
+    },
+    "ChooseNotebook": {
+        "message": "选择笔记本"
     }
 }
