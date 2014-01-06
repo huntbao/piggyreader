@@ -98,7 +98,7 @@
                     content: jzArticle.html()
                 });
                 return false;
-            }).attr('title', chrome.i18n.getMessage("SaveToEvernote"));
+            }).attr('title', chrome.i18n.getMessage("SaveEvernote"));
             $(document).keydown(function (e) {
                 if (e.which === 27) {
                     parent.postMessage({name: 'removeiframe'}, '*');

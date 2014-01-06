@@ -115,7 +115,7 @@
     "SavingTip": {
         "message": "正在保存笔记，请稍候..."
     },
-    "SaveNoteFailed": {
+    "SaveNoteFailedPageIsTooComplex": {
         "message": "页面结构过于复杂，请把内容拷贝到文本编辑器里面，然后再粘贴到饥猪阅读里面进行保存。"
     }
 }
