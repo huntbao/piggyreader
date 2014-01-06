@@ -97,6 +97,7 @@
                     title: self.__pageInfo.title,
                     content: jzArticle.html()
                 });
+                return false;
             }).attr('title', chrome.i18n.getMessage("SaveToEvernote"));
             $(document).keydown(function (e) {
                 if (e.which === 27) {

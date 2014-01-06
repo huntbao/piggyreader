@@ -93,5 +93,26 @@
     },
     "ChooseNotebook": {
         "message": "Choose notebook"
+    },
+    "RequestLoadingdata": {
+        "message": "Loading data..."
+    },
+    "ClearSavedOAuth": {
+        "message": "Sign out"
+    },
+    "ReOAuth": {
+        "message": "Re-authorize"
+    },
+    "NoteSavedSuccess": {
+        "message": "Note saved success"
+    },
+    "ViewNoteLink": {
+        "message": "View"
+    },
+    "SavingTip": {
+        "message": "Saving note..."
+    },
+    "SaveNoteFailed": {
+        "message": "Save failed, the page's html is too complex. You can copy the text into the texteditor first, then paste the content to the PiggyReader, then you can save it. Sorry for the inconvenience."
     }
 }

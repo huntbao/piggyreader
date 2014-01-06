@@ -5,3 +5,38 @@ author @huntbao*/
     background: none;
     text-indent: 0;
 }
+
+.jz-save-evernote-modal .jz-evernote-user {
+    text-align: right;
+    font-size: 14px;
+    margin: -8px 0;
+}
+
+.jz-save-evernote-modal .jz-evernote-reoauthbtn {
+    border-radius: 3px;
+    padding: 5px 18px;
+    text-align: center;
+    cursor: pointer;
+    background: #dbdbdb;
+    background: linear-gradient(to bottom, #24a828 0, #1b7e1e 100%);
+    color: #fff;
+    border: none;
+}
+
+.jz-save-evernote-modal .jz-evernote-clearoauth {
+    cursor: pointer;
+}
+
+.jz-save-evernote-modal .jz-evernote-reoauth,
+.jz-save-evernote-modal .jz-evernote-savednote {
+    text-align: center;
+}
+
+.jz-save-evernote-modal .jz-evernote-saveloading {
+    background: url(images/ajax-loader.gif) no-repeat;
+    padding-left: 20px;
+    margin: 20px 0 0 190px;
+    font-size: 12px;
+    display: none;
+}
+

@@ -91,10 +91,31 @@
     "Disabled": {
         "message": "禁用"
     },
-    "Savenote": {
-        "message": "保存笔记"
+    "SaveEvernote": {
+        "message": "保存到印象笔记"
     },
     "ChooseNotebook": {
         "message": "选择笔记本"
+    },
+    "RequestLoadingdata": {
+        "message": "正在加载数据，请稍候..."
+    },
+    "ClearSavedOAuth": {
+        "message": "注销"
+    },
+    "ReOAuth": {
+        "message": "重新授权"
+    },
+    "NoteSavedSuccess": {
+        "message": "笔记保存成功"
+    },
+    "ViewNoteLink": {
+        "message": "查看笔记"
+    },
+    "SavingTip": {
+        "message": "正在保存笔记，请稍候..."
+    },
+    "SaveNoteFailed": {
+        "message": "页面结构过于复杂，请把内容拷贝到文本编辑器里面，然后再粘贴到饥猪阅读里面进行保存。"
     }
 }

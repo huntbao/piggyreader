@@ -28,6 +28,9 @@
                 case 'get-evernoteoauth':
                     App.modules.evernoteOAuth.getOAuthHandler(port);
                     break;
+                case 'clear-evernoteoauth':
+                    App.modules.evernoteOAuth.clearOAuthHandler(port);
+                    break;
                 case 'save-evernote':
                     App.modules.evernoteOAuth.saveNoteHandler(port);
                     break;

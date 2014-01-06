@@ -29,7 +29,13 @@
                     App.modules.evernoteSaveModal.save(request.data);
                     break;
                 case 'saved-evernote':
-                    App.modules.modal.close();
+                    App.modules.evernoteSaveModal.afterSavedNote(request.data);
+                    break;
+                case 'saved-evernote-failed':
+                    App.modules.evernoteSaveModal.saveNoteFailed(request.data);
+                    break;
+                case 'cleared-evernote-oauth':
+                    App.modules.evernoteSaveModal.afterClearOAuth();
                     break;
                 default:
                     break;
