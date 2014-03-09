@@ -8,6 +8,7 @@ author @huntbao*/
     transition: opacity .38s;
     opacity: 0;
     z-index: 2147483647 !important;
+    text-align: left;
 }
 
 .jz-mod-dict-layer.jz-opacity-ani {

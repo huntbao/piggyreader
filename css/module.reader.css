@@ -28,7 +28,7 @@ body {
     margin: 20px 0;
     width: 100%;
     height: 100%;
-    font: 16px/1.7 Georgia, Arial, "\5b8b\4f53", sans-serif;
+    font: 16px/1.7 Georgia, Arial, "\5b8b\4f53", sans-serif !important;
     color: #333;
     background: url(images/itembg.png);
     overflow-x: hidden;

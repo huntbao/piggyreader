@@ -19,16 +19,19 @@
             var self = this;
             self.__options = options;
             var container = options.container || $(document);
+            container.keydown(function () {
+                $.jps.publish('hide-dict-layer');
+            });
             if (self.__options.dictLookup === 'selection') {
                 $(container).mouseup(function (e) {
-                    if ($(e.target).is('input, textarea')) return;
                     if ($(e.currentTarget).prop('contenteditable') === 'true') return;
                     setTimeout(function () {
                         self.getSelectedPhrase({
                             left: e.pageX,
                             top: e.pageY,
                             clientX: e.clientX,
-                            clientY: e.clientY
+                            clientY: e.clientY,
+                            isInput: $(e.target).is(':input')
                         });
                     }, 0);
                 });
@@ -47,12 +50,17 @@
                     }, 300);
                 });
                 $(container).mouseleave(function (e) {
-                    clearTimeout(self.__mousemoveTimer);
-                    $.jps.publish('hide-dict-layer');
-                    var sel = window.getSelection();
-                    sel.removeAllRanges();
+                    self.__hideDictLayer();
                 });
             }
+        },
+
+        __hideDictLayer: function () {
+            var self = this;
+            clearTimeout(self.__mousemoveTimer);
+            $.jps.publish('hide-dict-layer');
+            var sel = window.getSelection();
+            sel.removeAllRanges();
         },
 
         getSelectedPhrase: function (position, isSamePhraseWithPrevious) {
@@ -65,7 +73,7 @@
                 if (/^[a-z]+$/g.test(testPhrase)) {
                     $.jps.publish('lookup-phrase', {
                         phrase: selectedPhrase,
-                        position: self.getSeletionPosition(sel, position),
+                        position: position.isInput ? position : self.getSeletionPosition(sel, position),
                         isSamePhraseWithPrevious: isSamePhraseWithPrevious,
                         from: self.__options.from
                     });
