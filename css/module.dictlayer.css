@@ -3,12 +3,13 @@ author @huntbao*/
 .jz-mod-dict-layer {
     width: 400px;
     position: absolute;
-    -moz-transition: opacity .38s;
     -webkit-transition: opacity .38s;
     transition: opacity .38s;
     opacity: 0;
     z-index: 2147483647 !important;
-    text-align: left;
+    text-align: left !important;
+    color: #000 !important;
+    font-size: 14px !important;
 }
 
 .jz-mod-dict-layer.jz-opacity-ani {

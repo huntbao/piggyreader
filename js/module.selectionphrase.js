@@ -13,6 +13,8 @@
 
         __prevPointedFocusOffset: null,
 
+        __mouseDownedInput: null,
+
         __options: null,
 
         init: function (options) {
@@ -23,16 +25,13 @@
                 $.jps.publish('hide-dict-layer');
             });
             if (self.__options.dictLookup === 'selection') {
+                $(container).on('mousedown', ':input', function () {
+                    self.__mouseDownedInput = this;
+                });
                 $(container).mouseup(function (e) {
-                    if ($(e.currentTarget).prop('contenteditable') === 'true') return;
                     setTimeout(function () {
-                        self.getSelectedPhrase({
-                            left: e.pageX,
-                            top: e.pageY,
-                            clientX: e.clientX,
-                            clientY: e.clientY,
-                            isInput: $(e.target).is(':input')
-                        });
+                        self.getSelectedPhrase();
+                        self.__mouseDownedInput = null;
                     }, 0);
                 });
             }
@@ -41,12 +40,7 @@
                     e.stopPropagation();
                     clearTimeout(self.__mousemoveTimer);
                     self.__mousemoveTimer = setTimeout(function () {
-                        self.getPointedPhrase({
-                            left: e.pageX,
-                            top: e.pageY,
-                            clientX: e.clientX,
-                            clientY: e.clientY
-                        });
+                        self.getPointedPhrase();
                     }, 300);
                 });
                 $(container).mouseleave(function (e) {
@@ -63,17 +57,16 @@
             sel.removeAllRanges();
         },
 
-        getSelectedPhrase: function (position, isSamePhraseWithPrevious) {
+        getSelectedPhrase: function (isSamePhraseWithPrevious) {
             var self = this;
             var sel = document.getSelection();
-            var selectedPhrase = sel.toString();
-            selectedPhrase = $.trim(selectedPhrase);
+            var selectedPhrase = sel.toString().trim();
             if (selectedPhrase) {
                 var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '');
                 if (/^[a-z]+$/g.test(testPhrase)) {
                     $.jps.publish('lookup-phrase', {
                         phrase: selectedPhrase,
-                        position: position.isInput ? position : self.getSeletionPosition(sel, position),
+                        position: self.getSeletionPosition(sel),
                         isSamePhraseWithPrevious: isSamePhraseWithPrevious,
                         from: self.__options.from
                     });
@@ -84,18 +77,25 @@
         },
 
         getSeletionPosition: function (sel, position) {
-            if (sel.rangeCount) {
-                var range = sel.getRangeAt(0).cloneRange();
-                if (range.getBoundingClientRect) {
-                    var rect = range.getBoundingClientRect();
-                    position.left = (rect.right + rect.left) / 2;
-                    position.top = position.top + rect.height - 12;
+            var self = this;
+            var boundingClientRect = {left: 0, top: 0, right: 0, bottom: 0, width: 0, height: 0};
+            var r = sel.getRangeAt(0);
+            if (r.collapsed) {
+                if (self.__mouseDownedInput) {
+                    var start = self.__mouseDownedInput.selectionStart;
+                    var end = self.__mouseDownedInput.selectionEnd;
+                    if (start !== end) {
+                        boundingClientRect = self.getSelectedTextBounding(self.__mouseDownedInput, start, end);
+                        self.__mouseDownedInput.setSelectionRange(start, end);
+                    }
                 }
+            } else {
+                boundingClientRect = r.getBoundingClientRect();
             }
-            return position;
+            return boundingClientRect;
         },
 
-        getPointedPhrase: function (position) {
+        getPointedPhrase: function () {
             var self = this;
             var isAlpha = function (str) {
                 str = str.toLowerCase().replace(/-|’/g, '');
@@ -139,9 +139,66 @@
             self.__prevPointedContainer = range.startContainer;
             self.__prevPointedFocusOffset = sel.focusOffset;
             self.__prevPointedAnchorOffset = sel.anchorOffset;
-            self.getSelectedPhrase(position, isSamePhraseWithPrevious);
-        }
+            self.getSelectedPhrase(isSamePhraseWithPrevious);
+        },
 
+        getSelectedTextBounding: function (input, start, end) {
+            var taBoudRect = input.getBoundingClientRect();
+            var div = $('<div>').html(input.value.replace(/\n/g, '<br />')).appendTo(document.body);
+            div[0].style.cssText = document.defaultView.getComputedStyle(input, null).cssText;
+            div.css({
+                position: 'absolute',
+                left: taBoudRect.left,
+                top: taBoudRect.top,
+                whiteSpace: 'nowrap',
+                overflow: 'hidden'
+            });
+            div[0].scrollLeft = input.scrollLeft;
+            div[0].scrollTop = input.scrollTop;
+            var range = setSelectionRange(div[0], start, end);
+            var textBounding = range.getBoundingClientRect();
+            div.remove();
+            return textBounding;
+
+            function getTextNodesIn(node) {
+                var textNodes = [];
+                if (node.nodeType == 3) {
+                    textNodes.push(node);
+                } else {
+                    var children = node.childNodes;
+                    for (var i = 0, len = children.length; i < len; ++i) {
+                        textNodes.push.apply(textNodes, getTextNodesIn(children[i]));
+                    }
+                }
+                return textNodes;
+            }
+
+            function setSelectionRange(el, start, end) {
+                var range = document.createRange();
+                range.selectNodeContents(el);
+                var textNodes = getTextNodesIn(el);
+                var foundStart = false;
+                var charCount = 0, endCharCount;
+
+                for (var i = 0, textNode; textNode = textNodes[i++];) {
+                    endCharCount = charCount + textNode.length;
+                    if (!foundStart && start >= charCount && (start < endCharCount || (start == endCharCount && i < textNodes.length))) {
+                        range.setStart(textNode, start - charCount);
+                        foundStart = true;
+                    }
+                    if (foundStart && end <= endCharCount) {
+                        range.setEnd(textNode, end - charCount);
+                        break;
+                    }
+                    charCount = endCharCount;
+                }
+
+                var sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+                return range;
+            }
+        }
     };
 
     App.modules.selectionPhrase = selectionPhrase;

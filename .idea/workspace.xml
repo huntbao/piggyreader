@@ -23,29 +23,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="module.selectionphrase.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="module.dictlayer.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="36" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.5682353" vertical-offset="115" max-vertical-offset="2484">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.reader.shell.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.selectionphrase.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="49" selection-start="2914" selection-end="2914" vertical-scroll-proportion="2.0564706" vertical-offset="0" max-vertical-offset="3519">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.dictlayer.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="14" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.reader.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/module.reader.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302">
-              <folding />
+            <state line="162" column="43" selection-start="6452" selection-end="6452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4853">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,12 +82,18 @@
         <option value="$PROJECT_DIR$/js/module.reader.js" />
         <option value="$PROJECT_DIR$/js/module.common.shell.js" />
         <option value="$PROJECT_DIR$/js/getpagecontent.js" />
-        <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/js/background.js" />
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/css/module.reader.css" />
+        <option value="$PROJECT_DIR$/js/background.js" />
+        <option value="$PROJECT_DIR$/htmltags.html" />
+        <option value="$USER_HOME$/Dropbox/blogs/htmltags.html" />
+        <option value="$USER_HOME$/Dropbox/blogs/htmltags2.html" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$USER_HOME$/Dropbox/blogs/test.html" />
+        <option value="$PROJECT_DIR$/manifest.json" />
+        <option value="$PROJECT_DIR$/js/x.js" />
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
+        <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
         <option value="$PROJECT_DIR$/js/module.selectionphrase.js" />
       </list>
     </option>
@@ -122,6 +130,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,45 +177,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="piggyreader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="piggyreader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_locales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zh_CN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="piggyreader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="piggyreader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_locales" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="en" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,10 +191,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/js/lib" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -332,8 +305,53 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="49" selection-start="2914" selection-end="2914" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3542">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="3657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="14" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="49" selection-start="2914" selection-end="2914" vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="3519">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="14" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="86" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="3335">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -352,32 +370,9 @@
         <state line="27" column="41" selection-start="1087" selection-end="1115" vertical-scroll-proportion="0.7157233" vertical-offset="52" max-vertical-offset="897" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.13529412" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="341" selection-end="341" vertical-scroll-proportion="0.29764706" vertical-offset="0" max-vertical-offset="1012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.4317647" vertical-offset="392" max-vertical-offset="4324">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.page.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="897">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="34" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.4317647" vertical-offset="392" max-vertical-offset="4324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.getpagecontent.js">
@@ -395,40 +390,85 @@
         <state line="6" column="0" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1472" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="65" selection-start="3124" selection-end="3124" vertical-scroll-proportion="0.7294118" vertical-offset="1381" max-vertical-offset="2415" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="21" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.78128797" vertical-offset="645" max-vertical-offset="1495" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/all.pages.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.29764706" vertical-offset="0" max-vertical-offset="1150">
-          <folding />
-        </state>
+        <state line="11" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.29764706" vertical-offset="0" max-vertical-offset="1150" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.reader.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302">
+        <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/blogs/htmltags.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="560" column="8" selection-start="130" selection-end="10330" vertical-scroll-proportion="0.027946537" vertical-offset="12857" max-vertical-offset="13915" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/blogs/htmltags2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="434" column="8" selection-start="30901" selection-end="30901" vertical-scroll-proportion="12.128798" vertical-offset="0" max-vertical-offset="10189" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.page.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="8" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="3657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="14" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725">
+        <state line="29" column="30" selection-start="662" selection-end="662" vertical-scroll-proportion="0.7847059" vertical-offset="0" max-vertical-offset="1748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/blogs/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="12" selection-start="881" selection-end="3240" vertical-scroll-proportion="-1.1925926" vertical-offset="1518" max-vertical-offset="5175">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="29" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6764706" vertical-offset="0" max-vertical-offset="1012">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="49" selection-start="2914" selection-end="2914" vertical-scroll-proportion="2.0564706" vertical-offset="0" max-vertical-offset="3519">
+        <state line="162" column="43" selection-start="6452" selection-end="6452" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4853">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="36" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.5682353" vertical-offset="115" max-vertical-offset="2484">
           <folding />
         </state>
       </provider>

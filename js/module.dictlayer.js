@@ -15,14 +15,17 @@
             self.__layerEl = $(Mustache.to_html(dictLayerTpl, data.dictData));
             self.__layerEl.appendTo(document.body);
             var layerElHeight = self.__layerEl.height();
-            if (data.position.clientY + layerElHeight > $(window).height()) {
-                data.position.top -= layerElHeight + 20;
+            var layerElWidth = self.__layerEl.width();
+            var position = data.position;
+            if (position.bottom + layerElHeight > $(window).height()) {
+                position.bottom = position.top - layerElHeight - 4;
                 self.__layerEl.find('.jz-arrow').appendTo(self.__layerEl);
                 self.__layerEl.addClass('jz-dict-layer-bottom');
             }
+            var left = Math.max((position.right + position.left - layerElWidth) / 2, 0);
             self.__layerEl.css({
-                left: data.position.left - self.__layerEl.width() / 2,
-                top: data.position.top
+                left: left,
+                top: position.bottom
             });
             self.__layerEl.mouseup(function (e) {
                 e.stopPropagation();
