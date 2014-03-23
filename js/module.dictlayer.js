@@ -24,8 +24,8 @@
             }
             var left = Math.max((position.right + position.left - layerElWidth) / 2, 0);
             self.__layerEl.css({
-                left: left,
-                top: position.bottom
+                left: left + document.body.scrollLeft,
+                top: position.bottom + document.body.scrollTop
             });
             self.__layerEl.mouseup(function (e) {
                 e.stopPropagation();
