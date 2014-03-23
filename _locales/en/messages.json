@@ -7,6 +7,10 @@
         "description": "extension name",
         "message": "Piggy Reader"
     },
+    "ExtensionShortName": {
+        "description": "extension short name",
+        "message": "Reader"
+    },
     "BrowserActionTitle": {
         "description": "extension name",
         "message": "Piggy Reader"

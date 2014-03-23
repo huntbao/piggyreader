@@ -7,6 +7,10 @@
         "description": "extension name",
         "message": "饥猪阅读"
     },
+    "ExtensionShortName": {
+        "description": "extension short name",
+        "message": "阅读器"
+    },
     "BrowserActionTitle": {
         "description": "extension name",
         "message": "饥猪阅读"

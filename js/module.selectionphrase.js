@@ -150,7 +150,7 @@
                 position: 'absolute',
                 left: taBoudRect.left,
                 top: taBoudRect.top,
-                whiteSpace: 'nowrap',
+                margin: 0,
                 overflow: 'hidden'
             });
             div[0].scrollLeft = input.scrollLeft;
