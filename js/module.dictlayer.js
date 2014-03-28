@@ -23,6 +23,9 @@
                 self.__layerEl.addClass('jz-dict-layer-bottom');
             }
             var left = Math.max((position.right + position.left - layerElWidth) / 2, 0);
+            if ($(document.body).css('position') === 'relative') {
+                left -= ($(window).width() - $(document.body).width()) / 2;
+            }
             self.__layerEl.css({
                 left: left + document.body.scrollLeft,
                 top: position.bottom + document.body.scrollTop
