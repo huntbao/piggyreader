@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="" />
+    <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/module.reader.css" afterPath="$PROJECT_DIR$/css/module.reader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reader.html" afterPath="$PROJECT_DIR$/reader.html" />
+    </list>
     <ignored path="piggyreader.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,37 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="module.dictlayer.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
+      <file leaf-file-name="module.reader.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/module.reader.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="69" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="2553">
+            <state line="49" column="28" selection-start="827" selection-end="827" vertical-scroll-proportion="0.43294117" vertical-offset="759" max-vertical-offset="6325">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="reader.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="70" selection-end="70" vertical-scroll-proportion="0.13739546" vertical-offset="0" max-vertical-offset="1518">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.reader.shell.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="414">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.selectionphrase.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="43" selection-start="6441" selection-end="6441" vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4853">
+            <state line="20" column="65" selection-start="860" selection-end="860" vertical-scroll-proportion="-17.037037" vertical-offset="0" max-vertical-offset="920">
               <folding />
             </state>
           </provider>
@@ -84,12 +69,10 @@
         <option value="$PROJECT_DIR$/js/all.pages.js" />
         <option value="$PROJECT_DIR$/js/module.page.js" />
         <option value="$PROJECT_DIR$/js/module.reader.shell.js" />
-        <option value="$PROJECT_DIR$/reader.html" />
         <option value="$PROJECT_DIR$/js/module.page.shell.js" />
         <option value="$PROJECT_DIR$/js/module.reader.js" />
         <option value="$PROJECT_DIR$/js/module.common.shell.js" />
         <option value="$PROJECT_DIR$/js/getpagecontent.js" />
-        <option value="$PROJECT_DIR$/css/module.reader.css" />
         <option value="$PROJECT_DIR$/js/background.js" />
         <option value="$PROJECT_DIR$/htmltags.html" />
         <option value="$USER_HOME$/Dropbox/blogs/htmltags.html" />
@@ -102,6 +85,8 @@
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/reader.html" />
+        <option value="$PROJECT_DIR$/css/module.reader.css" />
       </list>
     </option>
   </component>
@@ -206,6 +191,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -216,23 +209,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -286,11 +271,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -312,6 +297,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="49" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2438">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="1472">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="11" selection-start="5477" selection-end="5477" vertical-scroll-proportion="0.0" vertical-offset="3220" max-vertical-offset="3358">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="49" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2507">
           <folding />
         </state>
@@ -319,9 +332,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="21" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.0" vertical-offset="1288" max-vertical-offset="1495">
-          <folding />
-        </state>
+        <state line="56" column="21" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.0" vertical-offset="1288" max-vertical-offset="1495" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
@@ -364,11 +375,6 @@
         <state line="77" column="49" selection-start="2914" selection-end="2914" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3542">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="3657" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
@@ -415,11 +421,6 @@
         <state line="41" column="96" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.8286445" vertical-offset="295" max-vertical-offset="1426" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/reader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="41" selection-start="1087" selection-end="1115" vertical-scroll-proportion="0.7157233" vertical-offset="52" max-vertical-offset="897" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.4317647" vertical-offset="392" max-vertical-offset="4324" />
@@ -440,11 +441,6 @@
         <state line="11" column="35" selection-start="224" selection-end="224" vertical-scroll-proportion="0.29764706" vertical-offset="0" max-vertical-offset="1150" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="71" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Dropbox/blogs/htmltags.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="560" column="8" selection-start="130" selection-end="10330" vertical-scroll-proportion="0.027946537" vertical-offset="12857" max-vertical-offset="13915" />
@@ -460,11 +456,6 @@
         <state line="9" column="0" selection-start="300" selection-end="300" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="874" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="8" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="3657" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="30" selection-start="662" selection-end="662" vertical-scroll-proportion="0.7847059" vertical-offset="0" max-vertical-offset="1748" />
@@ -472,42 +463,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6764706" vertical-offset="0" max-vertical-offset="1012">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="43" selection-start="6441" selection-end="6441" vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="26" column="29" selection-start="768" selection-end="768" vertical-scroll-proportion="0.6764706" vertical-offset="0" max-vertical-offset="1012" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="21" selection-start="2156" selection-end="2156" vertical-scroll-proportion="1.5929526" vertical-offset="0" max-vertical-offset="1518">
+        <state line="57" column="21" selection-start="2156" selection-end="2156" vertical-scroll-proportion="1.5929526" vertical-offset="0" max-vertical-offset="1518" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="11" selection-start="713" selection-end="713" vertical-scroll-proportion="0.5085995" vertical-offset="161" max-vertical-offset="1518">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="69" selection-start="1043" selection-end="1043" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="2553">
+        <state line="32" column="49" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-0.026995305" vertical-offset="736" max-vertical-offset="2553">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="70" selection-end="70" vertical-scroll-proportion="0.13739546" vertical-offset="0" max-vertical-offset="1518">
+        <state line="4" column="7" selection-start="74" selection-end="74" vertical-scroll-proportion="0.08098592" vertical-offset="0" max-vertical-offset="852">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="205" column="11" selection-start="8088" selection-end="8088" vertical-scroll-proportion="0.8380282" vertical-offset="3978" max-vertical-offset="4830">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="65" selection-start="860" selection-end="860" vertical-scroll-proportion="-17.037037" vertical-offset="0" max-vertical-offset="920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="28" selection-start="827" selection-end="827" vertical-scroll-proportion="0.43294117" vertical-offset="759" max-vertical-offset="6325">
           <folding />
         </state>
       </provider>

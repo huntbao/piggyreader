@@ -1,22 +1,5 @@
 ﻿/*Piggy Reader
 author @huntbao*/
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(127, 127, 127, .9);
-    border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #ccc;
-}
-
-::-webkit-scrollbar-track-piece {
-    background-color: #eee;
-}
 
 html {
     height: 100%;
@@ -25,13 +8,24 @@ html {
 
 body {
     padding: 0;
-    margin: 20px 0;
+    margin: 0;
     width: 100%;
     height: 100%;
-    font: 16px/1.7 Georgia, Arial, "\5b8b\4f53", sans-serif !important;
+    font: 16px/1.5 Georgia, Arial, "\5b8b\4f53", sans-serif !important;
     color: #333;
     background: url(images/itembg.png);
     overflow-x: hidden;
+}
+
+body.fiction-theme {
+    color: #333;
+    font: bold 20px/1.5 "楷体_GB2312", "仿宋_GB2312", "宋体" !important;
+    text-align: left;
+    background: #473624;
+}
+
+body.fiction-theme .jz-contentwrap {
+    background: url(images/contentbg.jpg);
 }
 
 a:visited, a:link {
@@ -49,10 +43,11 @@ a:hover {
     right: 0;
     top: 12px;
     bottom: 0;
-    width: 150px;
+    width: 8%;
 }
 
 .jz-sider.hover .jz-editbtn,
+.jz-sider.hover .jz-themebtn,
 .jz-sider.hover .jz-printbtn,
 .jz-sider.hover .jz-helpbtn {
     opacity: 1;
@@ -89,15 +84,21 @@ a:hover {
     opacity: 0;
 }
 
+.jz-themebtn {
+    background-image: url(images/theme.png);
+    top: 120px;
+    opacity: 0;
+}
+
 .jz-printbtn {
     background-image: url(images/print.png);
-    top: 120px;
+    top: 180px;
     opacity: 0;
 }
 
 .jz-helpbtn {
     background-image: url(images/help.png);
-    top: 180px;
+    top: 240px;
     opacity: 0;
 }
 
@@ -128,7 +129,7 @@ a:hover {
 }
 
 .jz-contentwrap {
-    width: 800px;
+    width: 768px;
     margin: 0 auto;
     padding: 12px;
     background-color: #fff;
