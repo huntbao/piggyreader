@@ -11,7 +11,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-    font: 16px/1.5 Georgia, Arial, "\5b8b\4f53", sans-serif !important;
+    font: 16px/1.5 Georgia, "微软雅黑";
     color: #333;
     background: url(images/itembg.png);
     overflow-x: hidden;
@@ -19,9 +19,14 @@ body {
 
 body.fiction-theme {
     color: #333;
-    font: bold 20px/1.5 "楷体_GB2312", "仿宋_GB2312", "宋体" !important;
     text-align: left;
     background: #473624;
+}
+
+body.fiction-theme.chinese-article {
+    font-weight: bold;
+    font-family: "楷体_GB2312", "仿宋_GB2312", "宋体";
+    font-size: 20px !important;
 }
 
 body.fiction-theme .jz-contentwrap {
