@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.reader.js" afterPath="$PROJECT_DIR$/js/module.reader.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/module.reader.css" afterPath="$PROJECT_DIR$/css/module.reader.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.reader.js" afterPath="$PROJECT_DIR$/js/module.reader.js" />
     </list>
     <ignored path="piggyreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,7 +26,26 @@
     <favorites_list name="piggyreader" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="reader.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reader.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="10" selection-start="869" selection-end="869" vertical-scroll-proportion="-15.222222" vertical-offset="72" max-vertical-offset="897">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="0" selection-start="504" selection-end="504" vertical-scroll-proportion="0.33990148" vertical-offset="0" max-vertical-offset="1541">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -59,7 +78,6 @@
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
         <option value="$PROJECT_DIR$/js/module.selectionphrase.js" />
         <option value="$PROJECT_DIR$/js/module.dictlayer.js" />
-        <option value="$PROJECT_DIR$/reader.html" />
         <option value="$PROJECT_DIR$/css/module.reader.css" />
         <option value="$PROJECT_DIR$/js/module.settings.js" />
         <option value="$PROJECT_DIR$/js/module.reader.js" />
@@ -69,6 +87,7 @@
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/module.page.js" />
         <option value="$PROJECT_DIR$/js/module.page.shell.js" />
+        <option value="$PROJECT_DIR$/reader.html" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -105,6 +124,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -171,7 +191,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,14 +212,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -211,15 +222,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -259,14 +278,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="22" width="1837" height="970" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22081497" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22081497" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -275,9 +293,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -299,9 +318,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/module.reader.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="6325">
-          <folding />
-        </state>
+        <state line="17" column="1" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="6325" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
@@ -460,9 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.getpagecontent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="10" selection-start="6132" selection-end="6132" vertical-scroll-proportion="0.0" vertical-offset="2771" max-vertical-offset="3634">
-          <folding />
-        </state>
+        <state line="141" column="10" selection-start="6132" selection-end="6132" vertical-scroll-proportion="0.0" vertical-offset="2771" max-vertical-offset="3634" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.settings.js">
@@ -476,9 +491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.reader.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6095">
-          <folding />
-        </state>
+        <state line="16" column="23" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6095" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.js">
@@ -493,23 +506,13 @@
         <state line="11" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1398345709000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/options.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="1331" selection-end="1331" vertical-scroll-proportion="-20.444445" vertical-offset="0" max-vertical-offset="1196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="729" selection-end="729" vertical-scroll-proportion="-16.185184" vertical-offset="0" max-vertical-offset="897">
-          <folding />
-        </state>
+        <state line="24" column="29" selection-start="1331" selection-end="1331" vertical-scroll-proportion="-20.444445" vertical-offset="0" max-vertical-offset="1196" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
@@ -549,9 +552,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/reader.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="10" selection-start="869" selection-end="869" vertical-scroll-proportion="-15.222222" vertical-offset="72" max-vertical-offset="897">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="86" selection-start="134" selection-end="134" vertical-scroll-proportion="0.14162561" vertical-offset="0" max-vertical-offset="1541">
+        <state line="12" column="0" selection-start="504" selection-end="504" vertical-scroll-proportion="0.33990148" vertical-offset="0" max-vertical-offset="1541">
           <folding />
         </state>
       </provider>

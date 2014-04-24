@@ -10,7 +10,6 @@
 
 # 在线安装（Online Install） #
 请点击Chrome Webstore的安装地址，直接安装插件： [去商店直接安装（Install address）](https://chrome.google.com/webstore/detail/%E9%A5%A5%E7%8C%AA%E9%98%85%E8%AF%BB/jfckifkogfenafeakigpkjlifbkklmih?hl=zh-CN)
-<button onclick="chrome.webstore.install('https //chrome.google.com/webstore/detail/jfckifkogfenafeakigpkjlifbkklmih')">Install PiggyReader</button>
 
 # 使用方法 #
 安装完后，可以按如下方法来使用该插件：
