@@ -57,9 +57,14 @@
                 self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint');
                 prettyPrint();
             }
-            if (data.title !== '') {
-                self.jzTitle.html(data.title);
-                document.title = data.title;
+            var title = data.title.trim();
+            if (title !== '') {
+                self.jzTitle.html(title);
+                document.title = title;
+                if (/.*[\u4e00-\u9fa5]+.*$/.test(title)) {
+                    // has chinese charecter
+                    $(document.body).addClass('chinese-article');
+                }
             }
             if (data.subtitle !== '') {
                 self.jzSubtitle.html(data.subtitle);
