@@ -21,14 +21,6 @@
         writable: false
     });
     Object.defineProperties(jiZhuReaderOptions, {
-        fontSize: {
-            get: function () {
-                return getOption('fontSize', 16);
-            },
-            set: function (value) {
-                setOption('fontSize', value);
-            }
-        },
         dictHostpage: {
             get: function () {
                 return getOption('dictHostpage', '');

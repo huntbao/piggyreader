@@ -15,6 +15,9 @@
             var self = this;
             chrome.extension.onConnect.addListener(function (port) {
                 switch (port.name) {
+                    case 'createreader':
+                        self.createReader();
+                        break;
                     case 'articlefrompage':
                         self.articlefrompageHandler(port);
                         break;
@@ -108,7 +111,6 @@
         getSettings: function () {
             var options = window.jiZhuReaderOptions;
             return {
-                fontSize: options.fontSize + 'px',
                 dictHostpage: options.dictHostpage,
                 dictJzpage: options.dictJzpage
             }

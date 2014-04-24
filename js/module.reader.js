@@ -69,7 +69,6 @@
             if (data.subtitle !== '') {
                 self.jzSubtitle.html(data.subtitle);
             }
-            $(document.body).css('font-size', settings.fontSize);
             $.jps.publish('init-selectionphrase', {
                 container: $('#jz-contentwrap'),
                 dictLookup: settings.dictJzpage || 'selection',

@@ -29,6 +29,11 @@
             }
         });
         chrome.extension.connect({name: 'getsettings'}).postMessage();
+        $(document.body).keydown(function (e) {
+            if ((e.metaKey || e.ctrlKey) && e.keyCode === 88) {
+                chrome.extension.connect({name: 'createreader'});
+            }
+        });
     });
 
 }(jQuery));

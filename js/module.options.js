@@ -9,7 +9,6 @@
         init: function () {
             var self = this;
             self.i18nPage();
-            self.initFontSize();
             self.initDictOptions();
         },
 
@@ -18,24 +17,6 @@
             $('.i18n').each(function () {
                 $(this).text(chrome.i18n.getMessage($(this).data('i18n')));
             });
-        },
-
-        initFontSize: function () {
-            var self = this;
-            var jiZhuReaderOptions = window.jiZhuReaderOptions;
-            var demonstrateFontSize = $('#demonstratefontsize');
-            var changeFunc = function (fs) {
-                demonstrateFontSize.css('font-size', fs + 'px');
-            };
-            $('#fontsize').change(function (e) {
-                var fontSize = $(this).val();
-                $(this).next().text(fontSize);
-                changeFunc(fontSize);
-                jiZhuReaderOptions.fontSize = fontSize;
-                if (!e.isTrigger) {
-                    self.__tipFunc();
-                }
-            }).val(jiZhuReaderOptions.fontSize).trigger('change');
         },
 
         initDictOptions: function () {
