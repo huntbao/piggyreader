@@ -3,10 +3,11 @@
 
 # 更新（Update） #
 
-1. 2014.4.24 修改主背景颜色、放大字体为18px、区分中文和英文的字体、去掉选项中的字体大小设置功能、去掉滚动条的样式、添加了快捷键（cmd+x, ctrl+x）。
-2. 2014.3.28 修復词典层位置不对的bug（dictionary function bug fix）。
-3. 2014.3.20 修復词典功能的bug（dictionary function bug fix）。
-4. 2013.12.30 添加词典功能（dictionary function added）。
+5. 2014.4.26 修改快捷键（cmd+shift+x, ctrl+shift+x）。
+4. 2014.4.24 修改主背景颜色、放大字体为18px、区分中文和英文的字体、去掉选项中的字体大小设置功能、去掉滚动条的样式、添加了快捷键（cmd+x, ctrl+x）。
+3. 2014.3.28 修復词典层位置不对的bug（dictionary function bug fix）。
+2. 2014.3.20 修復词典功能的bug（dictionary function bug fix）。
+1. 2013.12.30 添加词典功能（dictionary function added）。
 
 # 在线安装（Online Install） #
 请点击Chrome Webstore的安装地址，直接安装插件： [去商店直接安装（Install address）](https://chrome.google.com/webstore/detail/%E9%A5%A5%E7%8C%AA%E9%98%85%E8%AF%BB/jfckifkogfenafeakigpkjlifbkklmih?hl=zh-CN)
