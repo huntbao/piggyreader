@@ -59,18 +59,25 @@
         extractContent: function (doc) {
             var ex = new ExtractContentJS.LayeredExtractor();
             ex.addHandler(ex.factory.getHandler('Heuristics'));
-            var res = ex.extract(doc);
-            return res;
+            return ex.extract(doc);
         },
         cleanNode: function (node) {
             var self = this,
                 cloneNode = $(node).clone();
             cloneNode.find('style,script,link,iframe,frame,frameset,noscript,head,html,applet,base,basefont,bgsound,blink,ilayer,layer,meta,object,embed,input,textarea,button,select,canvas,map').remove();
+            var baseURI = window.location.origin + window.location.pathname;
             cloneNode.find('a, img').each(function (idx, el) {
                 //relative path to absolute path
                 if (el.tagName.toLowerCase() === 'a') {
-                    el.href = el.href;
-                    el.target = '_blank';
+                    if (el.href) {
+                        if ((el.origin + el.pathname) === baseURI && el.hash) {
+                            el.target = '_self';
+                            el.href = el.hash;
+                        } else {
+                            el.target = '_blank';
+                            el.href = el.href;
+                        }
+                    }
                 } else {
                     el.src = el.getAttribute('original') || el.src;
                 }
