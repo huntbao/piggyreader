@@ -1,0 +1,37 @@
+﻿/*Piggy Reader
+author @huntbao*/
+
+.mod-search-result {
+    font-weight: normal;
+    font-family: arial, verdana, sans-serif;
+}
+
+.mod-search-result .result-item {
+    word-wrap: break-word;
+    margin: 0 0 20px 0;
+}
+
+.mod-search-result .result-title:link {
+    color: #00c;
+    font-size: 16px;
+}
+
+.mod-search-result .result-title:visited {
+    color: #551a8b;
+    font-size: 16px;
+}
+
+.mod-search-result .result-title em {
+    font-style: normal;
+}
+
+.mod-search-result .result-durl {
+    font-size: 13px;
+    margin: 0;
+    color: #21883b;
+}
+
+.mod-search-result .result-desc {
+    font-size: 13px;
+    margin: 0;
+}

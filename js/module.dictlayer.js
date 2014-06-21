@@ -1,7 +1,7 @@
 ﻿//Piggy Reader
 //author @huntbao
 (function ($) {
-    'use strict';
+    'use strict'
 
     var dictLayer = {
 
@@ -10,64 +10,64 @@
         __isEntered: false,
 
         init: function (data) {
-            var self = this;
-            self.__hideLayer();
-            self.__layerEl = $(Mustache.to_html(dictLayerTpl, data.dictData));
-            self.__layerEl.appendTo(document.body);
-            var layerElHeight = self.__layerEl.height();
-            var layerElWidth = self.__layerEl.width();
-            var position = data.position;
+            var self = this
+            self.__hideLayer()
+            self.__layerEl = $(Mustache.to_html(dictLayerTpl, data.dictData))
+            self.__layerEl.appendTo(document.body)
+            var layerElHeight = self.__layerEl.height()
+            var layerElWidth = self.__layerEl.width()
+            var position = data.position
             if (position.bottom + layerElHeight > $(window).height()) {
-                position.bottom = position.top - layerElHeight - 4;
-                self.__layerEl.find('.jz-arrow').appendTo(self.__layerEl);
-                self.__layerEl.addClass('jz-dict-layer-bottom');
+                position.bottom = position.top - layerElHeight - 4
+                self.__layerEl.find('.jz-arrow').appendTo(self.__layerEl)
+                self.__layerEl.addClass('jz-dict-layer-bottom')
             }
-            var left = Math.max((position.right + position.left - layerElWidth) / 2, 0);
+            var left = Math.max((position.right + position.left - layerElWidth) / 2, 0)
             if ($(document.body).css('position') === 'relative') {
-                left -= ($(window).width() - $(document.body).width()) / 2;
+                left -= ($(window).width() - $(document.body).width()) / 2
             }
             self.__layerEl.css({
                 left: left + document.body.scrollLeft,
                 top: position.bottom + document.body.scrollTop
-            });
+            })
             self.__layerEl.mouseup(function (e) {
-                e.stopPropagation();
-            });
+                e.stopPropagation()
+            })
             if (data.hover) {
                 self.__layerEl.mouseenter(function () {
-                    self.__isEntered = true;
-                });
+                    self.__isEntered = true
+                })
                 self.__layerEl.mouseleave(function () {
-                    self.__isEntered = false;
-                    self.__hideLayer();
-                });
+                    self.__isEntered = false
+                    self.__hideLayer()
+                })
             }
             $(document).mouseup(function () {
-                self.__hideLayer();
-            });
-            self.__layerEl.addClass('jz-opacity-ani');
+                self.__hideLayer()
+            })
+            self.__layerEl.addClass('jz-opacity-ani')
         },
 
         hideLayer: function () {
-            var self = this;
+            var self = this
             setTimeout(function () {
                 if (!self.__isEntered) {
-                    self.__hideLayer();
+                    self.__hideLayer()
                 }
-            }, 0);
+            }, 0)
         },
 
         __hideLayer: function () {
-            var self = this;
-            self.__layerEl && self.__layerEl.remove();
-            self.__layerEl = null;
+            var self = this
+            self.__layerEl && self.__layerEl.remove()
+            self.__layerEl = null
         },
 
         isLayerShown: function () {
-            return this.__layerEl;
+            return this.__layerEl
         }
 
-    };
+    }
 
     var dictLayerTpl = '' +
         '<div class="jz-mod-dict-layer">' +
@@ -100,8 +100,8 @@
         '           {{/hasMore}}' +
         '       </div>' +
         '   </div>' +
-        '</div>';
+        '</div>'
 
-    App.modules.dictLayer = dictLayer;
+    App.modules.dictLayer = dictLayer
 
-})(jQuery);
+})(jQuery)
