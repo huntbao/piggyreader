@@ -10,10 +10,6 @@
         App.modules.search.init()
     })
 
-    $.jps.subscribe('set-reader-content', function (content) {
-        App.modules.reader.setContent(content)
-    })
-
     $(function () {
         $.jps.publish('init-reader')
         $.jps.publish('init-search')

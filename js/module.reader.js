@@ -90,13 +90,6 @@
             }
         },
 
-        setContent: function (content) {
-            var self = this
-            var section = $('<section>', {class: 'jz-addcontent'})
-            var pageContent = $('<div>', {class: 'jz-pagecontent'}).append(content)
-            self.jzContentWrap.empty().append(pageContent)
-        },
-
         initActionBtn: function () {
             var self = this
             $('#jz-closebtn').click(function () {

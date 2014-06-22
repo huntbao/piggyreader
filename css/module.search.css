@@ -1,6 +1,41 @@
 ﻿/*Piggy Reader
 author @huntbao*/
 
+#search-box {
+    position: fixed;
+    top: .5em;
+    left: .5em;
+    width: 10em;
+    transition: width .5s;
+    outline: none;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    padding: .5em 1em;
+    opacity: .5;
+}
+
+#search-box:focus {
+    width: 20em;
+    opacity: 1;
+}
+
+.search-result-wrap {
+    display: flex;
+    margin: 0 auto;
+}
+
+.search-result-wrap .mod-search-result {
+    flex: 10;
+    padding: 12px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 .5em #000;
+}
+
+.search-result-wrap .mod-search-result-sep {
+    flex: 1;
+}
+
 .mod-search-result {
     font-weight: normal;
     font-family: arial, verdana, sans-serif;
@@ -21,10 +56,6 @@ author @huntbao*/
     font-size: 16px;
 }
 
-.mod-search-result .result-title em {
-    font-style: normal;
-}
-
 .mod-search-result .result-durl {
     font-size: 13px;
     margin: 0;
@@ -34,4 +65,32 @@ author @huntbao*/
 .mod-search-result .result-desc {
     font-size: 13px;
     margin: 0;
+}
+
+.mod-search-result .result-title em,
+.mod-search-result .result-title b,
+.mod-search-result .result-desc em,
+.mod-search-result .result-desc b {
+    font-style: normal;
+    font-weight: normal;
+    color: #c00;
+}
+
+.mod-search-result .result-page {
+    margin-bottom: 2em;
+}
+
+.mod-result-more-btn {
+    font-size: 14px;
+    text-align: right;
+    margin: 1em 0;
+}
+
+.mod-related-search {
+    font-size: 12px;
+}
+
+.mod-related-search a:link{
+    color: #00c;
+    margin: 0 0 0 12px;
 }

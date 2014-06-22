@@ -18,13 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-input[type="search"] {
-    position: fixed;
-    top: .5em;
-    left: .5em;
-    width: 12.5em;
-}
-
 body.chinese-article {
     font-weight: bold;
     font-family: "楷体_GB2312", "仿宋_GB2312", "宋体";
