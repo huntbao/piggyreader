@@ -102,19 +102,22 @@
                     class: 'mod-result-more-btn'
                 }).appendTo(self.__searchResultContainer1))
                 // build related search
-                var rsCon = $('<div>', {
-                    class: 'mod-related-search'
-                }).append('<span>related search:</span>').appendTo(self.__searchResultContainer1)
-                $(doc).find('#brs a').each(function () {
-                    rsCon.append($('<a>', {
-                        href: '#',
-                        text: $(this).text()
-                    }))
-                })
-                rsCon.on('click', 'a', function (e) {
-                    self.searchFromGoogle($(this).text())
-                    return false
-                })
+                var rsSeeds = $(doc).find('#brs a')
+                if (rsSeeds.length) {
+                    var rsCon = $('<div>', {
+                        class: 'mod-related-search'
+                    }).append('<span>related search:</span>').appendTo(self.__searchResultContainer1)
+                    rsSeeds.each(function () {
+                        rsCon.append($('<a>', {
+                            href: '#',
+                            text: $(this).text()
+                        }))
+                    })
+                    rsCon.on('click', 'a', function (e) {
+                        self.searchFromGoogle($(this).text())
+                        return false
+                    })
+                }
             }
             var moreBtnWrap = self.__searchResultContainer1.find('.mod-result-more-btn')
             moreBtnWrap.find('a').attr('href', $(doc).find('#nav .cur').next().find('a').attr('href')).text('more>>').data('loading', false)
@@ -169,19 +172,22 @@
                     class: 'mod-result-more-btn'
                 }).appendTo(self.__searchResultContainer2))
                 // build related search
-                var rsCon = $('<div>', {
-                    class: 'mod-related-search'
-                }).append('<span>related search:</span>').appendTo(self.__searchResultContainer2)
-                $(doc).find('#rs a').each(function () {
-                    rsCon.append($('<a>', {
-                        href: '#',
-                        text: $(this).text()
-                    }))
-                })
-                rsCon.on('click', 'a', function (e) {
-                    self.searchFromBaidu($(this).text())
-                    return false
-                })
+                var rsSeeds = $(doc).find('#rs a')
+                if (rsSeeds.length) {
+                    var rsCon = $('<div>', {
+                        class: 'mod-related-search'
+                    }).append('<span>related search:</span>').appendTo(self.__searchResultContainer2)
+                    rsSeeds.each(function () {
+                        rsCon.append($('<a>', {
+                            href: '#',
+                            text: $(this).text()
+                        }))
+                    })
+                    rsCon.on('click', 'a', function (e) {
+                        self.searchFromBaidu($(this).text())
+                        return false
+                    })
+                }
             }
             var moreBtnWrap = self.__searchResultContainer2.find('.mod-result-more-btn')
             moreBtnWrap.find('a').attr('href', $(doc).find('#page strong').next().attr('href')).text('more>>').data('loading', false)
