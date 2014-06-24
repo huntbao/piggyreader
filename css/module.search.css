@@ -1,20 +1,32 @@
 ﻿/*Piggy Reader
 author @huntbao*/
 
-#search-box {
-    position: fixed;
-    top: .5em;
-    left: .5em;
-    width: 10em;
-    transition: width .5s;
-    outline: none;
-    border-radius: 16px;
-    border: 1px solid #ccc;
-    padding: .5em 1em;
-    opacity: .5;
+.pr-searchbox-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000 !important;
 }
 
-#search-box:focus {
+.pr-searchbox-wrap.after-search {
+    top: 1em !important;
+    right: auto !important;
+    left: 3em !important;
+}
+
+.pr-searchbox-wrap.after-search .pr-search-box{
+    margin: auto;
+}
+
+.pr-search-box {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    margin: 0 auto;
+    font-size: 14px;
+    background: url("chrome-extension://__MSG_@@extension_id__/css/images/logo.png") no-repeat 99%;
+}
+
+.pr-search-box:focus {
     width: 20em;
     opacity: 1;
 }
@@ -22,23 +34,37 @@ author @huntbao*/
 .search-result-wrap {
     display: flex;
     margin: 0 auto;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    opacity: 0;
+    padding: 5em 0 0;
+    background-color: #fff;
+    min-height: 100%;
 }
 
 .search-result-wrap .mod-search-result {
-    flex: 10;
-    padding: 12px;
+    flex: 2;
+    padding: 3em;
     background-color: #fff;
     overflow: hidden;
-    box-shadow: 0 0 .5em #000;
 }
 
-.search-result-wrap .mod-search-result-sep {
+.search-result-wrap .mod-search-result-ph {
     flex: 1;
 }
 
 .mod-search-result {
     font-weight: normal;
     font-family: arial, verdana, sans-serif;
+}
+
+.mod-search-result > div {
+    margin-bottom: 2em;
+    max-width: 500px;
 }
 
 .mod-search-result .result-item {
@@ -76,11 +102,7 @@ author @huntbao*/
     color: #c00;
 }
 
-.mod-search-result .result-page {
-    margin-bottom: 2em;
-}
-
-.mod-result-more-btn {
+.mod-result-pagination-btn {
     font-size: 14px;
     text-align: right;
     margin: 1em 0;
