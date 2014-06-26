@@ -25,7 +25,7 @@
                 placeholder: 'google/baidu search',
                 class: 'pr-search-box',
                 autofocus: true
-            }).appendTo(searchBoxWrap)
+            }).appendTo(searchBoxWrap).focus()
             __searchBox.css({
                 width: options.searchBoxCss.width,
                 height: options.searchBoxCss.height
@@ -36,253 +36,83 @@
                     if ($(this).val()) {
                         self.__searchContainer.css('opacity', 1)
                         searchBoxWrap.addClass('after-search')
-                        self.searchFromGoogle($(this).val())
-                        self.searchFromBaidu($(this).val())
+                        self.searchFromGoogle('https://wen.lu/search?q=' + $(this).val().replace(/\s/g, '+'))
+                        self.searchFromBaidu('http://www.baidu.com/s?wd=' + $(this).val())
                     }
                 }
             })
         },
 
-        searchFromGoogle: function (query, newsearch, pn) {
+        searchFromGoogle: function (url) {
             var self = this
-            if (newsearch) {
-                self.__searchResultContainer1.css('opacity', .5)
-            }
-            self.getDocByUrl(self.buildGoogleSearchUrl(query, pn), function (doc) {
+            self.__searchResultContainer1.css('opacity',.5).text('loading data...')
+            self.getDocByUrl(url, function (text) {
                 self.__searchResultContainer1.empty().css('opacity', 1)
-                self.buildGoogleSearchResult(doc, query, pn)
+                var iframe = $('<iframe>', {
+                    frameborder: 0
+                }).appendTo(self.__searchResultContainer1)
+                var iframeWin = iframe[0].contentWindow
+                var iframeDoc = iframe[0].contentDocument || iframeWin.document
+                iframeDoc.open()
+                iframeDoc.write(text)
+                iframeDoc.close()
+                $('#sfcnt', iframeDoc).parent().remove()
+                $('#mngb, #footcnt, #fbar, #top_nav, #rhs', iframeDoc).remove()
+                $('html', iframeDoc).css('overflow', 'hidden')
+                iframe.height($(iframeDoc.body).height())
+                var links = $('#brs a, #nav a, #trev a', iframeDoc)
+                links.click(function () {
+                    $(window).scrollTop(0)
+                    self.searchFromGoogle('https://wen.lu' + $(this).attr('href'))
+                    return false
+                })
+                $('#hdtb_msb > .hdtb_mitem:first-child, .ab_tnav_wrp, #cnt #center_col, .mw #center_col', iframeDoc).css('margin-left', 0)
+                $('#cnt', iframeDoc).css('padding-top', 0)
+                var resultLinks = iframeDoc.querySelectorAll('h3 a')
+                for(var i = 0, l = resultLinks.length; i < l; i++) {
+                    resultLinks[i].removeAttribute('onmousedown')
+                    var clonedLink = resultLinks[i].cloneNode(true)
+                    clonedLink.target = '_blank'
+                    resultLinks[i].parentNode.replaceChild(clonedLink, resultLinks[i])
+                }
             })
         },
 
-        searchFromBaidu: function (query, newsearch, pn) {
+        searchFromBaidu: function (url) {
             var self = this
-            if (newsearch) {
-                self.__searchResultContainer2.css('opacity', .5)
-            }
-            self.getDocByUrl(self.buildBaiduSearchUrl(query, pn), function (doc) {
+            self.__searchResultContainer2.css('opacity',.5).text('loading data...')
+            self.getDocByUrl(url, function (text) {
                 self.__searchResultContainer2.empty().css('opacity', 1)
-                self.buildBaiduSearchResult(doc, query, pn)
+                var iframe = $('<iframe>', {
+                    frameborder: 0
+                }).appendTo(self.__searchResultContainer2)
+                var iframeWin = iframe[0].contentWindow
+                var iframeDoc = iframe[0].contentDocument || iframeWin.document
+                iframeDoc.open()
+                iframeDoc.write(text)
+                iframeDoc.close()
+                $('#head, #page .nums, #search, #foot, #u, #content_right', iframeDoc).remove()
+                $('html', iframeDoc).css('overflow', 'hidden')
+                iframe.height($(iframeDoc.body).height())
+                var links = $('#page a, #rs a, #rs_top a', iframeDoc)
+                links.click(function () {
+                    $(window).scrollTop(0)
+                    self.searchFromBaidu('http://www.baidu.com' + $(this).attr('href'))
+                    return false
+                })
             })
-        },
-
-        buildGoogleSearchResult: function (doc, query, pn) {
-            var self = this
-            var genPage = function () {
-                // build results
-                var page = $('<div>', {
-                    class: 'result-page'
-                })
-                var results = doc.querySelectorAll('h3 a')
-                for (var i = 0, l = results.length, wrap, el, descEl, dUrlEl; i < l; i++) {
-                    el = results[i]
-                    wrap = $('<div>', {
-                        class: 'result-item'
-                    }).appendTo(page)
-                    wrap.append($('<a>', {
-                        href: el.href,
-                        target: '_blank',
-                        html: el.innerHTML,
-                        class: 'result-title'
-                    }))
-                    dUrlEl = $(el).closest('.rc').find('.kv')
-                    wrap.append($('<p>', {
-                        html: dUrlEl.find('cite').html(),
-                        class: 'result-durl'
-                    }))
-                    descEl = $(el).closest('.rc').find('.st')
-                    wrap.append($('<p>', {
-                        html: descEl.html(),
-                        class: 'result-desc'
-                    }))
-                }
-                return page
-            }
-
-            // build pagination
-            var currentPageEl = $(doc).find('#nav .cur')
-            var paginationWrap = $('<div>', {
-                class: 'mod-result-pagination-btn'
-            }).appendTo(self.__searchResultContainer1)
-
-            if (pn) {
-                // build prev button
-                var prevBtn = $('<a>', {
-                    text: 'Prev',
-                    class: 'pagination-prev',
-                    click: function () {
-                        if ($(this).data('loading')) return false
-                        $(this).data('loading', true)
-                        self.searchFromGoogle(query, true, self.getUrlPara(this.href, 'start') >> 0)
-                        self.__nextPNOfGoogle -= self.__itemsPerPageOfGoogle
-                        return false
-                    },
-                    href: '#&start=' + (self.__nextPNOfGoogle - self.__itemsPerPageOfGoogle * 2)
-                })
-                prevBtn.appendTo(paginationWrap)
-            }
-
-            var nextA = currentPageEl.next().find('a')
-            if (nextA.length) {
-                // build next button
-                if (!pn) {
-                    self.__itemsPerPageOfGoogle = self.getUrlPara(nextA.attr('href'), 'start') >> 0
-                    self.__nextPNOfGoogle = self.__itemsPerPageOfGoogle
-                }
-                var nextBtn = $('<a>', {
-                    text: 'Next',
-                    class: 'pagination-next',
-                    click: function () {
-                        if ($(this).data('loading')) return
-                        $(this).data('loading', true)
-                        self.searchFromGoogle(query, true, self.getUrlPara(this.href, 'start') >> 0)
-                        self.__nextPNOfGoogle += self.__itemsPerPageOfGoogle
-                        return false
-                    },
-                    href: '#&start=' + self.__nextPNOfGoogle
-                })
-                nextBtn.appendTo(paginationWrap)
-            }
-
-            // build related search
-            var rsSeeds = $(doc).find('#brs a')
-            if (rsSeeds.length) {
-                var rsCon = $('<div>', {
-                    class: 'mod-related-search'
-                }).append('<span>Related search:</span>').appendTo(self.__searchResultContainer1)
-                rsSeeds.each(function () {
-                    rsCon.append($('<a>', {
-                        href: '#',
-                        text: $(this).text()
-                    }))
-                })
-                rsCon.on('click', 'a', function (e) {
-                    self.searchFromGoogle($(this).text())
-                    return false
-                })
-            }
-
-            genPage().insertBefore(paginationWrap)
-        },
-
-        buildBaiduSearchResult: function (doc, query, pn) {
-            var self = this
-            var genPage = function () {
-                var results = doc.querySelectorAll('h3 a:not(.OP_LOG_LINK)')
-                // build results
-                var page = $('<div>', {
-                    class: 'result-page'
-                })
-                for (var i = 0, l = results.length, wrap, el, descEl, dUrlEl; i < l; i++) {
-                    el = results[i]
-                    wrap = $('<div>', {
-                        class: 'result-item'
-                    }).appendTo(page)
-                    wrap.append($('<a>', {
-                        href: el.href,
-                        target: '_blank',
-                        html: el.innerHTML,
-                        class: 'result-title'
-                    }))
-                    dUrlEl = $(el).closest('.c-container').find('.f13 .g')
-                    wrap.append($('<p>', {
-                        html: dUrlEl.html(),
-                        class: 'result-durl'
-                    }))
-                    descEl = $(el).closest('.c-container').find('.c-abstract').clone()
-                    descEl.find('div').remove()
-                    wrap.append($('<p>', {
-                        html: descEl.html(),
-                        class: 'result-desc'
-                    }))
-                }
-                return page
-            }
-
-            // build pagination
-            var currentPageEl = $(doc).find('#page strong')
-            var paginationWrap = $('<div>', {
-                class: 'mod-result-pagination-btn'
-            }).appendTo(self.__searchResultContainer2)
-
-            if (pn) {
-                // build prev button
-                var prevBtn = $('<a>', {
-                    text: '<Prev',
-                    class: 'pagination-prev',
-                    click: function () {
-                        if ($(this).data('loading')) return false
-                        $(this).data('loading', true)
-                        self.searchFromBaidu(query, true, self.getUrlPara(this.href, 'pn') >> 0)
-                        self.__nextPNOfBaidu -= self.__itemsPerPageOfBaidu
-                        return false
-                    },
-                    href: '#&pn=' + (self.__nextPNOfBaidu - self.__itemsPerPageOfBaidu * 2)
-                })
-                prevBtn.appendTo(paginationWrap)
-            }
-
-            var nextA = currentPageEl.next()
-            if (nextA.length) {
-                // build next button
-                if (!pn) {
-                    self.__itemsPerPageOfBaidu = self.getUrlPara(nextA.attr('href'), 'pn') >> 0
-                    self.__nextPNOfBaidu = self.__itemsPerPageOfBaidu
-                }
-                var nextBtn = $('<a>', {
-                    text: 'Next>',
-                    class: 'pagination-next',
-                    click: function () {
-                        if ($(this).data('loading')) return false
-                        $(this).data('loading', true)
-                        self.searchFromBaidu(query, true, self.getUrlPara(this.href, 'pn') >> 0)
-                        self.__nextPNOfBaidu += self.__itemsPerPageOfBaidu
-                        return false
-                    },
-                    href: '#&pn=' + self.__nextPNOfBaidu
-                })
-                nextBtn.appendTo(paginationWrap)
-            }
-
-            // build related search
-            var rsSeeds = $(doc).find('#rs a')
-            if (rsSeeds.length) {
-                var rsCon = $('<div>', {
-                    class: 'mod-related-search'
-                }).append('<span>Related search:</span>').appendTo(self.__searchResultContainer2)
-                rsSeeds.each(function () {
-                    rsCon.append($('<a>', {
-                        href: '#',
-                        text: $(this).text()
-                    }))
-                })
-                rsCon.on('click', 'a', function (e) {
-                    self.searchFromBaidu($(this).text())
-                    return false
-                })
-            }
-
-            genPage().insertBefore(paginationWrap)
         },
 
         getDocByUrl: function (url, callback) {
             var xhr = new XMLHttpRequest()
             xhr.open('get', url, true)
-            xhr.responseType = 'document'
+            xhr.responseType = 'text'
             xhr.onload = function (e) {
                 if (e.target.status === 200) {
                     callback(xhr.response)
                 }
             }
             xhr.send(null)
-        },
-
-        buildGoogleSearchUrl: function (query, start) {
-            //return 'http://search.aol.com/aol/search?q=' + query.replace(/\s/g, '+')
-            return 'https://wen.lu/search?q=' + query.replace(/\s/g, '+') + (start ? '&start=' + start : '')
-        },
-
-        buildBaiduSearchUrl: function (query, pn) {
-            return 'http://www.baidu.com/s?wd=' + query + (pn ? '&pn=' + pn : '')
         },
 
         preparePage: function () {
@@ -297,19 +127,6 @@
                 self.__searchResultContainer2 = self.__searchResultContainer1.clone()
                 self.__searchContainer.append(self.__searchResultContainer1)
                 self.__searchContainer.append(self.__searchResultContainer2)
-                self.__searchContainer.append($('<div>', {
-                    class: 'mod-search-result-ph'
-                }))
-            }
-        },
-
-        getUrlPara: function (url, key) {
-            var paras = url.split('&')
-            for (var i = 0, l = paras.length; i < l; i++) {
-                var s = paras[i].split('=')
-                if (s.length === 2 && s[0] === key) {
-                    return s[1]
-                }
             }
         }
     }

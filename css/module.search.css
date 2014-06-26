@@ -9,7 +9,7 @@ author @huntbao*/
 }
 
 .pr-searchbox-wrap.after-search {
-    top: 1em !important;
+    top: 2em !important;
     right: auto !important;
     left: 3em !important;
 }
@@ -47,14 +47,10 @@ author @huntbao*/
 }
 
 .search-result-wrap .mod-search-result {
-    flex: 2;
+    flex: 1;
     padding: 3em;
     background-color: #fff;
     overflow: hidden;
-}
-
-.search-result-wrap .mod-search-result-ph {
-    flex: 1;
 }
 
 .mod-search-result {
@@ -62,57 +58,8 @@ author @huntbao*/
     font-family: arial, verdana, sans-serif;
 }
 
-.mod-search-result > div {
-    margin-bottom: 2em;
-    max-width: 500px;
-}
-
-.mod-search-result .result-item {
-    word-wrap: break-word;
-    margin: 0 0 20px 0;
-}
-
-.mod-search-result .result-title:link {
-    color: #00c;
-    font-size: 16px;
-}
-
-.mod-search-result .result-title:visited {
-    color: #551a8b;
-    font-size: 16px;
-}
-
-.mod-search-result .result-durl {
-    font-size: 13px;
-    margin: 0;
-    color: #21883b;
-}
-
-.mod-search-result .result-desc {
-    font-size: 13px;
-    margin: 0;
-}
-
-.mod-search-result .result-title em,
-.mod-search-result .result-title b,
-.mod-search-result .result-desc em,
-.mod-search-result .result-desc b {
-    font-style: normal;
-    font-weight: normal;
-    color: #c00;
-}
-
-.mod-result-pagination-btn {
-    font-size: 14px;
-    text-align: right;
-    margin: 1em 0;
-}
-
-.mod-related-search {
-    font-size: 12px;
-}
-
-.mod-related-search a:link{
-    color: #00c;
-    margin: 0 0 0 12px;
+.mod-search-result iframe {
+    width: 100%;
+    min-height: 1000px;
+    overflow: hidden;
 }

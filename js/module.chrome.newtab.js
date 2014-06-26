@@ -4,7 +4,8 @@
     'use strict'
 
     $(function () {
-        if ($('html').attr('manifest').indexOf('/_/chrome/newtab/manifest') !== -1) {
+        var manifest = $('html').attr('manifest')
+        if (manifest && manifest.indexOf('/_/chrome/newtab/manifest') !== -1) {
             var originalSearchBox = $('#q')
             var originalSearchBoxOffset = originalSearchBox.offset()
             setTimeout(function () {
@@ -17,7 +18,7 @@
                     }
                 })
                 originalSearchBox.parent().hide()
-            }, 1000)
+            }, 0)
         }
     })
 
