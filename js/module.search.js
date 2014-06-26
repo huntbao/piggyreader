@@ -16,7 +16,7 @@
             self.preparePage()
             var searchBoxWrap = $('<div>', {
                 class: 'pr-searchbox-wrap'
-            }).appendTo(self.__body)
+            }).prependTo(self.__body)
             searchBoxWrap.css({
                 top: options.searchBoxCss.top
             })
@@ -24,8 +24,9 @@
                 type: 'text',
                 placeholder: 'google/baidu search',
                 class: 'pr-search-box',
-                autofocus: true
-            }).appendTo(searchBoxWrap).focus()
+                autofocus: true,
+                tabIndex: 1
+            }).appendTo(searchBoxWrap)
             __searchBox.css({
                 width: options.searchBoxCss.width,
                 height: options.searchBoxCss.height
