@@ -60,7 +60,6 @@
                 $('#sfcnt', iframeDoc).parent().remove()
                 $('#mngb, #footcnt, #fbar, #top_nav, #rhs', iframeDoc).remove()
                 $('html', iframeDoc).css('overflow', 'hidden')
-                iframe.height($(iframeDoc.body).height())
                 var links = $('#brs a, #nav a, #trev a', iframeDoc)
                 links.click(function () {
                     $(window).scrollTop(0)
@@ -76,6 +75,7 @@
                     clonedLink.target = '_blank'
                     resultLinks[i].parentNode.replaceChild(clonedLink, resultLinks[i])
                 }
+                iframe.height($(iframeDoc.body).height() + 50)
             })
         },
 
@@ -94,13 +94,13 @@
                 iframeDoc.close()
                 $('#head, #page .nums, #search, #foot, #u, #content_right', iframeDoc).remove()
                 $('html', iframeDoc).css('overflow', 'hidden')
-                iframe.height($(iframeDoc.body).height())
                 var links = $('#page a, #rs a, #rs_top a', iframeDoc)
                 links.click(function () {
                     $(window).scrollTop(0)
                     self.searchFromBaidu('http://www.baidu.com' + $(this).attr('href'))
                     return false
                 })
+                iframe.height($(iframeDoc.body).height() + 50)
             })
         },
 
