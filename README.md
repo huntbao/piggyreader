@@ -3,6 +3,7 @@
 
 # 更新（Update） #
 
+* 2014.6.27 将google和baidu的双搜索功能和在新开页面的搜索框中，修改了实现过程，效果更佳。
 * 2014.6.22 添加google和baidu的双搜索功能，修正google搜索结果页面的链接以及其他bug fix。
 * 2014.5.10 去掉边框1像素的样式，修正 iframe 里面的链接无法正常跳转到 iframe 本页面的 bug。
 * 2014.4.26 修改快捷键（cmd+shift+x, ctrl+shift+x）。

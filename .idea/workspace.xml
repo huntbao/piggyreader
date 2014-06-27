@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.search.js" afterPath="$PROJECT_DIR$/js/module.search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="piggyreader.iws" />
@@ -26,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="module.search.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="module.search.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/module.search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.6764706" vertical-offset="1357" max-vertical-offset="3197">
+            <state line="84" column="44" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3197">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="0.14162561" vertical-offset="0" max-vertical-offset="1633">
               <folding />
             </state>
           </provider>
@@ -82,7 +91,6 @@
         <option value="$PROJECT_DIR$/js/module.settings.js" />
         <option value="$PROJECT_DIR$/js/module.reader.js" />
         <option value="$PROJECT_DIR$/css/module.reader.css" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/js/module.page.shell.js" />
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
         <option value="$PROJECT_DIR$/js/module.reader.shell.js" />
@@ -91,6 +99,7 @@
         <option value="$PROJECT_DIR$/css/module.search.css" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/module.search.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -296,6 +305,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -307,14 +317,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -325,15 +327,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -605,11 +615,6 @@
         <state line="90" column="9" selection-start="3544" selection-end="3544" vertical-scroll-proportion="-1.7329412" vertical-offset="3520" max-vertical-offset="4370" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="465" selection-end="465" vertical-scroll-proportion="0.19706242" vertical-offset="115" max-vertical-offset="1610" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="1" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1771" />
@@ -654,28 +659,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="8" selection-start="2322" selection-end="2322" vertical-scroll-proportion="-0.051373955" vertical-offset="1308" max-vertical-offset="7452">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="556" selection-end="556" vertical-scroll-proportion="0.027946537" vertical-offset="322" max-vertical-offset="1702">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16235293" vertical-offset="0" max-vertical-offset="850">
+        <state line="7" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16235293" vertical-offset="0" max-vertical-offset="850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="37" selection-start="556" selection-end="556" vertical-scroll-proportion="0.027878787" vertical-offset="322" max-vertical-offset="1702">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.6764706" vertical-offset="1357" max-vertical-offset="3197">
+        <state line="84" column="44" selection-start="3646" selection-end="3646" vertical-scroll-proportion="0.0" vertical-offset="1932" max-vertical-offset="3197">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="55" selection-start="103" selection-end="103" vertical-scroll-proportion="0.14162561" vertical-offset="0" max-vertical-offset="1633">
           <folding />
         </state>
       </provider>
