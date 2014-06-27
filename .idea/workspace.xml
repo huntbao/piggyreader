@@ -29,7 +29,7 @@
       <file leaf-file-name="module.search.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/module.search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="33" selection-start="3687" selection-end="3687" vertical-scroll-proportion="0.26995304" vertical-offset="1702" max-vertical-offset="3243">
+            <state line="85" column="0" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.6764706" vertical-offset="1357" max-vertical-offset="3197">
               <folding />
             </state>
           </provider>
@@ -165,6 +165,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -225,6 +226,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="piggyreader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="piggyreader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -267,7 +286,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,6 +307,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -299,23 +325,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -355,13 +373,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="970" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22064245" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22064245" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -393,13 +411,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/module.search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="87" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="3220">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="21" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.0" vertical-offset="879" max-vertical-offset="1702">
@@ -409,9 +420,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610">
-          <folding />
-        </state>
+        <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.search.js">
@@ -611,11 +620,6 @@
         <state line="3" column="16" selection-start="65" selection-end="65" vertical-scroll-proportion="0.05399061" vertical-offset="0" max-vertical-offset="1012" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16197184" vertical-offset="0" max-vertical-offset="852" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/reader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.19562575" vertical-offset="0" max-vertical-offset="920" />
@@ -643,21 +647,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/module.search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610">
-          <folding />
+        <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lib/htmlparser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="8" selection-start="2322" selection-end="2322" vertical-scroll-proportion="-0.051373955" vertical-offset="1308" max-vertical-offset="7452">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="21" selection-start="2504" selection-end="2504" vertical-scroll-proportion="0.77454543" vertical-offset="856" max-vertical-offset="1702">
+        <state line="15" column="37" selection-start="556" selection-end="556" vertical-scroll-proportion="0.027946537" vertical-offset="322" max-vertical-offset="1702">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.16235293" vertical-offset="0" max-vertical-offset="850">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="33" selection-start="3687" selection-end="3687" vertical-scroll-proportion="0.26995304" vertical-offset="1702" max-vertical-offset="3243">
+        <state line="85" column="0" selection-start="3654" selection-end="3654" vertical-scroll-proportion="0.6764706" vertical-offset="1357" max-vertical-offset="3197">
           <folding />
         </state>
       </provider>
