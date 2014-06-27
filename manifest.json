@@ -63,6 +63,6 @@
     "name": "__MSG_ExtensionName__",
     "short_name": "__MSG_ExtensionShortName__",
     "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
-    "version": "1.4.0",
+    "version": "1.4.1",
     "web_accessible_resources": [ "reader.html", "js/lib/jquery-1.10.2.min.map", "css/images/logo.png" ]
 }
