@@ -83,6 +83,8 @@
             var self = this
             self.__searchResultContainer2.css('opacity',.5).text('loading data...')
             self.getDocByUrl(url, function (text) {
+                console.log(text)
+                return
                 self.__searchResultContainer2.empty().css('opacity', 1)
                 var iframe = $('<iframe>', {
                     frameborder: 0
