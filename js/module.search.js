@@ -35,7 +35,7 @@
                 if (e.keyCode === 13) {
                     $(this).val($.trim($(this).val()))
                     if ($(this).val()) {
-                        self.__searchContainer.css('opacity', 1)
+                        self.__searchContainer.css('opacity', 1).css('display', 'flex')
                         searchBoxWrap.addClass('after-search')
                         self.searchFromGoogle('https://wen.lu/search?q=' + $(this).val().replace(/\s/g, '+'))
                         self.searchFromBaidu('http://www.baidu.com/s?wd=' + $(this).val())

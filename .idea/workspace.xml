@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/module.dictlayer.css" afterPath="$PROJECT_DIR$/css/module.dictlayer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/module.search.css" afterPath="$PROJECT_DIR$/css/module.search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.search.js" afterPath="$PROJECT_DIR$/js/module.search.js" />
     </list>
     <ignored path="piggyreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +29,19 @@
       <file leaf-file-name="module.search.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/module.search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="0" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.19058824" vertical-offset="1264" max-vertical-offset="3220">
+            <state line="37" column="87" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.64941174" vertical-offset="299" max-vertical-offset="3220">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.search.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/module.search.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,9 +98,9 @@
         <option value="$PROJECT_DIR$/css/module.dictlayer.css" />
         <option value="$PROJECT_DIR$/js/module.reader.shell.js" />
         <option value="$PROJECT_DIR$/reader.html" />
-        <option value="$PROJECT_DIR$/css/module.search.css" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/js/module.chrome.newtab.js" />
+        <option value="$PROJECT_DIR$/css/module.search.css" />
         <option value="$PROJECT_DIR$/js/module.search.js" />
       </list>
     </option>
@@ -292,6 +300,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -302,23 +318,15 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -396,6 +404,15 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/module.search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="5865">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="7" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="414" />
@@ -606,11 +623,6 @@
         <state line="18" column="1" selection-start="277" selection-end="277" vertical-scroll-proportion="0.29764706" vertical-offset="161" max-vertical-offset="6072" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="21" selection-start="1158" selection-end="1158" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1610" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/sites/google.com.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="13" selection-start="172" selection-end="431" vertical-scroll-proportion="0.24352941" vertical-offset="0" max-vertical-offset="850" />
@@ -626,14 +638,16 @@
         <state line="48" column="38" selection-start="1935" selection-end="1935" vertical-scroll-proportion="1.3414338" vertical-offset="0" max-vertical-offset="1702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.chrome.newtab.js">
+    <entry file="file://$PROJECT_DIR$/css/module.search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.18941176" vertical-offset="0" max-vertical-offset="850" />
+        <state line="34" column="17" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1610">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/module.search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.19058824" vertical-offset="1264" max-vertical-offset="3220">
+        <state line="37" column="87" selection-start="1255" selection-end="1255" vertical-scroll-proportion="0.64941174" vertical-offset="299" max-vertical-offset="3220">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
