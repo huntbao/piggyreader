@@ -14,6 +14,7 @@
                 "js/lib/extract-content.js",
                 "js/lib/jps.js",
                 "js/lib/mustache.js",
+                "js/lib/jquery.autocomplete.js",
                 "js/module.common.shell.js",
                 "js/module.dictlayer.js",
                 "js/module.getpagecontent.js",
@@ -63,6 +64,6 @@
     "name": "__MSG_ExtensionName__",
     "short_name": "__MSG_ExtensionShortName__",
     "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
-    "version": "1.4.1",
+    "version": "1.4.2",
     "web_accessible_resources": [ "reader.html", "js/lib/jquery-1.10.2.min.map", "css/images/logo.png" ]
 }

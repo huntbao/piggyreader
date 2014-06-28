@@ -10,6 +10,8 @@
 
         __searchResultContainer2: null,
 
+        __searchBox: null,
+
         init: function (container, options) {
             var self = this
             self.__body = container
@@ -25,23 +27,53 @@
                 placeholder: 'google/baidu search',
                 class: 'pr-search-box',
                 autofocus: true,
-                tabIndex: 1
+                tabIndex: 1,
+                name: 'q'
             }).appendTo(searchBoxWrap)
             __searchBox.css({
                 width: options.searchBoxCss.width,
                 height: options.searchBoxCss.height
             })
+            var searchFun = function () {
+                __searchBox.val($.trim(__searchBox.val()))
+                if (__searchBox.val()) {
+                    self.__searchContainer.css('opacity', 1).css('display', 'flex')
+                    searchBoxWrap.addClass('after-search')
+                    __searchBox.autocomplete('dispose')
+                    addAutocompleteFunc()
+                    self.searchFromGoogle('https://wen.lu/search?q=' + __searchBox.val().replace(/\s/g, '+'))
+                    self.searchFromBaidu('http://www.baidu.com/s?wd=' + __searchBox.val())
+                }
+            }
+            var addAutocompleteFunc = function () {
+                __searchBox.autocomplete({
+                    serviceUrl: 'https://wen.lu/complete/search?client=hp&hl=zh-CN&xhr=t',
+                    paramName: 'q',
+                    dataType: 'json',
+                    transformResult: function(response, originalQuery) {
+                        var d = response[1]
+                        var lookup = []
+                        for (var i = 0, l = d.length; i < l; i++) {
+                            lookup.push({
+                                value: d[i][0],
+                                data: d[i][0]
+                            })
+                        }
+                        return {
+                            suggestions: lookup
+                        }
+                    },
+                    deferRequestBy: 50,
+                    maxHeight: 310
+                })
+            }
             __searchBox.keydown(function (e) {
                 if (e.keyCode === 13) {
-                    $(this).val($.trim($(this).val()))
-                    if ($(this).val()) {
-                        self.__searchContainer.css('opacity', 1).css('display', 'flex')
-                        searchBoxWrap.addClass('after-search')
-                        self.searchFromGoogle('https://wen.lu/search?q=' + $(this).val().replace(/\s/g, '+'))
-                        self.searchFromBaidu('http://www.baidu.com/s?wd=' + $(this).val())
-                    }
+                    searchFun()
                 }
             })
+            addAutocompleteFunc()
+            self.__searchBox = __searchBox
         },
 
         searchFromGoogle: function (url) {
@@ -76,6 +108,9 @@
                     resultLinks[i].parentNode.replaceChild(clonedLink, resultLinks[i])
                 }
                 iframe.height($(iframeDoc.body).height() + 50)
+                $(iframeDoc).click(function () {
+                    self.__searchBox.autocomplete('hide')
+                })
             })
         },
 
@@ -94,13 +129,16 @@
                 iframeDoc.close()
                 $('#head, #page .nums, #search, #foot, #u, #content_right', iframeDoc).remove()
                 $('html', iframeDoc).css('overflow', 'hidden')
-                var links = $('#page a, #rs a, #rs_top a', iframeDoc)
+                var links = $('#page a, #rs a, #rs_top a, .hit_top .jc a', iframeDoc)
                 links.click(function () {
                     $(window).scrollTop(0)
                     self.searchFromBaidu('http://www.baidu.com' + $(this).attr('href'))
                     return false
                 })
                 iframe.height($(iframeDoc.body).height() + 50)
+                $(iframeDoc).click(function () {
+                    self.__searchBox.autocomplete('hide')
+                })
             })
         },
 

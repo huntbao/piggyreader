@@ -1,4 +1,4 @@
-﻿/*Piggy Reader
+﻿/*piggy reader
 author @huntbao*/
 
 .pr-searchbox-wrap {
@@ -14,7 +14,7 @@ author @huntbao*/
     left: 3em !important;
 }
 
-.pr-searchbox-wrap.after-search .pr-search-box{
+.pr-searchbox-wrap.after-search .pr-search-box {
     margin: auto;
 }
 
@@ -23,7 +23,7 @@ author @huntbao*/
     padding: 4px 8px;
     margin: 0 auto;
     font-size: 14px;
-    background: url("chrome-extension://__MSG_@@extension_id__/css/images/logo.png") no-repeat 99%;
+    background: url("chrome-extension://__msg_@@extension_id__/css/images/logo.png") no-repeat 99%;
 }
 
 .pr-search-box:focus {
@@ -62,4 +62,28 @@ author @huntbao*/
     width: 100%;
     min-height: 1000px;
     overflow: hidden;
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #fff;
+    overflow: auto;
+    text-align: left;
+    text-indent: 4px;
+}
+
+.autocomplete-suggestion {
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+}
+
+.autocomplete-selected {
+    background: #f0f0f0;
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #3399ff;
 }
