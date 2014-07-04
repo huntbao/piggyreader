@@ -111,6 +111,9 @@
                 $(iframeDoc).click(function () {
                     self.__searchBox.autocomplete('hide')
                 })
+                $('a', iframeDoc).each(function (idx, a) {
+                    a.target = '_blank'
+                })
             })
         },
 
@@ -138,6 +141,9 @@
                 iframe.height($(iframeDoc.body).height() + 50)
                 $(iframeDoc).click(function () {
                     self.__searchBox.autocomplete('hide')
+                })
+                $('a', iframeDoc).each(function (idx, a) {
+                    a.target = '_blank'
                 })
             })
         },
