@@ -144,6 +144,7 @@
                 })
                 $('a', iframeDoc).each(function (idx, a) {
                     a.target = '_blank'
+                    a.protocol = 'http'
                 })
             })
         },
