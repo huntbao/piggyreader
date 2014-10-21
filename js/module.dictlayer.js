@@ -90,12 +90,12 @@
         '           {{#hasMore}}' +
         '           <div class="jz-trans-moreitems">' +
         '               <div class="jz-trans-more"></div>' +
-        '           {{#moreTranslatioin}}' +
+        '               {{#moreTranslatioin}}' +
         '               <div class="jz-phrase-tran">' +
         '                   <span class="jz-phrase-key">{{key}}: </span>' +
         '                   <span class="jz-phrase-value">{{value}}</span>' +
         '               </div>' +
-        '           {{/moreTranslatioin}}' +
+        '               {{/moreTranslatioin}}' +
         '           </div>' +
         '           {{/hasMore}}' +
         '       </div>' +
