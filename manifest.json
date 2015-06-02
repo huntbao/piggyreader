@@ -20,7 +20,6 @@
                 "js/module.getpagecontent.js",
                 "js/module.page.js",
                 "js/module.selectionphrase.js",
-                "js/module.chrome.newtab.js",
                 "js/module.search.js",
                 "js/module.page.shell.js",
                 "js/sites/google.com.js"
