@@ -40,6 +40,11 @@
             "run_at": "document_start"
         },
         {
+            "js": [ "js/sites/quora.com.js" ],
+            "matches": [ "http://www.quora.com/*" ],
+            "run_at": "document_start"
+        },
+        {
             "js": [ "js/sites/bbs.tianya.cn.js" ],
             "matches": [ "http://bbs.tianya.cn/*" ],
             "run_at": "document_start"
@@ -64,6 +69,6 @@
     "name": "__MSG_ExtensionName__",
     "short_name": "__MSG_ExtensionShortName__",
     "permissions": [ "tabs", "contextMenus", "http://*/*", "https://*/*" ],
-    "version": "1.4.5",
+    "version": "1.4.6",
     "web_accessible_resources": [ "reader.html", "js/lib/jquery-1.10.2.min.map", "css/images/logo.png" ]
 }
