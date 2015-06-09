@@ -57,23 +57,28 @@
             sel.removeAllRanges()
         },
 
+        getSelectedPhraseTimer: null,
+
         getSelectedPhrase: function (isSamePhraseWithPrevious) {
             var self = this
-            var sel = document.getSelection()
-            var selectedPhrase = sel.toString().trim()
-            if (selectedPhrase) {
-                var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '')
-                if (/^[a-z]+$/g.test(testPhrase)) {
-                    $.jps.publish('lookup-phrase', {
-                        phrase: selectedPhrase,
-                        position: self.getSeletionPosition(sel),
-                        isSamePhraseWithPrevious: isSamePhraseWithPrevious,
-                        from: self.__options.from
-                    })
+            clearTimeout(self.getSelectedPhraseTimer)
+            self.getSelectedPhraseTimer = setTimeout(function () {
+                var sel = document.getSelection()
+                var selectedPhrase = sel.toString().trim()
+                if (selectedPhrase) {
+                    var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '')
+                    if (/^[a-z]+$/g.test(testPhrase)) {
+                        $.jps.publish('lookup-phrase', {
+                            phrase: selectedPhrase,
+                            position: self.getSeletionPosition(sel),
+                            isSamePhraseWithPrevious: isSamePhraseWithPrevious,
+                            from: self.__options.from
+                        })
+                    }
+                } else {
+                    $.jps.publish('hide-dict-layer')
                 }
-            } else {
-                $.jps.publish('hide-dict-layer')
-            }
+            }, 50)
         },
 
         getSeletionPosition: function (sel, position) {

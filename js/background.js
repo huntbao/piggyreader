@@ -68,7 +68,8 @@
                             data: {
                                 dictData: self.getDictData($(xmlDoc)),
                                 position: data.position,
-                                from: data.from
+                                from: data.from,
+                                phrase: data.phrase
                             }
                         })
                     }

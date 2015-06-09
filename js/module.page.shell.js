@@ -18,6 +18,7 @@
                     break
                 case 'lookupphrase-result':
                     if (request.data.from !== 'page') return
+                    if (request.data.phrase !== document.getSelection().toString().trim()) return
                     $.jps.publish('init-dict-layer', {
                         dictData: request.data.dictData,
                         position: request.data.position,
