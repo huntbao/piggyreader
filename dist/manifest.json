@@ -95,7 +95,7 @@
     "http://*/*",
     "https://*/*"
   ],
-  "version": "1.4.7",
+  "version": "1.4.8",
   "web_accessible_resources": [
     "reader.html",
     "js/lib/jquery-1.10.2.min.map",
