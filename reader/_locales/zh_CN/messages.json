@@ -1,0 +1,95 @@
+{
+    "ExtensionDescription": {
+        "description": "extension description",
+        "message": "饥猪阅读(Piggy Reader)，改进阅读体验！"
+    },
+    "ExtensionName": {
+        "description": "extension name",
+        "message": "饥猪阅读"
+    },
+    "ExtensionShortName": {
+        "description": "extension short name",
+        "message": "阅读器"
+    },
+    "BrowserActionTitle": {
+        "description": "extension name",
+        "message": "饥猪阅读"
+    },
+    "Pagination": {
+        "description": "pagination",
+        "message": "第 $1 页"
+    },
+    "JiZhuReaderOption": {
+        "description": "title",
+        "message": "饥猪阅读选项"
+    },
+    "Option": {
+        "description": "option",
+        "message": "选项"
+    },
+    "ReaderFontSize": {
+        "description": "reader fontsize",
+        "message": "阅读字体大小"
+    },
+    "Copyright": {
+        "description": "piggy reader",
+        "message": "©2013-2014 - 饥猪阅读"
+    },
+    "Goback": {
+        "message": "返回(Esc)"
+    },
+    "Edit": {
+        "message": "编辑"
+    },
+    "SaveNote": {
+        "message": "保存为笔记"
+    },
+    "CannotSaveBlankNote": {
+        "message": "不能保存空笔记"
+    },
+    "IsSavingNote": {
+        "message": "正在保存空笔记..."
+    },
+    "Save": {
+        "message": "保存"
+    },
+    "Print": {
+        "message": "打印"
+    },
+    "Help": {
+        "message": "帮助"
+    },
+    "HelpModalTip": {
+        "message": "欢迎使用饥猪阅读（Piggy Reader）！<br />在使用过程中遇到任何问题，请<a href=\"mailto:gzooler@gmail.com\" target=\"_blank\" class=\"jz-highlight-link\">联系我</a>，谢谢。"
+    },
+    "ClipFailedTip": {
+        "message": "<div class=\"jz-clipfailed-tip\">抱歉，没有找到有效的网页正文~~</div>"
+    },
+    "LoadingTip": {
+        "message": "<div class=\"jz-loading-tip\">正在请求内容，请稍候...</div>"
+    },
+    "GeneralOption": {
+        "message": "通用选项"
+    },
+    "DictOption": {
+        "message": "查询选项"
+    },
+    "DictHostpage": {
+        "message": "原始页面"
+    },
+    "DictJzPage": {
+        "message": "饥猪阅读页面"
+    },
+    "DictSelection": {
+        "message": "划词/双击"
+    },
+    "DictMouse": {
+        "message": "鼠标悬停"
+    },
+    "OptionSavedTip": {
+        "message": "选项已保存，请刷新已打开的页面"
+    },
+    "Disabled": {
+        "message": "禁用"
+    }
+}

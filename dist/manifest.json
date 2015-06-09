@@ -19,20 +19,17 @@
         "js/lib/extract-content.js",
         "js/lib/jps.js",
         "js/lib/mustache.js",
-        "js/lib/jquery.autocomplete.min.js",
         "js/module.common.shell.js",
         "js/module.dictlayer.js",
         "js/module.getpagecontent.js",
         "js/module.page.js",
         "js/module.selectionphrase.js",
-        "js/module.search.js",
         "js/module.page.shell.js",
         "js/sites/google.com.js"
       ],
       "css": [
         "css/all.pages.css",
-        "css/module.dictlayer.css",
-        "css/module.search.css"
+        "css/module.dictlayer.css"
       ],
       "matches": [
         "http://*/*",

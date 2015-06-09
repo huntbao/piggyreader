@@ -2,13 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16bcc91b-e278-4fe0-83c5-dd068d1f5c09" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/background.js" afterPath="$PROJECT_DIR$/js/background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/module.dictlayer.css" afterPath="$PROJECT_DIR$/css/module.dictlayer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.page.shell.js" afterPath="$PROJECT_DIR$/js/module.page.shell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.selectionphrase.js" afterPath="$PROJECT_DIR$/js/module.selectionphrase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/en/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_locales/zh_CN/messages.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/all.pages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/help.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/print.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/module.dictlayer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/module.options.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/module.reader.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/module.search.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icons/128x128.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icons/16x16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icons/19x19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icons/32x32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/icons/48x48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/background.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/extract-content.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/htmlparser.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jquery-1.10.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jquery-1.10.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jquery-1.10.2.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jquery.autocomplete.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/jquery.autocomplete.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/mustache.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/lib/string.levenshtein.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.chrome.newtab.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.common.shell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.dictlayer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.getpagecontent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.page.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.page.shell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.reader.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.reader.shell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.search.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.selectionphrase.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/module.settings.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/bbs.tianya.cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/douban.com.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/google.com.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/quora.com.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/wenku.baidu.com.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/sites/zhihu.com.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/options.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/reader.html" afterPath="" />
     </list>
     <ignored path="piggyreader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,30 +77,7 @@
     <favorites_list name="piggyreader" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="253">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/WebstormProjects/glystatic/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.22091782" vertical-offset="253" max-vertical-offset="1955">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,6 +102,7 @@
         <option value="$PROJECT_DIR$/js/module.page.shell.js" />
         <option value="$PROJECT_DIR$/js/module.selectionphrase.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/reader/manifest.json" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
@@ -264,15 +288,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1895" height="1057" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2476684" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22038421" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22038421" sideWeight="0.67058825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -307,341 +331,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2507">
-          <caret line="29" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1288" max-vertical-offset="1495">
-          <caret line="56" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="414">
-          <caret line="6" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4853">
-          <caret line="162" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="2484">
-          <caret line="27" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="414">
-          <caret line="6" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3726" max-vertical-offset="4853">
-          <caret line="162" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3542">
-          <caret line="77" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="3657">
-          <caret line="3" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725">
-          <caret line="51" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302">
-          <caret line="30" column="71" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="3519">
-          <caret line="77" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="1725">
-          <caret line="51" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="6302">
-          <caret line="30" column="71" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="3335">
-          <caret line="24" column="86" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_locales/zh_CN/messages.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7941176" vertical-offset="1265" max-vertical-offset="2231">
-          <caret line="82" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/options.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.444445" vertical-offset="0" max-vertical-offset="1196">
-          <caret line="24" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/all.pages.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32470587" vertical-offset="0" max-vertical-offset="1196">
-          <caret line="12" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.options.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6752941" vertical-offset="2094" max-vertical-offset="2944">
-          <caret line="116" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/lib/jquery-1.10.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8578255" vertical-offset="2392" max-vertical-offset="225285">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/bbs.tianya.cn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18941176" vertical-offset="0" max-vertical-offset="1449">
-          <caret line="7" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/douban.com.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10823529" vertical-offset="0" max-vertical-offset="1564">
-          <caret line="4" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/wenku.baidu.com.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8376471" vertical-offset="576" max-vertical-offset="1426">
-          <caret line="56" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.getpagecontent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.29151732" vertical-offset="2981" max-vertical-offset="3818">
-          <caret line="119" column="52" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.options.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86588234" vertical-offset="0" max-vertical-offset="1311">
-          <caret line="32" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10823529" vertical-offset="0" max-vertical-offset="1081">
-          <caret line="4" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7329412" vertical-offset="3520" max-vertical-offset="4370">
-          <caret line="90" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19562575" vertical-offset="0" max-vertical-offset="920">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/icons/16x16.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.reader.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29764706" vertical-offset="161" max-vertical-offset="6072">
-          <caret line="18" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.reader.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16235293" vertical-offset="0" max-vertical-offset="850">
-          <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6211765" vertical-offset="1105" max-vertical-offset="2162">
-          <caret line="71" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/lib/jquery.autocomplete.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38705882" vertical-offset="14322" max-vertical-offset="18906">
-          <caret line="644" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70235294" vertical-offset="2738" max-vertical-offset="4232">
-          <caret line="146" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/zhihu.com.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18996799" vertical-offset="6" max-vertical-offset="943">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/quora.com.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="943">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.chrome.newtab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44183564" vertical-offset="0" max-vertical-offset="937">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sites/google.com.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17182498" vertical-offset="0" max-vertical-offset="937">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/module.dictlayer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44183564" vertical-offset="0" max-vertical-offset="1794">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.dictlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3191035" vertical-offset="0" max-vertical-offset="2553">
-          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.selectionphrase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5218784" vertical-offset="0" max-vertical-offset="4945">
-          <caret line="63" column="53" selection-start-line="63" selection-start-column="53" selection-end-line="63" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6571429" vertical-offset="0" max-vertical-offset="2599">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.common.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5891142" vertical-offset="0" max-vertical-offset="1012">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.page.shell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46638206" vertical-offset="0" max-vertical-offset="1012">
-          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6275347" vertical-offset="1022" max-vertical-offset="3703">
-          <caret line="71" column="51" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1600854" vertical-offset="184" max-vertical-offset="2668">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12609649" vertical-offset="0" max-vertical-offset="1702">
@@ -658,20 +347,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="253">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="698">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PiggyReader.komodoproject">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="698">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/js/lib/string.levenshtein.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.032951288" vertical-offset="0" max-vertical-offset="989">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/js/module.getpagecontent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048025616" vertical-offset="438" max-vertical-offset="3795">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/WebstormProjects/glystatic/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5057307" vertical-offset="1257" max-vertical-offset="1955">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="72" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reader/js/lib/htmlparser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7452">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/glystatic/main.js">
+    <entry file="file://$PROJECT_DIR$/reader/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22091782" vertical-offset="253" max-vertical-offset="1955">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        <state vertical-scroll-proportion="-1.2494506" vertical-offset="1620" max-vertical-offset="2530">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6872999" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding />
         </state>
       </provider>
