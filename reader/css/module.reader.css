@@ -14,7 +14,7 @@ body {
     font: 18px/1.5 Georgia, "微软雅黑";
     color: #333;
     text-align: left;
-    background: #a2a749;
+    background: #586e75;
     overflow-x: hidden;
 }
 
@@ -124,9 +124,9 @@ a:hover {
     width: 768px;
     margin: 0 auto;
     padding: 12px;
-    background-color: #fff;
+    background-color: #fdf5e3;
     overflow: hidden;
-    box-shadow: 0 0 .5em #000;
+    box-shadow: 0 0 .3em #333;
 }
 
 .jz-article {
@@ -154,9 +154,11 @@ a:hover {
     font-size: 12px;
     font-family: tahoma;
     padding: 2px 4px;
-    background-color: #f7f7f7;
+    background-color: #e15b58;
     margin: 36px 0 12px;
-    color: #999;
+    color: #fff;
+    border-radius: 4px;
+    text-indent: 8px;
 }
 
 .jz-stitle a:link, .jz-stitle a:visited {

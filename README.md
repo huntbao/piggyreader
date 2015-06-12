@@ -3,6 +3,7 @@
 
 # 更新（Update） #
 
+* 2015.6.12 修复了之前发版造成的bug。修改了 reader 的样式。
 * 2015.6.12 Add hashchange eventlistener for google site.
 * 2015.6.09 在页面左上角显示当前页面最近的修改时间，默认不显示，鼠标hover才显示。
 * 2015.6.09 添加 iframe 的取词功能。

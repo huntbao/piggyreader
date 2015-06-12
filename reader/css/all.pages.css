@@ -10,7 +10,7 @@ author @huntbao*/
     max-height: none !important;
     top: 0 !important;
     bottom: 0 !important;
-    left: -100% !important;
+    left: -100%;
     z-index: 2147483647 !important;
 }
 
