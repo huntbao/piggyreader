@@ -7,13 +7,13 @@
 
         __mousemoveTimer: null,
 
+        __getSelectedPhraseTimer: null,
+
         __prevPointedContainer: null,
 
         __prevPointedAnchorOffset: null,
 
         __prevPointedFocusOffset: null,
-
-        __mouseDownedInput: null,
 
         __options: null,
 
@@ -25,13 +25,9 @@
                 $.jps.publish('hide-dict-layer')
             })
             if (self.__options.dictLookup === 'selection') {
-                $(container).on('mousedown', ':input', function () {
-                    self.__mouseDownedInput = this
-                })
                 $(container).mouseup(function (e) {
                     setTimeout(function () {
                         self.getSelectedPhrase()
-                        self.__mouseDownedInput = null
                     }, 0)
                 })
             }
@@ -40,7 +36,7 @@
                     e.stopPropagation()
                     clearTimeout(self.__mousemoveTimer)
                     self.__mousemoveTimer = setTimeout(function () {
-                        self.getPointedPhrase()
+                        self.getPointedPhrase(e)
                     }, 300)
                 })
                 $(container).mouseleave(function (e) {
@@ -59,52 +55,43 @@
 
         getSelectedPhrase: function (isSamePhraseWithPrevious) {
             var self = this
-            if (self.__mouseDownedInput && /^(q|wd)$/.test(self.__mouseDownedInput.name)) {
-                return
-            }
-            var sel = document.getSelection()
-            var selectedPhrase = sel.toString().trim()
-            if (selectedPhrase) {
-                var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '')
-                if (/^[a-z]+$/g.test(testPhrase)) {
-                    $.jps.publish('lookup-phrase', {
-                        phrase: selectedPhrase,
-                        position: self.getSeletionPosition(sel),
-                        isSamePhraseWithPrevious: isSamePhraseWithPrevious,
-                        from: self.__options.from
-                    })
+            clearTimeout(self.__getSelectedPhraseTimer)
+            self.__getSelectedPhraseTimer = setTimeout(function () {
+                console.log(111)
+                var sel = document.getSelection()
+                var selectedPhrase = sel.toString().trim()
+                if (selectedPhrase) {
+                    var testPhrase = selectedPhrase.toLowerCase().replace(/\s|-|’/g, '')
+                    if (/^[a-z]+$/g.test(testPhrase)) {
+                        $.jps.publish('lookup-phrase', {
+                            phrase: selectedPhrase,
+                            position: self.getSeletionPosition(sel),
+                            isSamePhraseWithPrevious: isSamePhraseWithPrevious,
+                            from: self.__options.from
+                        })
+                    }
+                } else {
+                    $.jps.publish('hide-dict-layer')
                 }
-            } else {
-                $.jps.publish('hide-dict-layer')
-            }
+            }, 230)
         },
 
-        getSeletionPosition: function (sel, position) {
-            var self = this
+        getSeletionPosition: function (sel) {
             var boundingClientRect = {left: 0, top: 0, right: 0, bottom: 0, width: 0, height: 0}
             var r = sel.getRangeAt(0)
-            if (r.collapsed) {
-                if (self.__mouseDownedInput) {
-                    var start = self.__mouseDownedInput.selectionStart
-                    var end = self.__mouseDownedInput.selectionEnd
-                    if (start !== end) {
-                        boundingClientRect = self.getSelectedTextBounding(self.__mouseDownedInput, start, end)
-                        self.__mouseDownedInput.setSelectionRange(start, end)
-                    }
-                }
-            } else {
+            if (!r.collapsed) {
                 boundingClientRect = r.getBoundingClientRect()
             }
             return boundingClientRect
         },
 
-        getPointedPhrase: function () {
+        getPointedPhrase: function (evt) {
             var self = this
             var isAlpha = function (str) {
                 str = str.toLowerCase().replace(/-|’/g, '')
                 return /^[a-z]*$/g.test(str)
             }
-            var range = document.caretRangeFromPoint(position.clientX, position.clientY)
+            var range = document.caretRangeFromPoint(evt.clientX, evt.clientY)
             if (!range) return true
             var so = range.startOffset
             var eo = range.endOffset

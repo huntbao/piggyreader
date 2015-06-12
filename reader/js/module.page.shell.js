@@ -40,8 +40,11 @@
         },
 
         __injectPageLasteModifiedTime: function () {
-            var tpl = '<div id="jz-page-lastmodified">' + document.lastModified + '</div>'
+            var tpl = $('<div id="jz-page-lastmodified">' + document.lastModified + '<span>&times;</span></div>')
             $(document.body).append(tpl)
+            tpl.find('span').click(function () {
+                tpl.remove()
+            })
         }
     }
 

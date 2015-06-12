@@ -78,7 +78,7 @@
         "message": "JZ Page"
     },
     "DictSelection": {
-        "message": "(Double Click)Mouse Select"
+        "message": "Mouse Select/Click"
     },
     "DictMouse": {
         "message": "Mouse Hover"
@@ -87,6 +87,6 @@
         "message": "Option saved, please refresh the opened page."
     },
     "Disabled": {
-        "message": "禁用"
+        "message": "Disabled"
     }
 }
