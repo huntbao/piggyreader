@@ -3,6 +3,7 @@
 
 # 更新（Update） #
 
+* 2015.6.12 Add hashchange eventlistener for google site.
 * 2015.6.09 在页面左上角显示当前页面最近的修改时间，默认不显示，鼠标hover才显示。
 * 2015.6.09 添加 iframe 的取词功能。
 * 2015.6.02 去掉google和baidu的双搜索功能，用处不大。添加了对quora的支持。修复了google搜索结果页面的链接不会直接去指定网站的bug。
