@@ -26,6 +26,7 @@
             })
             if (self.__options.dictLookup === 'selection') {
                 $(container).mouseup(function (e) {
+                    if ($(e.target).is(':input')) return
                     setTimeout(function () {
                         self.getSelectedPhrase()
                     }, 0)
@@ -57,7 +58,6 @@
             var self = this
             clearTimeout(self.__getSelectedPhraseTimer)
             self.__getSelectedPhraseTimer = setTimeout(function () {
-                console.log(111)
                 var sel = document.getSelection()
                 var selectedPhrase = sel.toString().trim()
                 if (selectedPhrase) {
