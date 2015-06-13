@@ -24,11 +24,8 @@ gulp.task('release', ['clean-dist'], function (cb) {
             return true
         }
     }
-    var stream = gulp.src([
-        'reader/**/*.*',
-        '!reader/js/lib/jquery-1.10.2.js',
-        '!reader/js/lib/htmlparser.js'
-    ]).pipe(gulpif(gulpJSFilter, uglify()))
+    var stream = gulp.src(['reader/**/*.*'])
+        .pipe(gulpif(gulpJSFilter, uglify()))
         .pipe(gulpif(gulpCSSFilter, minifyCss()))
         .pipe(gulp.dest('dist'))
         .pipe(zip('dist.zip'))

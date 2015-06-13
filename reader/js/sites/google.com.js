@@ -1,6 +1,6 @@
 ﻿//Piggy Reader
 //author @huntbao
-jQuery(function () {
+Zepto(function () {
     'use strict'
     if (document.domain.indexOf('google.com') !== -1) {
         var dealFunc = function () {

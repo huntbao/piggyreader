@@ -1,7 +1,9 @@
 ﻿//Piggy Reader
 //author @huntbao
 (function ($) {
+
     'use strict'
+
     window.jiZhuReaderBackground = {
 
         init: function () {
@@ -154,4 +156,4 @@
         jiZhuReaderBackground.init()
     })
 
-})(jQuery)
+})(Zepto)

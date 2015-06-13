@@ -24,12 +24,11 @@
             }
             self.removeIframe = function () {
                 htmlAndBody.removeClass(beforeReaderCls).removeClass(readerCls)
-                self.iframe.animate({
-                    left: '-100%'
-                }, function () {
+                self.iframe.removeClass('jizhureader-iframe-open')
+                setTimeout(function () {
                     self.iframe.remove()
                     self.iframe = null
-                })
+                }, 300)
                 //clear get page content timer
                 clearTimeout(jiZhuReaderGetPageContent.getContentTimer)
             }
@@ -52,13 +51,13 @@
                 allowtransparency: true,
                 scrolling: 'auto',
                 src: chrome.extension.getURL('reader.html')
-            }).appendTo(document.body).animate({
-                    left: '0%'
-                })
+            }).appendTo(document.body)
+            setTimeout(function () {
+                self.iframe.addClass('jizhureader-iframe-open')
+            }, 0)
         },
 
         getPageContent: function () {
-            var self = this
             window.jiZhuReaderGetPageContent.getCurrentContent(function (content) {
                 var port = chrome.extension.connect({name: 'articlefrompage'})
                 port.postMessage({
@@ -109,4 +108,4 @@
         }
 
     }
-})(jQuery)
+})(Zepto)

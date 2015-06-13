@@ -52,6 +52,6 @@
         }
         getDocByUrl(url)
     }
-})(jQuery)
+})(Zepto)
 
 //test page: http://wenku.baidu.com/view/618ac92d10661ed9ad51f3c5.html

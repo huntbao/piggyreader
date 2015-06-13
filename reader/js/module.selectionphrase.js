@@ -26,7 +26,7 @@
             })
             if (self.__options.dictLookup === 'selection') {
                 $(container).mouseup(function (e) {
-                    if ($(e.target).is(':input')) return
+                    if ($(e.target).is('input, textarea')) return
                     setTimeout(function () {
                         self.getSelectedPhrase()
                     }, 0)
@@ -193,4 +193,4 @@
 
     App.modules.selectionPhrase = selectionPhrase
 
-})(jQuery)
+})(Zepto)

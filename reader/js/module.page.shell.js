@@ -52,4 +52,4 @@
         page.init()
     })
 
-}(jQuery))
+}(Zepto))

@@ -36,11 +36,10 @@
 
         __tipFunc: function () {
             var self = this
-            self.__optionsTip.fadeIn(function () {
-                setTimeout(function () {
-                    self.__optionsTip.fadeOut()
-                }, 3000)
-            })
+            self.__optionsTip.css('opacity', 1)
+            setTimeout(function () {
+                self.__optionsTip.css('opacity', 0)
+            }, 3000)
         }
 
     }
@@ -49,4 +48,4 @@
         JiZhuReaderSettings.init()
     })
 
-})(jQuery)
+})(Zepto)

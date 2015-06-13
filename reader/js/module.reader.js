@@ -20,7 +20,6 @@
         },
 
         getPageContent: function () {
-            var self = this
             parent.postMessage({name: 'getpagecontent'}, '*')
         },
 
@@ -109,8 +108,8 @@
             $('#jz-sider').mouseenter(function () {
                 $(this).addClass('hover')
             }).mouseleave(function () {
-                    $(this).removeClass('hover')
-                })
+                $(this).removeClass('hover')
+            })
             $(document).keydown(function (e) {
                 if (e.which === 27) {
                     parent.postMessage({name: 'removeiframe'}, '*')
@@ -141,23 +140,24 @@
             }).appendTo(document.body)
             var modalTpl =
                 '<div class="jz-modal jz-help-modal">' +
-                    '   <div class="jz-modal-hd">' +
-                    '       <button type="button" class="close">×</button>' +
-                    '       <h3></h3>' +
-                    '   </div>' +
-                    '   <div class="jz-modal-bd"></div>' +
-                    '</div>'
+                '   <div class="jz-modal-hd">' +
+                '       <button type="button" class="close">×</button>' +
+                '       <h3></h3>' +
+                '   </div>' +
+                '   <div class="jz-modal-bd"></div>' +
+                '</div>'
             var modal = $(modalTpl)
             modal.find('h3').append(title || chrome.i18n.getMessage('ExtensionName'))
             modal.find('.jz-modal-bd').append(content)
             modal.appendTo(document.body)
             var closeModal = function () {
                 $(document.body).off('click.closemodal')
-                modal.fadeOut(function () {
+                modal.css('opacity', 0)
+                setTimeout(function () {
                     modal.remove()
                     modalBackdrop.remove()
                     self.modal = null
-                })
+                }, 300)
             }
             $(document.body).on('click.closemodal', function (e) {
                 if (modal.has(e.target).length === 0) {
@@ -183,4 +183,4 @@
         }
     }
 
-})(jQuery)
+})(Zepto)

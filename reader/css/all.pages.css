@@ -12,6 +12,11 @@ author @huntbao*/
     bottom: 0 !important;
     left: -100%;
     z-index: 2147483647 !important;
+    transition: all ease 300ms;
+}
+
+#jizhureader-iframe.jizhureader-iframe-open {
+    left: 0% !important;
 }
 
 #jz-page-lastmodified {

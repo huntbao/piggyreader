@@ -37,4 +37,4 @@
         App.modules.dictLayer.hideLayer()
     })
 
-}(jQuery))
+}(Zepto))

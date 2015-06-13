@@ -12,7 +12,7 @@
         init: function (data) {
             var self = this
             self.__hideLayer()
-            self.__layerEl = $(Mustache.to_html(dictLayerTpl, data.dictData))
+            self.__layerEl = $(self.getLayerStr(data.dictData))
             self.__layerEl.appendTo(document.body)
             var layerElHeight = self.__layerEl.height()
             var layerElWidth = self.__layerEl.width()
@@ -65,6 +65,33 @@
 
         isLayerShown: function () {
             return this.__layerEl
+        },
+
+        getLayerStr: function (data) {
+            var phoneticSymbolStr = ''
+            if (data.phoneticSymbol) {
+                data.phoneticSymbol.split(',').forEach(function (el) {
+                    phoneticSymbolStr += '<span class="jz-phonetic-symbol">[' + el + ']</span>'
+                })
+            }
+            var translationStr = ''
+            if (data.translation) {
+                data.translation.forEach(function (el) {
+                    translationStr += '<div class="jz-phrase-tran">' + el + '</div>'
+                })
+            }
+            var moreTransStr = ''
+            if (data.hasMore) {
+                moreTransStr += '<div class="jz-trans-moreitems"><div class="jz-trans-more"></div>'
+                data.moreTranslatioin.forEach(function (el) {
+                    moreTransStr += '<div class="jz-phrase-tran"><span class="jz-phrase-key">' + el.key + ': ' + '</span><span class="jz-phrase-value">' + el.value + '</span></div>'
+                })
+            }
+            var str = dictLayerTpl.replace(/{{phrase}}/, data.phrase)
+                .replace(/{{phoneticSymbol}}/, phoneticSymbolStr)
+                .replace(/{{translation}}/, translationStr)
+                .replace(/{{moreTranslation}}/, moreTransStr)
+            return str
         }
 
     }
@@ -78,30 +105,16 @@
         '       <div class="jz-layer-content-wrap">' +
         '           <div class="jz-phrase-wrap">' +
         '               <span class="jz-phrase">{{phrase}}</span>' +
-        '               {{#phoneticSymbol}}' +
-        '               <span class="jz-phonetic-symbol">[{{phoneticSymbol}}]</span>' +
-        '               {{/phoneticSymbol}}' +
+        '               {{phoneticSymbol}}' +
         '           </div>' +
         '           <div class="jz-trans-items">' +
-        '           {{#translation}}' +
-        '               <div class="jz-phrase-tran">{{.}}</div>' +
-        '           {{/translation}}' +
+        '           {{translation}}' +
         '           </div>' +
-        '           {{#hasMore}}' +
-        '           <div class="jz-trans-moreitems">' +
-        '               <div class="jz-trans-more"></div>' +
-        '               {{#moreTranslatioin}}' +
-        '               <div class="jz-phrase-tran">' +
-        '                   <span class="jz-phrase-key">{{key}}: </span>' +
-        '                   <span class="jz-phrase-value">{{value}}</span>' +
-        '               </div>' +
-        '               {{/moreTranslatioin}}' +
-        '           </div>' +
-        '           {{/hasMore}}' +
+        '           {{moreTranslation}}' +
         '       </div>' +
         '   </div>' +
         '</div>'
 
     App.modules.dictLayer = dictLayer
 
-})(jQuery)
+})(Zepto)

@@ -33,4 +33,4 @@
         })
         return htmlStr
     }
-})(jQuery)
+})(Zepto)

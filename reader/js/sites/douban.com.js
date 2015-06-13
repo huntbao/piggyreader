@@ -60,4 +60,4 @@
         var viewDate = document.querySelector('span[property="v:dtreviewed"]')
         return viewDate.outerHTML + viewer.parent()[0].outerHTML
     }
-})(jQuery)
+})(Zepto)

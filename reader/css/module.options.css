@@ -108,15 +108,13 @@ body {
 }
 
 .options-tip {
-    display: none;
+    opacity: 0;
     background-color: #600;
     padding: 8px;
     text-align: center;
     color: #fff;
     border-radius: 3px;
     float: left;
-    -moz-transition: opacity .38s;
-    -webkit-transition: opacity .38s;
-    transition: opacity .38s;
+    transition: all ease .38s;
 }
 

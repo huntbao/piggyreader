@@ -10,4 +10,4 @@
         $.jps.publish('init-reader')
     })
 
-}(jQuery))
+}(Zepto))

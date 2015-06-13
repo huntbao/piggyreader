@@ -1,8 +1,7 @@
 {
   "background": {
     "scripts": [
-      "js/lib/jquery-1.10.2.min.js",
-      "js/lib/extract-content.js",
+      "js/lib/zepto.js",
       "js/module.settings.js",
       "js/background.js"
     ]
@@ -14,11 +13,10 @@
   "content_scripts": [
     {
       "js": [
-        "js/lib/jquery-1.10.2.min.js",
+        "js/lib/zepto.js",
         "js/lib/string.levenshtein.js",
         "js/lib/extract-content.js",
         "js/lib/jps.js",
-        "js/lib/mustache.js",
         "js/module.common.shell.js",
         "js/module.dictlayer.js",
         "js/module.getpagecontent.js",
@@ -95,10 +93,9 @@
     "http://*/*",
     "https://*/*"
   ],
-  "version": "1.5.1",
+  "version": "1.5.2",
   "web_accessible_resources": [
     "reader.html",
-    "js/lib/jquery-1.10.2.min.map",
     "css/images/logo.png"
   ]
 }

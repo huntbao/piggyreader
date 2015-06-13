@@ -24,12 +24,12 @@ body.chinese-article {
 }
 
 a:visited, a:link {
-    color: #06c;
+    color: #666;
     text-decoration: none;
 }
 
 a:hover {
-    color: #c00;
+    color: #06c;
     text-decoration: underline;
 }
 
@@ -60,7 +60,6 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center center;
     border-radius: 1px;
-    -webkit-transition: opacity .18s;
     transition: opacity .18s;
     border-radius: 50%;
 }
@@ -154,9 +153,9 @@ a:hover {
     font-size: 12px;
     font-family: tahoma;
     padding: 2px 4px;
-    background-color: #e15b58;
+    background-color: rgba(204, 204, 204, 0.53);
     margin: 36px 0 12px;
-    color: #fff;
+    color: #999;
     border-radius: 4px;
     text-indent: 8px;
 }
@@ -204,10 +203,9 @@ a:hover {
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     outline: none;
-    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    -webkit-background-clip: padding-box;
     background-clip: padding-box;
+    transition: all ease 300ms;
 }
 
 .jz-modal .jz-modal-hd {
