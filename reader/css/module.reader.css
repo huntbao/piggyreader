@@ -24,12 +24,11 @@ body.chinese-article {
 }
 
 a:visited, a:link {
-    color: #666;
+    color: #06c;
     text-decoration: none;
 }
 
 a:hover {
-    color: #06c;
     text-decoration: underline;
 }
 
