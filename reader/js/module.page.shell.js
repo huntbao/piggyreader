@@ -36,15 +36,6 @@
                     chrome.extension.connect({name: 'createreader'})
                 }
             })
-            self.__injectPageLasteModifiedTime()
-        },
-
-        __injectPageLasteModifiedTime: function () {
-            var tpl = $('<div id="jz-page-lastmodified">' + document.lastModified + '<span>&times;</span></div>')
-            $(document.body).append(tpl)
-            tpl.find('span').click(function () {
-                tpl.remove()
-            })
         }
     }
 
