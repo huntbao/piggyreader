@@ -17,20 +17,22 @@
         })
     }
     function getContent() {
-        var commentItems = $('.zm-item-answer'),
-            title,
-            content,
-            htmlStr = ''
+        var commentItems = $('.zm-item-answer')
+        var title
+        var content
+        var htmlStr = ''
         commentItems.each(function (idx, el) {
-            title = $(el).find('.zm-item-answer-author-wrap').text()
-                + '&nbsp' + $(el).find('.zm-item-vote-info').data('votecount') + '&nbsp票'
-                + '&nbsp' + $(el).find('.toggle-comment').text()
-            var richText = $(el).find('.zm-item-rich-text')
+            el = $(el)
+            title = el.find('.zm-item-answer-author-wrap').text()
+            + '&nbsp;' + el.find('.zm-item-vote-info').data('votecount') + '&nbsp票'
+            + '&nbsp;' + el.find('.answer-date-link').html()
+            + '&nbsp;<a href="#" data-aid="' + el.data('aid') + '">' + el.find('.toggle-comment').text() + '</a>'
+            var richText = el.find('.zm-item-rich-text')
             richText.find('img').attr('src', function () {
                 return $(this).data('actualsrc')
             })
             content = richText.html()
-            htmlStr += '<p class="jz-stitle">' + (idx + 1) + '#&nbsp&nbsp' + title + '</p>' + '<div class="jz-scontent">' + content + '</div>'
+            htmlStr += '<p class="jz-stitle jz-zhihu-title">' + (idx + 1) + '#&nbsp&nbsp' + title + '</p><div class="jz-scontent">' + content + '</div>'
         })
         return htmlStr
     }

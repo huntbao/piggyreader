@@ -1,5 +1,15 @@
 ﻿/*Piggy Reader
 author @huntbao*/
+.jz-clr {
+    zoom: 1;
+}
+
+.jz-clr:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
 
 html {
     height: 100%;
@@ -19,7 +29,6 @@ body {
 }
 
 body.chinese-article {
-    font-weight: bold;
     font-family: "楷体_GB2312", "仿宋_GB2312", "宋体";
 }
 
@@ -240,7 +249,7 @@ a:hover {
 
 .jz-modal .jz-modal-bd {
     position: relative;
-    max-height: 400px;
+    max-height: 600px;
     padding: 15px;
     overflow-y: auto;
 }
@@ -255,4 +264,44 @@ a:hover {
 .jz-clipfailed-tip {
     font-style: italic;
     font-size: 14px;
+}
+
+address, blockquote, sup {
+    border-left: 3px solid #d0e5f2;
+    font-style: normal;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height: 22px;
+    vertical-align: baseline;
+    font-size: 100%;
+    margin: 12px;
+}
+
+.jz-zhihu-comment {
+    font-size: 14px;
+}
+
+.jz-zhihu-comment .item-comment {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.jz-zhihu-comment .item-comment:last-child {
+    border-bottom: none;
+}
+
+.jz-zhihu-comment img {
+    float: left;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+
+.jz-zhihu-comment .like-num {
+    font-size: 12px;
+    color: #999;
+}
+
+.jz-zhihu-comment .like-num em {
+    font-style: normal;
 }

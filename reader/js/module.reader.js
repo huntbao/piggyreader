@@ -115,6 +115,29 @@
                     parent.postMessage({name: 'removeiframe'}, '*')
                 }
             })
+            $(document).on('click', '.jz-zhihu-title a', function () {
+                var t = $(this)
+                var aid = t.data('aid')
+                $.ajax({
+                    url: 'http://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
+                    success: function (data) {
+                        var comments = $(data).find('.zm-item-comment')
+                        var content = '<div class="jz-zhihu-comment">'
+                        comments.each(function (idx, el) {
+                            el = $(el)
+                            content += '<p class="jz-clr item-comment">' + el.find('.zm-item-img-avatar')[0].outerHTML + el.find('.zm-comment-hd').html() + ':' + el.find('.zm-comment-content').text()
+                            var likeNum = el.find('.like-num')
+                            if (likeNum.find('em').text() !== '0') {
+                                content += '<span class="like-num">(' + likeNum.html().trim() + ')'
+                            }
+                            content += '</p>'
+                        })
+                        content += '</div>'
+                        self.showModal(content, '用户评论')
+                    }
+                })
+                return false
+            })
         },
 
         editContent: function () {
