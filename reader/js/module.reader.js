@@ -118,24 +118,27 @@
             $(document).on('click', '.jz-zhihu-title a', function () {
                 var t = $(this)
                 var aid = t.data('aid')
-                $.ajax({
-                    url: 'http://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
-                    success: function (data) {
-                        var comments = $(data).find('.zm-item-comment')
-                        var content = '<div class="jz-zhihu-comment">'
-                        comments.each(function (idx, el) {
-                            el = $(el)
-                            content += '<p class="jz-clr item-comment">' + el.find('.zm-item-img-avatar')[0].outerHTML + el.find('.zm-comment-hd').html() + ':' + el.find('.zm-comment-content').text()
-                            var likeNum = el.find('.like-num')
-                            if (likeNum.find('em').text() !== '0') {
-                                content += '<span class="like-num">(' + likeNum.html().trim() + ')'
-                            }
-                            content += '</p>'
-                        })
-                        content += '</div>'
-                        self.showModal(content, '用户评论')
-                    }
-                })
+                function getContent () {
+                    $.ajax({
+                        url: 'http://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
+                        success: function (data) {
+                            var comments = $(data).find('.zm-item-comment')
+                            var content = '<div class="jz-zhihu-comment">'
+                            comments.each(function (idx, el) {
+                                el = $(el)
+                                content += '<p class="jz-clr item-comment">' + el.find('.zm-item-img-avatar')[0].outerHTML + el.find('.zm-comment-hd').html() + ':' + el.find('.zm-comment-content').text()
+                                var likeNum = el.find('.like-num')
+                                if (likeNum.find('em').text() !== '0') {
+                                    content += '<span class="like-num">(' + likeNum.html().trim() + ')'
+                                }
+                                content += '</p>'
+                            })
+                            content += '</div>'
+                            self.modal.find('.jz-modal-bd').html(content)
+                        }
+                    })
+                }
+                self.showModal('<div class="jz-zhihu-comment">评论加载中，请稍候...</div>', '用户评论', getContent())
                 return false
             })
         },
@@ -156,11 +159,12 @@
             self.showModal(chrome.i18n.getMessage('HelpModalTip'))
         },
 
-        showModal: function (content, title) {
+        showModal: function (content, title, callback) {
             var self = this
+            var docBody = $(document.body).addClass('ov-hidden')
             var modalBackdrop = $('<div>', {
                 class: 'jz-modal-backdrop'
-            }).appendTo(document.body)
+            }).appendTo(docBody)
             var modalTpl =
                 '<div class="jz-modal jz-help-modal">' +
                 '   <div class="jz-modal-hd">' +
@@ -172,9 +176,9 @@
             var modal = $(modalTpl)
             modal.find('h3').append(title || chrome.i18n.getMessage('ExtensionName'))
             modal.find('.jz-modal-bd').append(content)
-            modal.appendTo(document.body)
+            modal.appendTo(docBody)
             var closeModal = function () {
-                $(document.body).off('click.closemodal')
+                docBody.off('click.closemodal').removeClass('ov-hidden')
                 modal.css('opacity', 0)
                 setTimeout(function () {
                     modal.remove()
@@ -182,7 +186,7 @@
                     self.modal = null
                 }, 300)
             }
-            $(document.body).on('click.closemodal', function (e) {
+            docBody.on('click.closemodal', function (e) {
                 if (modal.has(e.target).length === 0) {
                     closeModal()
                     return false
@@ -194,6 +198,7 @@
                 return false
             })
             self.modal = modal
+            callback && callback()
         },
 
         lookupPhraseResultHandler: function (data) {

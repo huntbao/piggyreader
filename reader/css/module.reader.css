@@ -28,6 +28,10 @@ body {
     overflow-x: hidden;
 }
 
+body.ov-hidden {
+    overflow: hidden;
+}
+
 body.chinese-article {
     font-family: "楷体_GB2312", "仿宋_GB2312", "宋体";
 }
