@@ -271,14 +271,8 @@ a:hover {
 }
 
 address, blockquote, sup {
-    border-left: 3px solid #d0e5f2;
-    font-style: normal;
-    padding: 0 0 0 10px;
-    display: block;
-    line-height: 22px;
-    vertical-align: baseline;
-    font-size: 100%;
-    margin: 12px;
+    border-left: 3px solid rgba(20, 149, 242, 0.6);
+    padding: 0 0 0 1.5em;
 }
 
 .jz-zhihu-comment {
