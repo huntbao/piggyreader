@@ -70,7 +70,7 @@
         getLayerStr: function (data) {
             var phoneticSymbolStr = ''
             if (data.phoneticSymbol) {
-                data.phoneticSymbol.split(',').forEach(function (el) {
+                data.phoneticSymbol.split(', ').forEach(function (el) {
                     phoneticSymbolStr += '<span class="jz-phonetic-symbol">[' + el + ']</span>'
                 })
             }
