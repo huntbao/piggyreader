@@ -29,7 +29,7 @@
             + '&nbsp;<a href="#" data-aid="' + el.data('aid') + '">' + el.find('.toggle-comment').text() + '</a>'
             var richText = el.find('.zm-item-rich-text')
             richText.find('img').attr('src', function () {
-                return $(this).data('actualsrc')
+                return window.location.protocol + $(this).data('actualsrc')
             })
             content = richText.html()
             htmlStr += '<p class="jz-stitle jz-zhihu-title">' + (idx + 1) + '#&nbsp&nbsp' + title + '</p><div class="jz-scontent">' + content + '</div>'
