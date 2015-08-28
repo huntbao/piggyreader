@@ -6,6 +6,9 @@
         //override
         var titleCon = $('#zh-question-title').clone()
         var questionDetail = $('#zh-question-detail').clone()
+        questionDetail.find('img').attr('src', function () {
+            return window.location.protocol + $(this).data('original')
+        })
         titleCon.find('a').remove()
         questionDetail.find('a.zu-edit-button, .zm-editable-tip').remove()
         var title = titleCon.text()
@@ -24,9 +27,9 @@
         commentItems.each(function (idx, el) {
             el = $(el)
             title = el.find('.zm-item-answer-author-wrap').text()
-            + '&nbsp;' + el.find('.zm-item-vote-info').data('votecount') + '&nbsp票'
-            + '&nbsp;' + el.find('.answer-date-link').html()
-            + '&nbsp;<a href="#" data-aid="' + el.data('aid') + '">' + el.find('.toggle-comment').text() + '</a>'
+                + '&nbsp;' + el.find('.zm-item-vote-info').data('votecount') + '&nbsp票'
+                + '&nbsp;' + el.find('.answer-date-link').html()
+                + '&nbsp;<a href="#" data-aid="' + el.data('aid') + '">' + el.find('.toggle-comment').text() + '</a>'
             var richText = el.find('.zm-item-rich-text')
             richText.find('img').attr('src', function () {
                 return window.location.protocol + $(this).data('actualsrc')

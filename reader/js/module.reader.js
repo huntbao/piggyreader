@@ -126,7 +126,7 @@
                             var content = '<div class="jz-zhihu-comment">'
                             comments.each(function (idx, el) {
                                 el = $(el)
-                                content += '<p class="jz-clr item-comment">' + el.find('.zm-item-img-avatar')[0].outerHTML + el.find('.zm-comment-hd').html() + ':' + el.find('.zm-comment-content').html()
+                                content += '<p class="jz-clr item-comment">' + el.find('.zm-item-img-avatar')[0].outerHTML.replace(/\/\//, 'http://') + el.find('.zm-comment-hd').html() + ':' + el.find('.zm-comment-content').html()
                                 var likeNum = el.find('.like-num')
                                 if (likeNum.find('em').text() !== '0') {
                                     content += '<span class="like-num">(' + likeNum.html().trim() + ')'
