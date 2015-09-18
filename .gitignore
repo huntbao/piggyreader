@@ -1,2 +1,5 @@
 node_modules
 dist.zip
+.idea/dbnavigator.xml
+.idea/codeStyleSettings.xml
+.idea/workspace.xml
