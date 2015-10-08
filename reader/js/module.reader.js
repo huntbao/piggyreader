@@ -60,7 +60,7 @@
             if (title !== '') {
                 self.jzTitle.html(title)
                 document.title = title
-                if (/.*[\u4e00-\u9fa5]+.*$/.test(title)) {
+                if (navigator.platform.indexOf('Mac') !== -1 && /.*[\u4e00-\u9fa5]+.*$/.test(title)) {
                     // has chinese charecter
                     $(document.body).addClass('chinese-article')
                 }
@@ -82,7 +82,10 @@
                 self.currentPageNum++
                 var section = $('<section>', {class: 'jz-addcontent'})
                 var pageContent = $('<div>', {class: 'jz-pagecontent', html: data.content})
-                var pageNum = $('<h6>', {text: chrome.i18n.getMessage('Pagination', [self.currentPageNum]), class: 'jz-pagenum'})
+                var pageNum = $('<h6>', {
+                    text: chrome.i18n.getMessage('Pagination', [self.currentPageNum]),
+                    class: 'jz-pagenum'
+                })
                 section.append(pageNum).append(pageContent)
                 self.jzArticle.append(section).find('pre, code, xmp').addClass('prettyprint')
                 prettyPrint(section[0])
@@ -118,7 +121,8 @@
             $(document).on('click', '.jz-zhihu-title a', function () {
                 var t = $(this)
                 var aid = t.data('aid')
-                function getContent () {
+
+                function getContent() {
                     $.ajax({
                         url: 'http://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
                         success: function (data) {
@@ -138,6 +142,7 @@
                         }
                     })
                 }
+
                 self.showModal('<div class="jz-zhihu-comment">评论加载中，请稍候...</div>', '用户评论', getContent())
                 return false
             })

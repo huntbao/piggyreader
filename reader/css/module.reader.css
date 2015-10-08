@@ -71,7 +71,6 @@ a:hover {
     padding: 4px;
     background-repeat: no-repeat;
     background-position: center center;
-    border-radius: 1px;
     transition: opacity .18s;
     border-radius: 50%;
 }
