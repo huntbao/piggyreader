@@ -8,6 +8,7 @@
         var questionDetail = $('#zh-question-detail').clone()
         questionDetail.find('img').attr('src', function () {
             var imgSrc = $(this).data('original')
+            if (!imgSrc) return $(this).attr('href')
             if (imgSrc.startsWith('//')) {
                 return window.location.protocol + imgSrc
             } else {
@@ -38,6 +39,7 @@
             var richText = el.find('.zm-item-rich-text')
             richText.find('img').attr('src', function () {
                 var imgSrc = $(this).data('actualsrc')
+                if (!imgSrc) return $(this).attr('href')
                 if (imgSrc.startsWith('//')) {
                     return window.location.protocol + imgSrc
                 } else {
