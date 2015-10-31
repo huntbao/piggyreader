@@ -29,10 +29,12 @@
                 getCommentsByContainer(commentDiv, startNum)
                 var nextA = commentDiv.find('.paginator .next').find('a')
                 if (nextA.length === 1) {
-                    var currentPage = parseInt(commentDiv.find('.paginator .on').text())
-                    jiZhuReader.getSuperAddTimer = setTimeout(function () {
-                        getComments(currentPage * 100)
-                    }, currentPage * 2000)
+                    var currentPage = parseInt(commentDiv.find('.paginator .thispage').text())
+                    if (currentPage) {
+                        jiZhuReader.getSuperAddTimer = setTimeout(function () {
+                            getComments(currentPage * 100)
+                        }, currentPage * 2000)
+                    }
                 }
             }
         })
