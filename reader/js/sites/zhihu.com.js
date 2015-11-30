@@ -32,7 +32,7 @@
         var htmlStr = ''
         commentItems.each(function (idx, el) {
             el = $(el).clone(true, true)
-            title = el.find('.zm-item-answer-author-wrap').text()
+            title = el.find('.author-link').text()
                 + '&nbsp;' + el.find('.zm-item-vote-info').data('votecount') + '&nbsp票'
                 + '&nbsp;' + el.find('.answer-date-link').html()
                 + '&nbsp;<a href="#" data-aid="' + el.data('aid') + '">' + el.find('.toggle-comment').text() + '</a>'
