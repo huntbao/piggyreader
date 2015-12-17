@@ -48,7 +48,7 @@
     },
     {
       "js": ["js/sites/zhihu.com.js"],
-      "matches": ["http://www.zhihu.com/question/*"],
+      "matches": ["http://www.zhihu.com/question/*", "https://www.zhihu.com/question/*"],
       "all_frames": true,
       "run_at": "document_start"
     },
@@ -93,7 +93,7 @@
     "http://*/*",
     "https://*/*"
   ],
-  "version": "1.6.8",
+  "version": "1.7.0",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

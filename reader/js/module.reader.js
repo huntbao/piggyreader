@@ -29,7 +29,7 @@
 
         initExtensionRequest: function () {
             var self = this
-            chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
+            chrome.extension.onRequest.addListener(function (request, sender) {
                 if (!sender || sender.id !== chrome.i18n.getMessage("@@extension_id")) return
                 switch (request.name) {
                     case 'sendarticletoreader':
@@ -124,7 +124,7 @@
 
                 function getContent() {
                     $.ajax({
-                        url: 'http://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
+                        url: 'https://www.zhihu.com/node/AnswerCommentBoxV2?params=' + encodeURIComponent('{"answer_id":"' + aid + '","load_all":true}'),
                         success: function (data) {
                             var comments = $(data).find('.zm-item-comment')
                             var content = '<div class="jz-zhihu-comment">'
@@ -198,7 +198,7 @@
                 }
                 return true
             })
-            modal.find('.close').click(function (e) {
+            modal.find('.close').click(function () {
                 closeModal()
                 return false
             })
