@@ -270,8 +270,9 @@ a:hover {
 }
 
 .zm-editable-content blockquote {
-    border-left: 3px solid rgba(20, 149, 242, 0.6);
-    padding: 0 0 0 1.5em;
+    border-left: 3px solid rgba(221, 221, 221, .9);
+    padding: 0 0 0 1em;
+    margin: 0 .5em;
 }
 
 .jz-zhihu-comment {
