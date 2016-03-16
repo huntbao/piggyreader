@@ -62,18 +62,48 @@
         lookupPhraseHandler: function (port) {
             var self = this
             port.onMessage.addListener(function (data) {
-                $.ajax({
-                    url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
-                    success: function (xmlDoc) {
-                        chrome.tabs.sendRequest(port.sender.tab.id, {
-                            name: 'lookupphrase-result',
-                            data: {
-                                dictData: self.getDictData($(xmlDoc)),
-                                position: data.position,
-                                from: data.from,
-                                phrase: data.phrase
+                var callback = function (dictData) {
+                    chrome.tabs.sendRequest(port.sender.tab.id, {
+                        name: 'lookupphrase-result',
+                        data: {
+                            dictData: dictData,
+                            position: data.position,
+                            from: data.from,
+                            phrase: data.phrase
+                        }
+                    })
+                }
+                var dictDataSavedKey = 'DICT-DATA'
+                var isOutDate
+                var sendRequest = function () {
+                    $.ajax({
+                        url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
+                        success: function (xmlDoc) {
+                            // save xmlDoc for next use
+                            var dictData = self.getDictData($(xmlDoc))
+                            var savedObj = {}
+                            savedObj[dictDataSavedKey] = {}
+                            savedObj[dictDataSavedKey][data.phrase] = {
+                                dictData: dictData,
+                                createTime: Date.now()
                             }
-                        })
+                            StorageArea.set(savedObj)
+                            if (!isOutDate) {
+                                callback(dictData)
+                            }
+                        }
+                    })
+                }
+                StorageArea.get(dictDataSavedKey, function (result) {
+                    if (result[dictDataSavedKey] && result[dictDataSavedKey][data.phrase]) {
+                        // one month: 30 * 24 * 60 * 60 * 1000 = 2592000000
+                        isOutDate = Date.now() - result[dictDataSavedKey][data.phrase].createTime > 2592000000
+                        callback(result[dictDataSavedKey][data.phrase].dictData)
+                    } else {
+                        sendRequest()
+                    }
+                    if (isOutDate) {
+                        sendRequest()
                     }
                 })
             })
@@ -120,11 +150,10 @@
         },
 
         getDictData: function (xmlDoc) {
-            var self = this
-            var trans= []
+            var trans = []
             var translation = xmlDoc.find('custom-translation content')
             $.each(translation, function (idx, tr) {
-               trans.push($(tr).text())
+                trans.push($(tr).text())
             })
             var moreTrans = []
             var moreTranslatioin = xmlDoc.find('web-translation')

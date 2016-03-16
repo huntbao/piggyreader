@@ -2,6 +2,7 @@
   "background": {
     "scripts": [
       "js/lib/zepto.js",
+      "js/lib/storagearea.js",
       "js/module.settings.js",
       "js/background.js"
     ]
@@ -91,9 +92,11 @@
     "tabs",
     "contextMenus",
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "unlimitedStorage",
+    "storage"
   ],
-  "version": "1.7.1",
+  "version": "1.7.2",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

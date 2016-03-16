@@ -1,0 +1,1 @@
+window.StorageArea={get:function(o,e){chrome.storage.local.get(o,function(o){e(o)})},set:function(o,e){chrome.storage.local.set(o,function(){e&&e()})},remove:function(o,e){chrome.storage.local.remove(o,function(){e&&e()})},clear:function(o){chrome.storage.local.clear(function(){o&&o()})}};

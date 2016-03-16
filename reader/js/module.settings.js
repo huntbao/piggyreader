@@ -36,6 +36,14 @@
             set: function (value) {
                 setOption('dictJzpage', value)
             }
+        },
+        dictData: {
+            get: function () {
+                return getOption('dictData', {})
+            },
+            set: function (value) {
+                setOption('dictData', value)
+            }
         }
     })
     window.jiZhuReaderOptions = jiZhuReaderOptions
