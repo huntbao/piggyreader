@@ -75,14 +75,16 @@
                 }
                 var dictDataSavedKey = 'DICT-DATA'
                 var isOutDate
-                var sendRequest = function () {
+                var sendRequest = function (savedObj) {
                     $.ajax({
                         url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
                         success: function (xmlDoc) {
                             // save xmlDoc for next use
                             var dictData = self.getDictData($(xmlDoc))
-                            var savedObj = {}
-                            savedObj[dictDataSavedKey] = {}
+                            if (!savedObj) {
+                                savedObj = {}
+                                savedObj[dictDataSavedKey] = {}
+                            }
                             savedObj[dictDataSavedKey][data.phrase] = {
                                 dictData: dictData,
                                 createTime: Date.now()
@@ -95,14 +97,18 @@
                     })
                 }
                 StorageArea.get(dictDataSavedKey, function (result) {
-                    if (result[dictDataSavedKey] && result[dictDataSavedKey][data.phrase]) {
-                        // one month: 30 * 24 * 60 * 60 * 1000 = 2592000000
-                        isOutDate = Date.now() - result[dictDataSavedKey][data.phrase].createTime > 2592000000
-                        callback(result[dictDataSavedKey][data.phrase].dictData)
+                    if (result[dictDataSavedKey]) {
+                        if (result[dictDataSavedKey][data.phrase]) {
+                            // one month: 30 * 24 * 60 * 60 * 1000 = 2592000000
+                            isOutDate = Date.now() - result[dictDataSavedKey][data.phrase].createTime > 2592000000
+                            callback(result[dictDataSavedKey][data.phrase].dictData)
+                            if (isOutDate) {
+                                sendRequest(result)
+                            }
+                        } else {
+                            sendRequest(result)
+                        }
                     } else {
-                        sendRequest()
-                    }
-                    if (isOutDate) {
                         sendRequest()
                     }
                 })
