@@ -14,12 +14,14 @@
   "content_scripts": [
     {
       "js": [
+        "data/putian.data.js",
         "js/lib/zepto.js",
         "js/lib/string.levenshtein.js",
         "js/lib/extract-content.js",
         "js/lib/jps.js",
         "js/module.common.shell.js",
         "js/module.dictlayer.js",
+        "js/module.masklayer.js",
         "js/module.getpagecontent.js",
         "js/module.page.js",
         "js/module.selectionphrase.js",
@@ -73,6 +75,15 @@
       ],
       "all_frames": true,
       "run_at": "document_start"
+    },
+    {
+      "js": ["js/sites/search.baidu.com.js"],
+      "matches": [
+        "https://www.baidu.com/s*",
+        "http://www.baidu.com/s*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
     }
   ],
   "default_locale": "zh_CN",
@@ -96,7 +107,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.7.3",
+  "version": "1.7.4",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

@@ -71,3 +71,64 @@ body.jizhureader-beforereader #jizhureader-iframe,
     overflow: auto !important;
     visibility: visible !important;
 }
+
+.jizhureader-mask-layer {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ed143d;
+    font-size: 20px;
+    cursor: default;
+    line-height: 2em;
+    z-index: 2147483647 !important;
+}
+
+.jizhureader-mask-layer .jz-closebtn {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    line-height: 0;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+.jizhureader-mask-layer .jz-layer-content {
+    padding: 20px;
+}
+
+.jizhureader-mask-layer:hover .jz-closebtn {
+    opacity: 1;
+}
+
+.jizhureader-mask-layer .jz-layer-warn-title {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 8px;
+}
+
+.jizhureader-mask-layer .jz-layer-warn-tip {
+    line-height: 1em;
+    text-align: center;
+    font-size: 16px;
+}
+
+.jizhureader-mask-layer .jz-layer-warn-tip2 {
+    line-height: 1em;
+    text-align: right;
+    font-size: 12px;
+    margin: 4px 0 0;
+}
+
+.jizhureader-mask-layer .jz-layer-warn-tip a:link,
+.jizhureader-mask-layer .jz-layer-warn-tip a:visited {
+    text-decoration: underline;
+    color: #ed143d;
+}
