@@ -735,7 +735,6 @@ window.putianHospitalDataJiZhuReader={
 		"南宁南国妇科医院",
 		"南宁市博大医院",
 		"南宁博锐医院",
-		"医网",
 		"中华整形网",
 		"中华不育网",
 		"广州人流网",
