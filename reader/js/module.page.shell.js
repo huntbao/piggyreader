@@ -41,10 +41,10 @@
     },
 
     addEvent: function () {
-      $.jps.subscribe('create-mask-layer', function (refEl, type) {
-        App.modules.maskLayer.create(refEl, type)
+      $.jps.subscribe('create-mask-layer', function (refEl, type, keyword) {
+        App.modules.maskLayer.create(refEl, type, keyword)
       })
-      $.jps.subscribe('hide-all-mask-layers', function (refEl) {
+      $.jps.subscribe('hide-all-mask-layers', function () {
         App.modules.maskLayer.hideAll()
       })
     },

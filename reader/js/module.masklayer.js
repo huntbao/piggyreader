@@ -7,7 +7,7 @@
 
     __layerEl: null,
 
-    create: function (refEl, type) {
+    create: function (refEl, type, keyword) {
       var self = this
       var tpl = tpls[type || 'promotion']
       self.__layerEl = $(tpl).appendTo(refEl)
@@ -18,6 +18,9 @@
         width: $(refEl).width(),
         height: $(refEl).height()
       })
+      if (keyword) {
+        self.__layerEl.find('.jz-putian-keyword').text(keyword)
+      }
       self.__layerEl.find('.jz-closebtn').click(function () {
         $(this).parent().remove()
       })
@@ -46,8 +49,8 @@
     '   <div class="jz-layer-content">' +
     '       <div class="jz-layer-content-wrap">' +
     '        <h3 class="jz-layer-warn-title">危险!!!</h3>' +
-    '        <p class="jz-layer-warn-tip">疑似莆田系医院, 请不要访问 <a href="https://github.com/open-power-workgroup/Hospital" target="_blank">名单来源</a></p>' +
-    '        <p class="jz-layer-warn-tip2">——珍惜生命, 远离莆田!!!</p>' +
+    '        <p class="jz-layer-warn-tip">"<span class="jz-putian-keyword"></span>" 疑是莆田系医院, 请不要访问</p>' +
+    '        <p class="jz-layer-warn-tip2">—— 珍惜生命, 远离莆田 <a href="https://github.com/open-power-workgroup/Hospital" target="_blank">名单来源</a></p>' +
     '       </div>' +
     '   </div>' +
     '</div>'

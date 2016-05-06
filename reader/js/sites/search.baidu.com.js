@@ -23,7 +23,7 @@
       var found = false
       for (var i = 0; i < hospitalNames.length; i++) {
         if (innerText.indexOf(hospitalNames[i]) !== -1) {
-          $.jps.publish('create-mask-layer', title, 'putian')
+          $.jps.publish('create-mask-layer', title, 'putian', hospitalNames[i])
           found = true
           break
         }
@@ -31,7 +31,7 @@
       if (!found) {
         for (var i = 0; i < hospitalUrls.length; i++) {
           if (innerText.indexOf(hospitalUrls[i]) !== -1) {
-            $.jps.publish('create-mask-layer', title, 'putian')
+            $.jps.publish('create-mask-layer', title, 'putian', hospitalUrls[i])
             break
           }
         }

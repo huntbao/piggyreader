@@ -127,8 +127,8 @@ body.jizhureader-beforereader #jizhureader-iframe,
     margin: 4px 0 0;
 }
 
-.jizhureader-mask-layer .jz-layer-warn-tip a:link,
-.jizhureader-mask-layer .jz-layer-warn-tip a:visited {
+.jizhureader-mask-layer .jz-layer-warn-tip2 a:link,
+.jizhureader-mask-layer .jz-layer-warn-tip2 a:visited {
     text-decoration: underline;
     color: #ed143d;
 }
