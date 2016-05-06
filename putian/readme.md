@@ -1,3 +1,8 @@
+## 安装
+如果打不开[安装地址](https://chrome.google.com/webstore/detail/%E9%A5%A5%E7%8C%AA%E9%98%85%E8%AF%BB/jfckifkogfenafeakigpkjlifbkklmih?hl=zh-CN), 可以使用本地安装的方式:
+
+1. 下载安装包: 
+
 ## 说明
 
 * 在使用百度搜索信息时, 如果出现"疑是莆田系医院", 会使用遮罩将其过滤, 以降低人们上当受骗的概率, 效果如图:
