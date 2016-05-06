@@ -17,6 +17,8 @@ Start
 
 Line
     = "-" __ s:(AnyWithoutLB) LB+ {
+    	var name = s.join('')
+        if (name.indexOf('[') !== -1) return null
     	return {
         	name: s.join('').split('(')[0].split('（')[0].split(' ')[0]
         }

@@ -79,6 +79,8 @@
     {
       "js": ["js/sites/search.baidu.com.js"],
       "matches": [
+        "https://www.baidu.com/",
+        "http://www.baidu.com/",
         "https://www.baidu.com/s*",
         "http://www.baidu.com/s*"
       ],
@@ -107,7 +109,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.7.5",
+  "version": "1.7.6",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

@@ -16,13 +16,24 @@
       }
     })
     var titles = $('.c-container')
+    var hospitalNames = window.putianHospitalDataJiZhuReader.names
+    var hospitalUrls = window.putianHospitalDataJiZhuReader.urls
     titles.forEach(function (title) {
       var innerText = title.innerText
-      var hospitalNames = window.putianHospitalDataJiZhuReader.names
+      var found = false
       for (var i = 0; i < hospitalNames.length; i++) {
         if (innerText.indexOf(hospitalNames[i]) !== -1) {
           $.jps.publish('create-mask-layer', title, 'putian')
+          found = true
           break
+        }
+      }
+      if (!found) {
+        for (var i = 0; i < hospitalUrls.length; i++) {
+          if (innerText.indexOf(hospitalUrls[i]) !== -1) {
+            $.jps.publish('create-mask-layer', title, 'putian')
+            break
+          }
         }
       }
     })
@@ -47,5 +58,6 @@
 
   // pass in the target node, as well as the observer options
   observer.observe(document.querySelector('title'), config)
+
 
 })(Zepto)

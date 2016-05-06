@@ -53,7 +53,7 @@
       var hospitalUrls = window.putianHospitalDataJiZhuReader.urls
       var hostname = window.location.hostname
       for (var i = 0; i < hospitalUrls.length; i++) {
-        if (hostname.indexOf(hospitalUrls[i]) !== -1) {
+        if (hospitalUrls[i].indexOf(hostname) !== -1 || hostname.indexOf(hospitalUrls[i]) !== -1) {
           $(document.body).css('overflow', 'hidden')
           $.jps.publish('create-mask-layer', document.body, 'putian')
           break

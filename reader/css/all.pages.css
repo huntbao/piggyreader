@@ -86,7 +86,7 @@ body.jizhureader-beforereader #jizhureader-iframe,
     font-size: 20px;
     cursor: default;
     line-height: 2em;
-    z-index: 2147483647 !important;
+    z-index: 300 !important;
 }
 
 .jizhureader-mask-layer .jz-closebtn {
