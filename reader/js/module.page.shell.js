@@ -54,8 +54,11 @@
       var hostname = window.location.hostname
       for (var i = 0; i < hospitalUrls.length; i++) {
         if (hospitalUrls[i].indexOf(hostname) !== -1 || hostname.indexOf(hospitalUrls[i]) !== -1) {
-          $(document.body).css('overflow', 'hidden')
-          $.jps.publish('create-mask-layer', document.body, 'putian')
+          $(document.body).css({
+            overflow: 'hidden',
+            position: 'static'
+          })
+          $.jps.publish('create-mask-layer', document.body, 'putian', hospitalUrls[i])
           break
         }
       }

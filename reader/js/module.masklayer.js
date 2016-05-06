@@ -11,13 +11,9 @@
       var self = this
       var tpl = tpls[type || 'promotion']
       self.__layerEl = $(tpl).appendTo(refEl)
-      $(refEl).css('position', 'relative')
-      self.__layerEl.css({
-        left: 0,
-        top: 0,
-        width: $(refEl).width(),
-        height: $(refEl).height()
-      })
+      if (refEl !== document.body) {
+        $(refEl).css('position', 'relative')
+      }
       if (keyword) {
         self.__layerEl.find('.jz-putian-keyword').text(keyword)
       }

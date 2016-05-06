@@ -74,6 +74,10 @@ body.jizhureader-beforereader #jizhureader-iframe,
 
 .jizhureader-mask-layer {
     position: absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -86,7 +90,7 @@ body.jizhureader-beforereader #jizhureader-iframe,
     font-size: 20px;
     cursor: default;
     line-height: 2em;
-    z-index: 300 !important;
+    z-index: 2147483647 !important;
 }
 
 .jizhureader-mask-layer .jz-closebtn {
