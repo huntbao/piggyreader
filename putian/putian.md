@@ -1,32 +1,37 @@
-# 莆田系医院名单
+# 初选的医院名单
 
-本项目首先来源于：凤凰网医院名单([http://news.ifeng.com/mainland/special/ptxyy/](http://news.ifeng.com/mainland/special/ptxyy/))。
+本项目首先来源于：凤凰网医院名单([http://news.ifeng.com/mainland/special/ptxyy/](http://news.ifeng.com/mainland/special/ptxyy/))，后根据github社区程序员添加而成，并不代表名单中的医院就有一定有问题，只是一份初选的名单，项目随后会在这份名单的基础上，做成另一名单，另一份名单的标准如下
+- 曾经投放百度竞价广告 
+- 曾经媒体报道过医疗纠纷或者确认受骗 
+- 确认是莆田系
 
-欢迎更新，本人不会有任何商业目的，如果出现不当的情况，请大家及时指出，并随时监督。维护过程中难免不会保证别人有商业目的或其它动机，但会尽最大努力避免。
-
+- 随后我们会在这三条的基础上，提供更细节的审核标准和流程，由于确认工作十分复杂，工作量很大，也希望github上面的程序员提供资料，提交信息。对于初选的医院名单，也可以继续提供信息
 
 # 贡献者指南
 
 提交贡献之前，请先阅读[贡献者指南](guide.md)
 
 # 特别申明
+1. 项目不会有任何商业目的，如果出现不当的情况，请大家及时指出，并随时监督。维护过程中难免不会保证参与者有商业目的或其它动机，但会尽最大努力避免。
+2. 本文章收录的信息均来自互联网，仅为资源共享、学习参考之目的。作者对信息的可用性、准确性或可靠性不作任何承诺与保证。
+3. 如果您对信息有任何异议，请第一时间联系我们。情况属实的，我们会第一时间予以删除，并同时向您表示歉意。
+5. 如果您对信息有任何异议，请第一时间在Issues里面提出。如情况属实的，我们会第一时间予以删除，并同时向您表示歉意。
+6. 本项目收录的“用户反馈”，同样来自于互联网，也可能存在不实的问题。如果您对这些用户反馈有疑问或异议，也请及时与我们联系，或者直接通过提交issue表示。
+7. 如要转发本文章,请一定要把文章内容完全转发完全，并给上原文链接，请清楚这份名单来源。
+8. 原维护这个项目的管理员@langhua9527，由于个人能力和经验不足，加上工作时间忙， 已经退出本项目的维护，已有新的团队来管理这个项目，新的管理员是@fakeforreg
 
-1. 本文章收录的信息均来自互联网，仅为资源共享、学习参考之目的。作者对信息的可用性、准确性或可靠性不作任何承诺与保证。
-2. 如果您对信息有任何异议，请第一时间联系我们。情况属实的，我们会第一时间予以删除，并同时向您表示歉意。
-3. @wandergis 已经根据凤凰网的数据做了一个地图出来 https://github.com/wandergis/hospital-viz
-4. @fushenghua 也开源了一个查询的 https://github.com/fushenghua/GetHosp/ 的项目
-5. 为什么不推荐做原生的APP，比如说Android的APK包，因为要验证一个APK包是否很麻烦，现在的功能只是一个简单的查询功能，网页查询很轻松的满足了，验证一个APK包，权限是不是有问题，比如说要通讯录的权限等等的，还要抓包检查是否有收集用户信息等（比如说原生的APK做一个功能，用户第三次打开的时候，才去收集用户的手机信息，这个就很难发现,也没有这个精力去搞这个）,所以这里不推荐做原生的APP
-6. 三个浏览器插件[@erichuang199](https://github.com/erichuang1994/PTXNotification)和[@zhangjh](https://github.com/zhangjh/chromeExt)和[@hustcc](https://github.com/hustcc/PTHospital.chrome)
-7. 本文章收录的信息均来自互联网，仅为资源共享、学习参考之目的。作者对信息的可用性、准确性或可靠性不作任何承诺与保证
-8. 如果您对信息有任何异议，请第一时间联系我们(hospitalforreview@gmail.com)。情况属实的，我们会第一时间予以删除，并同时向您表示歉意。
-9. 本项目收录的“证据”，同样来自于互联网，也可能存在不实的问题。如果您对这些证据有疑问或异议，也请及时与我们联系，或者直接通过提交issue表示。
+# 关联项目
+1. @wandergis 已经根据凤凰网的数据做了一个地图出来 https://github.com/wandergis/hospital-viz
+2. @fushenghua 也开源了一个查询的 https://github.com/fushenghua/GetHosp/ 的项目
+3. [@neuyu](https://github.com/neuyu) 已经开源了一个原生的Android APP https://github.com/neuyu/BlackHospital
+4. 三个浏览器插件[@erichuang199](https://github.com/erichuang1994/PTXNotification)和[@zhangjh](https://github.com/zhangjh/chromeExt)和[@hustcc](https://github.com/hustcc/PTHospital.chrome)
+
 
 # 版本1.2beta
 
 # 目录
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [上海](#%E4%B8%8A%E6%B5%B7)
 - [北京](#%E5%8C%97%E4%BA%AC)
@@ -94,13 +99,13 @@
 - [南通](#%E5%8D%97%E9%80%9A)
 - [启东](#%E5%90%AF%E4%B8%9C)
 - [武汉](#%E6%AD%A6%E6%B1%89)
-  - [不孕症：](#%E4%B8%8D%E5%AD%95%E7%97%87%EF%BC%9A)
-  - [妇科、产科：](#%E5%A6%87%E7%A7%91%E3%80%81%E4%BA%A7%E7%A7%91%EF%BC%9A)
-  - [男科：](#%E7%94%B7%E7%A7%91%EF%BC%9A)
+  - [不孕症](#%E4%B8%8D%E5%AD%95%E7%97%87)
+  - [妇科/产科](#%E5%A6%87%E7%A7%91%E4%BA%A7%E7%A7%91)
+  - [男科](#%E7%94%B7%E7%A7%91)
   - [综合医院](#%E7%BB%BC%E5%90%88%E5%8C%BB%E9%99%A2)
-  - [整形科：](#%E6%95%B4%E5%BD%A2%E7%A7%91%EF%BC%9A)
+  - [整形科](#%E6%95%B4%E5%BD%A2%E7%A7%91)
   - [专科](#%E4%B8%93%E7%A7%91)
-  - [三甲医院外包科室名单如下：](#%E4%B8%89%E7%94%B2%E5%8C%BB%E9%99%A2%E5%A4%96%E5%8C%85%E7%A7%91%E5%AE%A4%E5%90%8D%E5%8D%95%E5%A6%82%E4%B8%8B%EF%BC%9A)
+  - [三甲医院外包科室名单如下](#%E4%B8%89%E7%94%B2%E5%8C%BB%E9%99%A2%E5%A4%96%E5%8C%85%E7%A7%91%E5%AE%A4%E5%90%8D%E5%8D%95%E5%A6%82%E4%B8%8B)
 - [荆州](#%E8%8D%86%E5%B7%9E)
 - [黄冈](#%E9%BB%84%E5%86%88)
 - [黄石](#%E9%BB%84%E7%9F%B3)
@@ -193,11 +198,11 @@
   - 电话	+86 400 889 2218
   - 网址	www.wz120.cc
   - 地址	上海市徐汇区吴中路2号
-  - 证据	[患者家属](http://health.dahe.cn/yypj/yhb/201207/t20120716_397644.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fhealth.dahe.cn%2Fyypj%2Fyhb%2F201207%2Ft20120716_397644.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fhealth.dahe.cn%2Fyypj%2Fyhb%2F201207%2Ft20120716_397644.html&aqs=chrome..69i57j69i58.4789j0j4&sourceid=chrome&ie=UTF-8) [天涯网友](http://bbs.tianya.cn/post-41-943030-1.shtml) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-943030-1.shtml&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-943030-1.shtml&aqs=chrome..69i57j69i58.2551j0j4&sourceid=chrome&ie=UTF-8)
+  - 用户反馈	[患者家属](http://health.dahe.cn/yypj/yhb/201207/t20120716_397644.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fhealth.dahe.cn%2Fyypj%2Fyhb%2F201207%2Ft20120716_397644.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fhealth.dahe.cn%2Fyypj%2Fyhb%2F201207%2Ft20120716_397644.html&aqs=chrome..69i57j69i58.4789j0j4&sourceid=chrome&ie=UTF-8) [天涯网友](http://bbs.tianya.cn/post-41-943030-1.shtml) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-943030-1.shtml&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-943030-1.shtml&aqs=chrome..69i57j69i58.2551j0j4&sourceid=chrome&ie=UTF-8)
 - 上海安真医院
   - 电话 +86 21 5771 1006
   - 地址	上海市松江区人民南路39号
-  - 证据	[天涯广告](http://bbs.tianya.cn/post-41-751455-1.shtml) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-751455-1.shtml&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-751455-1.shtml&aqs=chrome..69i57j69i58.2326j0j4&sourceid=chrome&ie=UTF-8)
+  - 用户反馈	[天涯广告](http://bbs.tianya.cn/post-41-751455-1.shtml) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-751455-1.shtml&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fbbs.tianya.cn%2Fpost-41-751455-1.shtml&aqs=chrome..69i57j69i58.2326j0j4&sourceid=chrome&ie=UTF-8)
 - 上海福华医院
   - 电话	+86 21 5196 1999
   - 地址	上海市浦东新区惠南镇城南路98号
@@ -209,7 +214,7 @@
 - 上海真爱(整形美容)医院
   - 电话	+86 21 6226 9000
   - 网址	http://www.shzhenai.com/
-  - 证据 [患者1](http://www.kobeei.com/lc/31713.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.kobeei.com%2Flc%2F31713.html&oq=cache%3A%2F%2Fwww.kobeei.com%2Flc%2F31713.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.4678j0j4) 
+  - 用户反馈 [患者1](http://www.kobeei.com/lc/31713.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.kobeei.com%2Flc%2F31713.html&oq=cache%3A%2F%2Fwww.kobeei.com%2Flc%2F31713.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.4678j0j4)
 - 上海沪申五官科医院
   - 电话 +86 21 5430 5338
   - 网址 www.hs5g.com
@@ -285,7 +290,7 @@
 - 上海中骏医学科学研究所
 - 上海天伦医院（注：隶属上海明爱医疗集团）
 	- 电话	+86 21 6566 7633
-	- 电话	+86 21 6525 9999 
+	- 电话	+86 21 6525 9999
 	- 电话	+986 400 666 0102
 	- 电话	+86 21 5515 8829
 	- 网址	http://www.shtl120.com/
@@ -312,7 +317,6 @@
 - 北京五洲女子医院
 - 北京圣保罗男子医院
 - 北京建国医院
-- 北京国际医疗中心
 - 北京天伦不孕不育医院
 - 北京玛丽妇婴医院
 - 北京美联臣医疗美容医院
@@ -332,6 +336,9 @@
 - 北京德胜门中医院
 - 北京军都医院
 - 北京慈康医院
+- 爱丽丝妇科医院
+  - 网址 [http://www.fuke120.cn/](http://www.fuke120.cn/)
+  - 证据 亲测：医院收费不透明，治疗过程中各种乱开检查的单子，手术价格为普通医院价格10倍左右，最后医院连检查的结果都不会给你。有类似的受害者：[http://money.163.com/16/0329/09/BJAIJCRK00253B0H.html](http://money.163.com/16/0329/09/BJAIJCRK00253B0H.html) , [http://ask.yaolan.com/question/15112409310913796432.html](http://ask.yaolan.com/question/15112409310913796432.html)
 
 ## 苏州
 
@@ -392,6 +399,49 @@
 - 天津长庚耳鼻喉医院
   - 电话 +86 400 6703 120
   - 网址 www.tjcg120.com
+- 天津阿波罗医院
+  - 电话 +86 022-28111999
+  - 网址 http://www.nkyy022.com/
+  - 地址 天津市南开区黄河道38号  
+- 天津美莱医学美容医院
+  - 电话 022-24239999
+  - 网址 null
+  - 地址 天津市河东区华昌道80-92号(裕阳大厦底商)
+
+- 天津254医院 部分科室 (注意是部分科室)
+  - 电话 022-26220266
+  - 地址 天津市河北区黄纬路60号
+  - 网址 http://www.yafrlaowuw.com/
+   ```
+医院别名：天津254医院、解放军254医院
+医院性质：公立/综合医院
+医院等级：三级甲等　　
+联系电话：022-26220266
+联系地址：天津市河北区黄纬路60号
+   ```
+- 解放军464医院 部分科室(部分男科吧)
+  - 电话 联系电话：4000220995
+  - 地址 天津市红旗南路600号
+  - 网址 null
+  ```
+医院别名：天津男科医院
+医院性质：公立/综合医院
+医院等级：三级甲等　　
+联系电话：4000220995
+联系地址：天津市红旗南路600号
+  ```
+- 解放军272医院 部分科室
+  - 电话 400-022-3272
+  - 地址 天津和平区多伦道185号
+  - 网址 null
+  ```
+医院别名：天津解放军第272医院
+医院性质：公立/综合医院
+医院等级：二级甲等
+联系电话：400-022-3272
+联系地址：天津和平区多伦道185号
+  ```
+
 
 ## 广州
 
@@ -733,8 +783,6 @@
 - 杭州和睦医院
   - 网址：www.hm120.cn
 - 杭州真爱医院
-- 杭州瑞丽医疗美容医院
-  - 网址：www.ruilizx.com www.hzzxyy.cc www.85181111.net www.railyzx.com
 - 杭州同济医院
   - 网址：www.0571tongji.com www.hztjh.com
 
@@ -783,17 +831,17 @@
 ## 龙岩
 
 - 龙岩女子医院
-  - 证据 [诚信网](http://xiaofeipinglun.com/yiyuanjiankang/5664.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fxiaofeipinglun.com%2Fyiyuanjiankang%2F5664.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fxiaofeipinglun.com%2Fyiyuanjiankang%2F5664.html&aqs=chrome..69i57j69i58.3136j0j4&sourceid=chrome&ie=UTF-8) 
+  - 用户反馈 [诚信网](http://xiaofeipinglun.com/yiyuanjiankang/5664.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fxiaofeipinglun.com%2Fyiyuanjiankang%2F5664.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fxiaofeipinglun.com%2Fyiyuanjiankang%2F5664.html&aqs=chrome..69i57j69i58.3136j0j4&sourceid=chrome&ie=UTF-8)
 - 龙岩阳光医院
 
 ## 济南
 
 - 山东东方男科医院
-  - 证据 [患者意见1](http://www.adiguo.com/nanke.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.adiguo.com%2Fnanke.html&oq=cache%3A%2F%2Fwww.adiguo.com%2Fnanke.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.4782j0j9) [患者意见2](http://tieba.baidu.com/p/2314938397) 以上意见仅代表发贴人
+  - 用户反馈 [患者意见1](http://www.adiguo.com/nanke.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.adiguo.com%2Fnanke.html&oq=cache%3A%2F%2Fwww.adiguo.com%2Fnanke.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.4782j0j9) [患者意见2](http://tieba.baidu.com/p/2314938397) 以上意见仅代表发贴人
 - 山东紫荆花医院
-  - 证据 [患者朋友](http://www.fgjy99.com/art2016/2016010391635.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.fgjy99.com%2Fart2016%2F2016010391635.html&oq=cache%3A%2F%2Fwww.fgjy99.com%2Fart2016%2F2016010391635.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.8547j0j7)
+  - 用户反馈 [患者朋友](http://www.fgjy99.com/art2016/2016010391635.html) [Google缓存](http://webcache.googleusercontent.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=cache%3A%2F%2Fwww.fgjy99.com%2Fart2016%2F2016010391635.html&oq=cache%3A%2F%2Fwww.fgjy99.com%2Fart2016%2F2016010391635.html&rlz=1C5CHFA_enUS659US659&aqs=chrome..69i57j69i58.8547j0j7)
 - 山东红十字会医院
-  - 证据 [患者1](http://www.cywty.com/so/tousu1/2016/0504/4709.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fwww.cywty.com%2Fso%2Ftousu1%2F2016%2F0504%2F4709.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fwww.cywty.com%2Fso%2Ftousu1%2F2016%2F0504%2F4709.html&aqs=chrome..69i57j69i58.2342j0j4&sourceid=chrome&ie=UTF-8)
+  - 用户反馈 [患者1](http://www.cywty.com/so/tousu1/2016/0504/4709.html) [Google缓存](http://webcache.googleusercontent.com/search?q=cache%3A%2F%2Fwww.cywty.com%2Fso%2Ftousu1%2F2016%2F0504%2F4709.html&rlz=1C5CHFA_enUS659US659&oq=cache%3A%2F%2Fwww.cywty.com%2Fso%2Ftousu1%2F2016%2F0504%2F4709.html&aqs=chrome..69i57j69i58.2342j0j4&sourceid=chrome&ie=UTF-8)
 - 济南一零六医院
 - 济南中医不孕不育医院
 - 济南中医白癜风医院
@@ -1001,13 +1049,13 @@
 
 ## 启东
 - 启东市中医院
-	- 电话	+86  513 8321 2540 
+	- 电话	+86  513 8321 2540
 	- 网址	http://www.qdszyy.com/
 	- 地址	江苏省启东市紫薇中路458号
 
 ## 武汉
 
-### 不孕症：
+### 不孕症
 
 - 武汉送子鸟不孕不育医院
   - 电话 +86 27 8377 1313
@@ -1016,7 +1064,7 @@
   - 电话 +86 400 996 1009
   - 网址 www.ctbyw.com
 
-### 妇科、产科：
+### 妇科/产科
 
 - 武汉现代妇产医院
   - 电话 +86 27 6883 6686
@@ -1038,7 +1086,7 @@
   - 网址 www.87189999.com
 - 武汉友好医院
 
-### 男科：
+### 男科
 
 - 武汉阿波罗男科医院
   - 电话 +86 27 8588 8669
@@ -1082,7 +1130,7 @@
   - 电话 +86 27 8808 9120
   - 网址 www.hqsmk.com
 
-### 整形科：
+### 整形科
 
 - 武汉华美整形医院
   - 电话 +86 400 007 0606
@@ -1116,7 +1164,7 @@
   - 电话 +86 27 8758 5666
   - 网址 www.whmdgc.com
 
-### 三甲医院外包科室名单如下：
+### 三甲医院外包科室名单如下
 
 - 广州军区武汉总医院（生殖中心、肿瘤科、整形）
 - 武汉八医院（肛肠科）

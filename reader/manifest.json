@@ -25,8 +25,7 @@
         "js/module.getpagecontent.js",
         "js/module.page.js",
         "js/module.selectionphrase.js",
-        "js/module.page.shell.js",
-        "js/sites/google.com.js"
+        "js/module.page.shell.js"
       ],
       "css": [
         "css/all.pages.css",
@@ -86,6 +85,48 @@
       ],
       "all_frames": true,
       "run_at": "document_end"
+    },
+    {
+      "js": ["js/sites/search.so.com.js"],
+      "matches": [
+        "https://www.so.com/",
+        "https://www.so.com/s*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/sites/search.google.com.js"],
+      "matches": [
+        "https://www.google.com.hk/*",
+        "https://www.google.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/sites/search.yahoo.com.js"],
+      "matches": [
+        "https://search.yahoo.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/sites/search.sogou.com.js"],
+      "matches": [
+        "https://www.sogou.com/web*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    },
+    {
+      "js": ["js/sites/search.bing.com.js"],
+      "matches": [
+        "https://www.bing.com/search*"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
     }
   ],
   "default_locale": "zh_CN",
@@ -109,7 +150,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.7.6",
+  "version": "1.7.7",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

@@ -4,21 +4,14 @@
   'use strict'
   var changeHandler = function () {
     $.jps.publish('hide-all-mask-layers')
-    var links = $('a[href]')
-    links.forEach(function (link) {
-      if (link.text == '推广链接') {
-        var node = link.parentNode
-        var boundRect = node.getBoundingClientRect()
-        if (boundRect.left > 200) {
-          node = link.parentNode.parentNode
-        }
-        $.jps.publish('create-mask-layer', node)
-      }
-    })
-    var titles = $('.c-container')
+    var titles = $('#b_results > li')
     var hospitalNames = window.putianHospitalDataJiZhuReader.names
     var hospitalUrls = window.putianHospitalDataJiZhuReader.urls
     titles.forEach(function (title) {
+      if (title.classList.contains('b_ad')) {
+        $.jps.publish('create-mask-layer', title)
+        return
+      }
       var innerText = title.innerText
       var found = false
       for (var i = 0; i < hospitalNames.length; i++) {

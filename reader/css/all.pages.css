@@ -73,66 +73,67 @@ body.jizhureader-beforereader #jizhureader-iframe,
 }
 
 .jizhureader-mask-layer {
-    position: absolute;
-    top: 0;
-    right:0;
-    bottom:0;
-    left:0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ed143d;
-    font-size: 20px;
-    cursor: default;
-    line-height: 2em;
+    position: absolute !important;
+    top: 0 !important;
+    right:0 !important;
+    bottom:0 !important;
+    left:0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-radius: 5px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #ed143d !important;
+    font-size: 20px !important;
+    cursor: default !important;
+    line-height: 2em !important;
     z-index: 2147483647 !important;
 }
 
 .jizhureader-mask-layer .jz-closebtn {
-    position: absolute;
-    top: 14px;
-    right: 8px;
-    cursor: pointer;
-    font-size: 1em;
-    line-height: 0;
-    opacity: 0;
-    transition: all ease .3s;
+    position: absolute !important;
+    top: 14px !important;
+    right: 8px !important;
+    cursor: pointer !important;
+    font-size: 1em !important;
+    line-height: 0 !important;
+    opacity: 0 !important;
+    transition: all ease .3s !important;
 }
 
 .jizhureader-mask-layer .jz-layer-content {
-    padding: 20px;
+    padding: 0 20px !important;
 }
 
 .jizhureader-mask-layer:hover .jz-closebtn {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .jizhureader-mask-layer .jz-layer-warn-title {
-    font-size: 2em;
-    text-align: center;
-    margin: 0 0 8px;
+    font-size: 1.8em !important;
+    text-align: center !important;
+    margin: 0 !important;
 }
 
 .jizhureader-mask-layer .jz-layer-warn-tip {
-    line-height: 1em;
-    text-align: center;
-    font-size: 16px;
+    line-height: 1em !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    margin: 0 !important;
 }
 
 .jizhureader-mask-layer .jz-layer-warn-tip2 {
-    line-height: 1em;
-    text-align: right;
-    font-size: 12px;
-    margin: 4px 0 0;
+    line-height: 1em !important;
+    text-align: right !important;
+    font-size: 12px !important;
+    margin: 2px 0 0 !important;
 }
 
 .jizhureader-mask-layer .jz-layer-warn-tip2 a:link,
 .jizhureader-mask-layer .jz-layer-warn-tip2 a:visited {
-    text-decoration: underline;
-    color: #ed143d;
+    text-decoration: underline !important;
+    color: #ed143d !important;
 }

@@ -6,7 +6,7 @@
     $.jps.publish('hide-all-mask-layers')
     var links = $('a[href]')
     links.forEach(function (link) {
-      if (link.text == '推广链接') {
+      if (link.text == '搜狗推广') {
         var node = link.parentNode
         var boundRect = node.getBoundingClientRect()
         if (boundRect.left > 200) {
@@ -15,15 +15,16 @@
         $.jps.publish('create-mask-layer', node)
       }
     })
-    var titles = $('.c-container')
+    var titles = $('h3 a')
     var hospitalNames = window.putianHospitalDataJiZhuReader.names
     var hospitalUrls = window.putianHospitalDataJiZhuReader.urls
     titles.forEach(function (title) {
-      var innerText = title.innerText
+      var node = title.parentNode.parentNode
+      var innerText = node.innerText
       var found = false
       for (var i = 0; i < hospitalNames.length; i++) {
         if (innerText.indexOf(hospitalNames[i]) !== -1) {
-          $.jps.publish('create-mask-layer', title, 'putian', hospitalNames[i])
+          $.jps.publish('create-mask-layer', node, 'putian', hospitalNames[i])
           found = true
           break
         }
@@ -31,7 +32,7 @@
       if (!found) {
         for (var i = 0; i < hospitalUrls.length; i++) {
           if (innerText.indexOf(hospitalUrls[i]) !== -1) {
-            $.jps.publish('create-mask-layer', title, 'putian', hospitalUrls[i])
+            $.jps.publish('create-mask-layer', node, 'putian', hospitalUrls[i])
             break
           }
         }

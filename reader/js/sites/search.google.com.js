@@ -1,37 +1,32 @@
+﻿//Piggy Reader
+//author @huntbao
 //Piggy Reader
 //author @huntbao
 (function ($) {
   'use strict'
   var changeHandler = function () {
     $.jps.publish('hide-all-mask-layers')
-    var links = $('a[href]')
-    links.forEach(function (link) {
-      if (link.text == '推广链接') {
-        var node = link.parentNode
-        var boundRect = node.getBoundingClientRect()
-        if (boundRect.left > 200) {
-          node = link.parentNode.parentNode
-        }
-        $.jps.publish('create-mask-layer', node)
-      }
-    })
-    var titles = $('.c-container')
+    var links = $('h3 a')
     var hospitalNames = window.putianHospitalDataJiZhuReader.names
     var hospitalUrls = window.putianHospitalDataJiZhuReader.urls
-    titles.forEach(function (title) {
-      var innerText = title.innerText
+    links.forEach(function (link) {
+      link.removeAttribute('onmousedown')
+      var replaceNode = link.cloneNode(true)
+      link.parentNode.replaceChild(replaceNode, link)
+      var node = replaceNode.parentNode.parentNode
+      var resultText = node.innerText
       var found = false
       for (var i = 0; i < hospitalNames.length; i++) {
-        if (innerText.indexOf(hospitalNames[i]) !== -1) {
-          $.jps.publish('create-mask-layer', title, 'putian', hospitalNames[i])
+        if (resultText.indexOf(hospitalNames[i]) !== -1) {
+          $.jps.publish('create-mask-layer', node, 'putian', hospitalNames[i])
           found = true
           break
         }
       }
       if (!found) {
         for (var i = 0; i < hospitalUrls.length; i++) {
-          if (innerText.indexOf(hospitalUrls[i]) !== -1) {
-            $.jps.publish('create-mask-layer', title, 'putian', hospitalUrls[i])
+          if (resultText.indexOf(hospitalUrls[i]) !== -1) {
+            $.jps.publish('create-mask-layer', node, 'putian', hospitalUrls[i])
             break
           }
         }
