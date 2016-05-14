@@ -41,9 +41,9 @@
     {
       "js": ["js/sites/douban.com.js"],
       "matches": [
-        "http://movie.douban.com/review/*",
-        "http://book.douban.com/review/*",
-        "http://music.douban.com/review/*"
+        "https://movie.douban.com/review/*",
+        "https://book.douban.com/review/*",
+        "https://music.douban.com/review/*"
       ],
       "all_frames": true,
       "run_at": "document_start"
@@ -150,7 +150,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.7.7",
+  "version": "1.7.8",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

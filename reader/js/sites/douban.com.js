@@ -4,10 +4,10 @@
   'use strict'
   jiZhuReader.getPageContent = function () {
     //override
-    var title = document.querySelector('*[property="v:summary"]'),
-      content = document.querySelector('*[property="v:description"]'),
-      viewer = document.querySelector('*[property="v:reviewer"]'),
-      port = chrome.extension.connect({name: 'articlefrompage'})
+    var title = document.querySelector('*[property="v:summary"]')
+    var content = document.querySelector('*[property="v:description"]')
+    var viewer = document.querySelector('*[property="v:reviewer"]')
+    var port = chrome.extension.connect({name: 'articlefrompage'})
     port.postMessage({
       content: content && content.innerHTML,
       title: title && title.innerHTML || document.title,
