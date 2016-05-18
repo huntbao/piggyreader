@@ -6,7 +6,7 @@
     $.jps.publish('hide-all-mask-layers')
     var links = $('a[href]')
     links.forEach(function (link) {
-      if (link.text == '推广链接') {
+      if (link.text == '商业推广') {
         var node = link.parentNode
         var boundRect = node.getBoundingClientRect()
         if (boundRect.left > 200) {
