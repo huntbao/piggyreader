@@ -46,7 +46,7 @@
       content,
       htmlStr = ''
     commentItems.each(function (idx, el) {
-      title = $(el).find('.author, .hd').html()
+      title = $(el).find('.header').html()
       content = $(el).find('p').html()
       htmlStr += '<p class="jz-stitle">' + (startNum + idx + 1) + '#&nbsp&nbsp' + title + '</p>' + '<div class="jz-scontent">' + content + '</div>'
     })
