@@ -59,7 +59,7 @@
   function getSubtitle(viewer) {
     viewer = $(viewer)
     viewer.parent().addClass('author').removeAttr('onclick')
-    var viewDate = document.querySelector('span[property="v:dtreviewed"]')
+    var viewDate = document.querySelector('[property="v:dtreviewed"]')
     return viewDate.outerHTML + viewer.parent()[0].outerHTML
   }
 })(Zepto)
