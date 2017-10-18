@@ -24,12 +24,7 @@
     var port = chrome.extension.connect({name: 'lookup-phrase'})
     port.postMessage({
       phrase: data.phrase,
-      position: {
-        top: data.position.top,
-        right: data.position.right,
-        bottom: data.position.bottom,
-        left: data.position.left
-      },
+      position: data.position,
       from: data.from
     })
   })

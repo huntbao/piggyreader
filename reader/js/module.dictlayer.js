@@ -17,18 +17,19 @@
       var layerElHeight = self.__layerEl.height()
       var layerElWidth = self.__layerEl.width()
       var position = data.position
-      if (position.bottom + layerElHeight > $(window).height()) {
-        position.bottom = position.top - layerElHeight - 4
+      var layerTop = position.top + 20
+      if (position.top + layerElHeight > window.innerHeight) {
+        layerTop = position.top - layerElHeight
         self.__layerEl.find('.jz-arrow').appendTo(self.__layerEl)
         self.__layerEl.addClass('jz-dict-layer-bottom')
       }
-      var left = Math.max((position.right + position.left - layerElWidth) / 2, 0)
+      var layerLeft = Math.max((position.right + position.left - layerElWidth) / 2, 0)
       if ($(document.body).css('position') === 'relative') {
-        left -= ($(window).width() - $(document.body).width()) / 2
+        layerLeft -= (window.innerWidth - $(document.body).width()) / 2
       }
       self.__layerEl.css({
-        left: left + document.body.scrollLeft,
-        top: position.bottom + document.body.scrollTop
+        left: layerLeft + document.body.scrollLeft,
+        top: layerTop + document.body.scrollTop
       })
       self.__layerEl.mouseup(function (e) {
         e.stopPropagation()

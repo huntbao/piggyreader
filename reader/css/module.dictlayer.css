@@ -2,7 +2,7 @@
 author @huntbao*/
 .jz-mod-dict-layer {
     width: 400px;
-    position: absolute;
+    position: fixed;
     -webkit-transition: opacity .38s;
     transition: opacity .38s;
     opacity: 0;
@@ -60,6 +60,19 @@ author @huntbao*/
     border-bottom: 1px solid rgba(255, 255, 255, .9);
     width: 50%;
     margin: 8px 0;
+}
+
+.jz-mod-dict-layer .jz-phrase,
+.jz-mod-dict-layer .jz-phonetic-symbol,
+.jz-mod-dict-layer .jz-phrase-key,
+.jz-mod-dict-layer .jz-phrase-value,
+.jz-mod-dict-layer .jz-trans-more,
+.jz-mod-dict-layer .jz-phrase-tran {
+    text-align: left !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    line-height: 22px !important;
 }
 
 .jz-dict-layer-bottom .jz-arrow {
