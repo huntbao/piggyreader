@@ -53,7 +53,8 @@
         "css/ne_wiki.css"
       ],
       "matches": [
-        "http://doc.hz.netease.com/*"
+        "http://doc.hz.netease.com/*",
+        "http://ks.netease.com/*"
       ],
       "all_frames": true,
       "run_at": "document_start"
@@ -160,7 +161,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.8.3",
+  "version": "1.8.4",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"
