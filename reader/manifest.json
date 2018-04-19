@@ -49,6 +49,16 @@
       "run_at": "document_start"
     },
     {
+      "css": [
+        "css/ne_wiki.css"
+      ],
+      "matches": [
+        "http://doc.hz.netease.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
       "js": ["js/sites/zhihu.com.js"],
       "matches": ["http://www.zhihu.com/question/*", "https://www.zhihu.com/question/*"],
       "all_frames": true,
@@ -150,7 +160,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.8.2",
+  "version": "1.8.3",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"
