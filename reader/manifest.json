@@ -29,7 +29,8 @@
       ],
       "css": [
         "css/all.pages.css",
-        "css/module.dictlayer.css"
+        "css/module.dictlayer.css",
+        "css/ne_wiki.css"
       ],
       "matches": [
         "http://*/*",
@@ -44,17 +45,6 @@
         "https://movie.douban.com/review/*",
         "https://book.douban.com/review/*",
         "https://music.douban.com/review/*"
-      ],
-      "all_frames": true,
-      "run_at": "document_start"
-    },
-    {
-      "css": [
-        "css/ne_wiki.css"
-      ],
-      "matches": [
-        "http://doc.hz.netease.com/*",
-        "http://ks.netease.com/*"
       ],
       "all_frames": true,
       "run_at": "document_start"
