@@ -73,45 +73,50 @@
             }
           })
         }
-        var dictDataSavedKey = 'DICT-DATA'
-        var isOutDate
-        var sendRequest = function (savedObj) {
-          $.ajax({
-            url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(data.phrase),
-            success: function (xmlDoc) {
-              // save xmlDoc for next use
-              var dictData = self.getDictData($(xmlDoc))
-              if (!savedObj) {
-                savedObj = {}
-                savedObj[dictDataSavedKey] = {}
-              }
-              savedObj[dictDataSavedKey][data.phrase] = {
-                dictData: dictData,
-                createTime: Date.now()
-              }
-              StorageArea.set(savedObj)
-              if (!isOutDate) {
-                callback(dictData)
-              }
+        self.lookupPhrase(data.phrase, callback)
+      })
+    },
+
+    lookupPhrase: function (phrase, callback) {
+      var self = this
+      var dictDataSavedKey = 'DICT-DATA'
+      var isOutDate
+      var sendRequest = function (savedObj) {
+        $.ajax({
+          url: 'http://dict.youdao.com/fsearch?q=' + encodeURIComponent(phrase),
+          success: function (xmlDoc) {
+            // save xmlDoc for next use
+            var dictData = self.getDictData($(xmlDoc))
+            if (!savedObj) {
+              savedObj = {}
+              savedObj[dictDataSavedKey] = {}
             }
-          })
-        }
-        StorageArea.get(dictDataSavedKey, function (result) {
-          if (result[dictDataSavedKey]) {
-            if (result[dictDataSavedKey][data.phrase]) {
-              // one month: 30 * 24 * 60 * 60 * 1000 = 2592000000
-              isOutDate = Date.now() - result[dictDataSavedKey][data.phrase].createTime > 2592000000
-              callback(result[dictDataSavedKey][data.phrase].dictData)
-              if (isOutDate) {
-                sendRequest(result)
-              }
-            } else {
+            savedObj[dictDataSavedKey][phrase] = {
+              dictData: dictData,
+              createTime: Date.now()
+            }
+            StorageArea.set(savedObj)
+            if (!isOutDate) {
+              callback(dictData)
+            }
+          }
+        })
+      }
+      StorageArea.get(dictDataSavedKey, function (result) {
+        if (result[dictDataSavedKey]) {
+          if (result[dictDataSavedKey][phrase]) {
+            // one month: 30 * 24 * 60 * 60 * 1000 = 2592000000
+            isOutDate = Date.now() - result[dictDataSavedKey][phrase].createTime > 2592000000
+            callback(result[dictDataSavedKey][phrase].dictData)
+            if (isOutDate) {
               sendRequest(result)
             }
           } else {
-            sendRequest()
+            sendRequest(result)
           }
-        })
+        } else {
+          sendRequest()
+        }
       })
     },
 
@@ -135,10 +140,31 @@
     createContextMenu: function () {
       var self = this
       chrome.contextMenus.create({
-        contexts: ['all'],
+        contexts: ["page", "frame", "link", "editable", "image", "video", "audio", "browser_action", "page_action"],
         title: chrome.i18n.getMessage('ExtensionName'),
         onclick: function (info, tab) {
           self.createReader()
+        }
+      })
+      chrome.contextMenus.create({
+        contexts: ['selection'],
+        title: chrome.i18n.getMessage('TranslateWord'),
+        onclick: function (info, tab) {
+          var phrase = info.selectionText
+          var callback = function (dictData) {
+            var data = {
+              dictData: dictData,
+              position: {
+                top: 0,
+                left: 0,
+                right: 0
+              },
+              from: 'page',
+              phrase: phrase
+            }
+            chrome.tabs.executeScript(null, {code: 'App.modules.dictLayer.init(' + JSON.stringify(data) + ')'})
+          }
+          self.lookupPhrase(phrase, callback)
         }
       })
     },

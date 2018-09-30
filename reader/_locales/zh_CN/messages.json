@@ -91,5 +91,8 @@
     },
     "Disabled": {
         "message": "禁用"
+    },
+    "TranslateWord": {
+        "message": "翻译选中单词"
     }
 }

@@ -88,5 +88,8 @@
     },
     "Disabled": {
         "message": "Disabled"
+    },
+    "TranslateWord": {
+        "message": "Translate selected words"
     }
 }

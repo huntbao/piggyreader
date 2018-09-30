@@ -10,6 +10,9 @@
     __isEntered: false,
 
     init: function (data) {
+      if (typeof data === 'string') {
+        data = JSON.parse(data)
+      }
       var self = this
       self.__hideLayer()
       self.__layerEl = $(self.getLayerStr(data.dictData))
