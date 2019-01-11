@@ -5,15 +5,15 @@
   jiZhuReader.getPageContent = function () {
     //override
     var title = document.querySelector('*[property="v:summary"]')
-    var content = document.querySelector('*[property="v:description"]')
-    var viewer = document.querySelector('*[property="v:reviewer"]')
+    var content = document.querySelector('.review-content')
+    var viewer = document.querySelector('.main-hd a')
     var port = chrome.extension.connect({name: 'articlefrompage'})
     port.postMessage({
       content: content && content.innerHTML,
       title: title && title.innerHTML || document.title,
-      subtitle: getSubtitle(viewer)
+      subtitle: viewer && viewer.innerText
     })
-    var pageNav = $('#comments .paginator')
+    var pageNav = $('#content .paginator')
     if (pageNav.length === 0) {
       getCommentsByContainer(document.body, 0)
     } else {
@@ -27,9 +27,9 @@
       var commentDiv = div.find('#comments')
       if (commentDiv.length === 1) {
         getCommentsByContainer(commentDiv, startNum)
-        var nextA = commentDiv.find('.paginator .next').find('a')
+        var nextA = div.find('.paginator .next').find('a')
         if (nextA.length === 1) {
-          var currentPage = parseInt(commentDiv.find('.paginator .thispage').text())
+          var currentPage = parseInt(div.find('.paginator .thispage').text())
           if (currentPage) {
             jiZhuReader.getSuperAddTimer = setTimeout(function () {
               getComments(currentPage * 100)
@@ -57,6 +57,9 @@
   }
 
   function getSubtitle(viewer) {
+    if (!viewer) {
+      return ''
+    }
     viewer = $(viewer)
     viewer.parent().addClass('author').removeAttr('onclick')
     var viewDate = document.querySelector('[property="v:dtreviewed"]')
