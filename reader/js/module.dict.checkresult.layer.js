@@ -58,7 +58,7 @@
       if (translationStr) {
         str = str.replace(/{{translation}}/, translationStr)
       } else {
-        str = str.replace(/{{translation}}/, '拼写错误，请在页面使用 Command+F 搜索确认')
+        str = str.replace(/{{translation}}/, '拼写错误，请在页面上使用 Command+F 搜索确认')
           .replace(/jz-layer-worditem/, 'jz-layer-worditem jz-layer-worditem-error')
       }
 
