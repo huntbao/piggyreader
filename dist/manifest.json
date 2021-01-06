@@ -21,6 +21,8 @@
         "js/lib/jps.js",
         "js/module.common.shell.js",
         "js/module.dictlayer.js",
+        "js/module.wordschecker.js",
+        "js/module.dict.checkresult.layer.js",
         "js/module.masklayer.js",
         "js/module.getpagecontent.js",
         "js/module.page.js",
@@ -30,6 +32,7 @@
       "css": [
         "css/all.pages.css",
         "css/module.dictlayer.css",
+        "css/module.dictcheckresultlayer.css",
         "css/ne_wiki.css"
       ],
       "matches": [
@@ -151,7 +154,7 @@
     "unlimitedStorage",
     "storage"
   ],
-  "version": "1.8.7",
+  "version": "1.8.8",
   "web_accessible_resources": [
     "reader.html",
     "css/images/logo.png"

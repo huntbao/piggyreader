@@ -94,5 +94,11 @@
     },
     "TranslateWord": {
         "message": "翻译选中单词"
+    },
+    "ContextMenuReader": {
+        "message": "清爽阅读模式"
+    },
+    "ContextMenuCheckAllPageWords": {
+        "message": "程序员单词救星"
     }
 }

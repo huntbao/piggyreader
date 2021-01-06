@@ -29,6 +29,9 @@
           case 'lookup-phrase':
             self.lookupPhraseHandler(port)
             break
+          case 'check-words':
+            self.checkWordsHandler(port)
+            break
           case 'getsettings':
             self.getSettingsHandler(port)
             break
@@ -77,6 +80,29 @@
       })
     },
 
+    checkWordsHandler: function (port) {
+      var self = this
+      port.onMessage.addListener(function (data) {
+        var words = data.words
+        var wordsNum = words.length
+        var dictDataArr = []
+        var callback = function (dictData) {
+          dictDataArr.push(dictData)
+          if (dictDataArr.length === wordsNum) {
+            chrome.tabs.sendRequest(port.sender.tab.id, {
+              name: 'checkwords-result',
+              data: {
+                dictDataArr: dictDataArr
+              }
+            })
+          } else {
+            self.lookupPhrase(words.shift(), callback)
+          }
+        }
+        self.lookupPhrase(words.shift(), callback)
+      })
+    },
+
     lookupPhrase: function (phrase, callback) {
       var self = this
       var dictDataSavedKey = 'DICT-DATA'
@@ -87,6 +113,7 @@
           success: function (xmlDoc) {
             // save xmlDoc for next use
             var dictData = self.getDictData($(xmlDoc))
+            dictData.phrase = phrase
             if (!savedObj) {
               savedObj = {}
               savedObj[dictDataSavedKey] = {}
@@ -141,9 +168,16 @@
       var self = this
       chrome.contextMenus.create({
         contexts: ["page", "frame", "link", "editable", "image", "video", "audio", "browser_action", "page_action"],
-        title: chrome.i18n.getMessage('ExtensionName'),
+        title: chrome.i18n.getMessage('ContextMenuReader'),
         onclick: function (info, tab) {
           self.createReader()
+        }
+      })
+      chrome.contextMenus.create({
+        contexts: ["page", "link", "editable"],
+        title: chrome.i18n.getMessage('ContextMenuCheckAllPageWords'),
+        onclick: function (info, tab) {
+          self.createWordsChecker()
         }
       })
       chrome.contextMenus.create({
@@ -171,6 +205,10 @@
 
     createReader: function () {
       chrome.tabs.executeScript(null, {code: 'jiZhuReader.create()'})
+    },
+
+    createWordsChecker: function () {
+      chrome.tabs.executeScript(null, {code: 'jzWordsChecker.create()'})
     },
 
     getSettings: function () {

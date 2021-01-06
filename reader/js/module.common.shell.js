@@ -29,8 +29,19 @@
     })
   })
 
+  $.jps.subscribe('check-words', function (data) {
+    var port = chrome.extension.connect({name: 'check-words'})
+    port.postMessage({
+      words: data.words
+    })
+  })
+
   $.jps.subscribe('init-dict-layer', function (dictData) {
     App.modules.dictLayer.init(dictData)
+  })
+
+  $.jps.subscribe('init-dict-checkresult-layer', function (dictData) {
+    App.modules.dictCheckResultLayer.init(dictData)
   })
 
   $.jps.subscribe('hide-dict-layer', function () {

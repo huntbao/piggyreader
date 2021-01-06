@@ -91,5 +91,11 @@
     },
     "TranslateWord": {
         "message": "Translate selected words"
+    },
+    "ContextMenuReader": {
+        "message": "Clearly Reader"
+    },
+    "ContextMenuCheckAllPageWords": {
+        "message": "Check All Words"
     }
 }

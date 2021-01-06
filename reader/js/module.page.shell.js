@@ -26,6 +26,11 @@
               hover: __settings.dictHostpage === 'hover'
             })
             break
+          case 'checkwords-result':
+            $.jps.publish('init-dict-checkresult-layer', {
+              dictDataArr: request.data.dictDataArr
+            })
+            break
           default:
             break
         }

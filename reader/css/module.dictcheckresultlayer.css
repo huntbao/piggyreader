@@ -1,0 +1,43 @@
+﻿/*Piggy Reader
+author @huntbao*/
+.jz-mod-dict-hidden-scroll {
+    overflow: hidden;
+}
+.jz-mod-dict-checkresult-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647 !important;
+    text-align: left !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    line-height: 22px !important;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.jz-mod-dict-checkresult-layer .jz-mod-dict-checkresult-layer-wrap {
+    overflow: auto;
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.jz-mod-dict-checkresult-layer .jz-layer-worditem {
+    margin: 0 0 10px;
+    padding: 5px;
+}
+
+.jz-mod-dict-checkresult-layer .jz-layer-worditem-error {
+    background-color: #a52a2a;
+    color: #fff;
+    border-radius: 4px;
+}
