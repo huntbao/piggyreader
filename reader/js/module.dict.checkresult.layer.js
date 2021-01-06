@@ -36,6 +36,7 @@
       var self = this
       self.__layerEl && self.__layerEl.remove()
       self.__layerEl = null
+      $(document.body).removeClass('jz-mod-dict-hidden-scroll')
     },
 
     getWordStr: function (data, num) {
